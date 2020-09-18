@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/teachLogo.png";
+import logo from "../../assets/teachLA.png";
 import "./posts.css";
 
 function PostHeader(props) {
