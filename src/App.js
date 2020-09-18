@@ -17,22 +17,12 @@ function App() {
 
   // dropdownArea: arrow function that returns the apporpriate button (and dropdown menu if applicable) depending on whether dropdownOpen is true/false
   const dropdownArea = () => {
-    if (dropdownOpen === false) {
-      return (
-        <button className='button' onClick={dropdownHandler}>
-          <div className="triangle"></div>
-        </button>
-      );
-    } else {
-      return (
-        <button className='button' onClick={dropdownHandler}>
-          <div className="triangle up"></div>
-          {/* below is a sample Dropdown Menu placeholder -- this is where the actual component will go */}
-          <div className='dropdown-placeholder'>dropdown menu</div>
-        </button>
-
-      );
-    }
+    return (
+      <button className='button' onClick={dropdownHandler}>
+        <div className={`triangle ${dropdownOpen ? "up" : ""}`}></div>
+        {dropdownOpen && <div className='dropdown-placeholder'>dropdown menu</div>}
+      </button>
+    );
   }
 
   return (
