@@ -2,7 +2,7 @@ import React from "react";
 import Post from "./components/posts/Post";
 import "./App.css";
 import CommentSection from "./components/comments/CommentSection";
-import content from "./assets/content.js";
+import content from "./assets/labContent.js";
 
 function App() {
   return (
