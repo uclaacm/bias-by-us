@@ -12,14 +12,14 @@ function App() {
 
   // dropdownHandler: arrow function that switches dropdownOpen value whenever the button is toggled
   const dropdownHandler = () => {
-    setDropdownOpen(!dropdownOpen)
+    setDropdownOpen(!dropdownOpen);
   }
 
   // dropdownArea: arrow function that returns the apporpriate button (and dropdown menu if applicable) depending on whether dropdownOpen is true/false
   const dropdownArea = () => {
     return (
       <button className='button' onClick={dropdownHandler}>
-        <div className='triangle' {...dropdownOpen ? "up" : ""}></div>
+        <div className={`triangle ${dropdownOpen ? "up" : ""}`}></div>
         {dropdownOpen && <div className='dropdown-placeholder'>dropdown menu</div>}
       </button>
     );
