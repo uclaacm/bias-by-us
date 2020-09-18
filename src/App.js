@@ -4,7 +4,8 @@ import './AppMain.css';
 function App() {
 
   // Posts: list variable containing Post component objects for every post in the case study, most likely to be imported through a different file
-  const [Posts, setPosts] = useState([]);
+  //const [Posts, setPosts] = useState([]);
+
   // dropdownOpen: boolean variable for whether the dropdown menu is open or closed
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -60,10 +61,11 @@ function App() {
         <p>post 3</p>
         {/* this mapping function will render the actual list of Posts */}
         {
+          /*
           Posts.map((post, index) => {
-            /*return <Post content={post} key={index} />*/
-            return;
+            return <Post content={post} key={index} />
           })
+          */
         }
       </div>
 
