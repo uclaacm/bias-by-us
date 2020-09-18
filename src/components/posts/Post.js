@@ -1,9 +1,10 @@
 import React from "react";
 import PostText from "./PostText";
 import PostHeader from "./PostHeader";
+import "./posts.css";
 export default function Post(props) {
   return (
-    <div style={styles.containerStyles}>
+    <div className="postContainer">
       <PostHeader
         header={props.postContent.header}
         subheader={props.postContent.subheader}
@@ -12,12 +13,3 @@ export default function Post(props) {
     </div>
   );
 }
-
-const styles = {
-  containerStyles: {
-    backgroundColor: "white",
-    textAlign: "left",
-    width: "950px",
-    borderRadius: "0px 25px 0px 0px",
-  },
-};

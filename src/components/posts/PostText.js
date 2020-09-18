@@ -1,22 +1,14 @@
 import React from "react";
+import "./posts.css";
 
 function PostText(props) {
-  return <p style={styles.bodyTextStyles}>{props.bodyText}</p>;
-}
-export default PostText;
+  let postContent = props.bodyText.map((paragraph) => {
+    let postClass = "postBodyText";
+    if (paragraph.bold === true) postClass += " boldText";
+    return <div className={postClass}>{paragraph.body}</div>;
+  });
 
-const styles = {
-  bodyTextStyles: {
-    marginLeft: "20px",
-    marginRight: "20px",
-    marginBottom: "20px",
-    marginTop: "20px",
-    fontFamily: "Mulish",
-    fontStyle: "normal",
-    fontWeight: "bold",
-    fontSize: "24px",
-    lineHeight: "30px",
-    alignItems: "left",
-    color: "#000000",
-  },
-};
+  return <div>{postContent}</div>;
+}
+
+export default PostText;

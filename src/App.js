@@ -2,31 +2,27 @@ import React from "react";
 import Post from "./components/posts/Post";
 import "./App.css";
 import CommentSection from "./components/comments/CommentSection";
-import Content from "./assets/Content.js";
+import content from "./assets/content.js";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div style={styles.separator}></div>
-        <Post postContent={Content.posts[0]} />
+        <br className="separator"></br>
 
-        <CommentSection followups={Content.followups[0]} />
+        <Post postContent={content.posts[0]} />
+        <CommentSection followups={content.followups[0]} />
 
-        <div style={styles.separator}></div>
+        <br className="separator"></br>
 
-        <Post postContent={Content.posts[0]} />
+        <Post postContent={content.posts[0]} />
 
-        <div style={styles.separator}></div>
-        <CommentSection followups={Content.followups[0]} />
-        <div style={styles.separator}></div>
+        <br className="separator"></br>
+
+        <CommentSection followups={content.followups[0]} />
+        <br className="separator"></br>
       </header>
     </div>
   );
 }
-const styles = {
-  separator: {
-    height: "100px",
-  },
-};
 export default App;

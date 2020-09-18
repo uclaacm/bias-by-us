@@ -3,15 +3,26 @@ export default {
     {
       header: "Introduction To The Case Study",
       subheader: "What Did Facebook Do?",
-      bodyText: `
-            In 2019, the U.S. Department of Housing and Urban development sued Facebook for steering its ads toward different 
-            subsets of the user population through an automated image classification mechanism. As consumers, we are more likely 
-            to engage with advertisements that are relevant to our interests. Knowing this, advertisers gear their ads towards 
-            certain demographics in the population in order to maximize relevancy and profit. 
-            While such ad-targeting is common practice, Facebook was sued for its ad-targeting machine learning algorithm because
-            it had targeted or blocked users from specific ads on the basis of race, gender, and religion. 
-            In this case study, we will explore how such stereotypes were incorporated into Facebook’s algorithm
-             and how such advertising could potentially create large impacts on our society.`,
+      bodyText: [
+        {
+          body: `In 2019, the U.S. Department of Housing and Urban development sued Facebook for steering its ads toward different 
+          subsets of the user population through an automated image classification mechanism.`,
+        },
+        {
+          body: `As consumers, we are more likely to engage with advertisements that are relevant to our interests. 
+          Knowing this, advertisers gear their ads towards certain demographics in the population in order 
+          to maximize relevancy and profit. `,
+        },
+        {
+          body: `While such ad-targeting is common practice, Facebook was sued for its ad-targeting machine learning algorithm because
+          it had targeted or blocked users from specific ads on the basis of race, gender, and religion.`,
+        },
+        {
+          body: `In this case study, we will explore how such stereotypes were incorporated into Facebook’s algorithm
+          and how such advertising could potentially create large impacts on our society.`,
+          bold: true,
+        },
+      ],
     },
   ],
 
@@ -60,6 +71,5 @@ export default {
           (such as their job, money, house, education, or health), then that action is considered discriminatory.`,
       },
     ],
-    [],
   ],
 };

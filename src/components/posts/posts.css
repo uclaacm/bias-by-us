@@ -1,0 +1,35 @@
+.profilePic {
+  float: left;
+  width: 88px;
+  height: 88x;
+}
+
+.postContainer {
+  background-color: white;
+  max-width: 1000px;
+  border-radius: 0px 25px 0px 0px;
+}
+
+.postHeader {
+  margin-left: 100px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.postSubheader {
+  margin-left: 100px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #606060;
+}
+.postBodyText {
+  margin: 20px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.boldText {
+  font-weight: bold;
+}
