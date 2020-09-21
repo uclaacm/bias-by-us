@@ -1,13 +1,17 @@
 .profilePic {
   float: left;
-  width: 88px;
-  height: 88x;
+  width: 65px;
+  height: 65px;
+  margin-left: 15px;
+  margin-top: 5px;
 }
 
 .postContainer {
   background-color: white;
   max-width: 1000px;
   border-radius: 0px 25px 0px 0px;
+  margin-top: 3rem;
+  padding-bottom: 30px;
 }
 
 .postHeader {

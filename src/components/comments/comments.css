@@ -1,16 +1,21 @@
 .divider {
   width: 90%;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 20px;
   border: none;
   height: 2px;
   display: flex;
   background-color: black;
 }
+
+.separator {
+  height: 10px;
+}
 .commentsContainer {
   background-color: white;
   max-width: 1000px;
   border-radius: 0px 0px 25px 25px;
+  padding-top: 5px;
+  padding-bottom: 20px;
 }
 .comment {
   font-size: 24px;

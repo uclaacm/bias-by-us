@@ -4,6 +4,9 @@ import Answer from "./Answer.js";
 import "./comments.css";
 export default function CommentSection(props) {
   let followupSection = [];
+
+  /*The function below takes each element within the followups prop array and will render its 
+    corresponding question/answer if it exists */
   props.followups.forEach((followup) => {
     if (followup.question != null) {
       followupSection.push(<Question questionText={followup.question} />);
@@ -20,7 +23,7 @@ export default function CommentSection(props) {
 
   return (
     <div className="commentsContainer">
-      <hr className="divider"></hr>
+      <hr className="divider" />
       {followupSection}
     </div>
   );
