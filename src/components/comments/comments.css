@@ -3,46 +3,29 @@
   margin-bottom: 20px;
   border: none;
   height: 2px;
-  display: flex;
   background-color: black;
 }
 
-.separator {
-  height: 10px;
-}
-.commentsContainer {
-  background-color: white;
-  max-width: 1000px;
+.comments-container {
   border-radius: 0px 0px 25px 25px;
   padding-top: 5px;
-  padding-bottom: 20px;
-}
-.comment {
-  font-size: 24px;
-  line-height: 30px;
 }
 
-.boldComment {
-  font-weight: bold;
-}
-.commentBubble {
+.comment-bubble {
   background-color: #eef0f1;
   border-radius: 25px;
   width: 80%;
   padding: 10px;
-  font-size: 24px;
-  line-height: 30px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-.answerBubble {
+.answer-bubble {
   margin-left: 20%;
   margin-right: 1.5%;
   width: 75%;
 }
 .question {
   margin-left: 1.5%;
-  font-weight: bold;
   color: #4267b2;
 }

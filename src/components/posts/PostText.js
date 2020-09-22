@@ -1,16 +1,21 @@
 import React from "react";
 import "./posts.css";
-
-function PostText(props) {
+import "../mainContent/mainContent.css";
+export default function PostText(props) {
   /*This mapping function takes the array of post body Text and renders each paragraph as a line of
 body text */
-  let postContent = props.bodyText.map((paragraph) => {
-    let postClass = "postBodyText";
-    if (paragraph.bold === true) postClass += " boldText";
-    return <div className={postClass}>{paragraph.body}</div>;
-  });
-
-  return <div>{postContent}</div>;
+  return (
+    <div>
+      {props.bodyText.map((paragraph, index) => {
+        let postClass = `post-body-text body-text ${
+          paragraph.bold ? "text-bold" : ""
+        } `;
+        return (
+          <div key={index} className={postClass}>
+            {paragraph.body}
+          </div>
+        );
+      })}
+    </div>
+  );
 }
-
-export default PostText;

@@ -2,29 +2,24 @@ import React from "react";
 import Question from "./Question.js";
 import Answer from "./Answer.js";
 import "./comments.css";
+import "../mainContent/mainContent.css";
 export default function CommentSection(props) {
-  let followupSection = [];
-
-  /*The function below takes each element within the followups prop array and will render its 
-    corresponding question/answer if it exists */
-  props.followups.forEach((followup) => {
-    if (followup.question != null) {
-      followupSection.push(<Question questionText={followup.question} />);
-    }
-    if (followup.answer != null || followup.answerHeader != null) {
-      followupSection.push(
-        <Answer
-          answerHeaderText={followup.answerHeader}
-          answerText={followup.answer}
-        />
-      );
-    }
-  });
-
   return (
-    <div className="commentsContainer">
+    /*The mapping function below takes each element within the followups prop array and will render it as 
+a corresponding question or answer*/
+    <div className="comments-container content-container ">
       <hr className="divider" />
-      {followupSection}
+      {props.followups.map((followup, index) => {
+        return followup.question ? (
+          <Question key={index} questionText={followup.question} />
+        ) : (
+          <Answer
+            key={index}
+            answerHeaderText={followup.answerHeader}
+            answerText={followup.answer}
+          />
+        );
+      })}
     </div>
   );
 }

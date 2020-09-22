@@ -1,4 +1,4 @@
-.profilePic {
+.profile-pic {
   float: left;
   width: 65px;
   height: 65px;
@@ -6,34 +6,21 @@
   margin-top: 5px;
 }
 
-.postContainer {
-  background-color: white;
-  max-width: 1000px;
+.post-container {
   border-radius: 0px 25px 0px 0px;
   margin-top: 3rem;
-  padding-bottom: 30px;
 }
 
-.postHeader {
+.post-header {
   margin-left: 100px;
-  font-weight: bold;
   font-size: 36px;
   line-height: 45px;
 }
 
-.postSubheader {
+.post-subheader {
   margin-left: 100px;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
   color: #606060;
 }
-.postBodyText {
+.post-body-text {
   margin: 20px;
-  font-size: 24px;
-  line-height: 30px;
-}
-
-.boldText {
-  font-weight: bold;
 }
