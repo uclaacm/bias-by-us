@@ -1,0 +1,31 @@
+.divider {
+  width: 90%;
+  margin-bottom: 20px;
+  border: none;
+  height: 2px;
+  background-color: black;
+}
+
+.comments-container {
+  border-radius: 0px 0px 25px 25px;
+  padding-top: 5px;
+}
+
+.comment-bubble {
+  background-color: #eef0f1;
+  border-radius: 25px;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.answer-bubble {
+  margin-left: 20%;
+  margin-right: 1.5%;
+  width: 75%;
+}
+.question {
+  margin-left: 1.5%;
+  color: #4267b2;
+}
