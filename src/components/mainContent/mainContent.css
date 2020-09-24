@@ -1,11 +1,56 @@
 .content-container {
   background-color: white;
-  max-width: 1000px;
+  width: 1000px;
   padding-bottom: 20px;
+}
+
+.direction-container {
+  position: fixed;
+  margin-top: 13.5rem;
+  right: 2.4rem;
+  background-color: #ffffff;
+  width: 9.4%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  border-radius: 60px;
+  max-width: 8.438rem;
+  max-height: 30rem;
+  z-index: 4;
+}
+
+.button-image {
+  z-index: 3;
+  height: 80%;
+}
+
+.forward-image {
+  transform: rotate(180deg);
 }
 .body-text {
   font-size: 24px;
   line-height: 30px;
+}
+
+.nav-button {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #4267b2;
+  border-width: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backward-button:active {
+  transform: translateY(-5px);
+}
+
+.forward-button:active {
+  transform: translateY(5px);
 }
 
 .text-bold {

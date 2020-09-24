@@ -100,7 +100,7 @@ export default [
           algorithms do it all the time to optimize efficiency in many things, including advertising.`,
         },
         {
-          body: `. By incorporating these categorizations into advertising algorithms, advertisers 
+          body: `By incorporating these categorizations into advertising algorithms, advertisers 
           are able to maximize the relevancy of their ads and thus maximize their profit. `,
         },
         {

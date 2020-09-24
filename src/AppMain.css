@@ -2,6 +2,7 @@
   font-family: "Mulish", sans-serif;
   min-height: 50rem;
   background: #eef0f1;
+  padding-bottom: 200px;
 }
 
 .navbar {
@@ -122,7 +123,7 @@
   position: fixed;
   margin-top: 13.5rem;
   right: 2.4rem;
-  background-color: black;
+  background-color: #ffffff;
   color: white;
   width: 9.4%;
   height: 30%;

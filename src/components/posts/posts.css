@@ -24,3 +24,7 @@
 .post-body-text {
   margin: 20px;
 }
+
+.hidden-text {
+  visibility: hidden;
+}
