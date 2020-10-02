@@ -16,11 +16,11 @@ export default function DirectionButtons(props) {
     it will go back to the previous section and make all its text visible*/
     if (props.visibleSections > 0 && props.currentVisibleText <= 0) {
       props.setVisibleSections(props.visibleSections - 1);
-      props.setcurrentVisibleText(previousLength);
+      props.setCurrentVisibleText(previousLength);
     } else if (props.visibleSections >= 0 && props.currentVisibleText > 0) {
       /* If the current Section still shows text/components, then it will hide some of the
     text/components that it is showing*/
-      props.setcurrentVisibleText(props.currentVisibleText - 1);
+      props.setCurrentVisibleText(props.currentVisibleText - 1);
     }
   }
 
@@ -41,12 +41,12 @@ export default function DirectionButtons(props) {
       props.currentVisibleText >= currentLength
     ) {
       props.setVisibleSections(props.visibleSections + 1);
-      props.setcurrentVisibleText(0);
+      props.setCurrentVisibleText(0);
     } else if (props.currentVisibleText < currentLength) {
-      /* If the current section is not displaying all of its text/components, let the next one become visible*/
-      props.setcurrentVisibleText(props.currentVisibleText + 1);
+      props.setCurrentVisibleText(props.currentVisibleText + 1);
     }
   }
+
   return (
     <div className="direction-container">
       <button className="nav-button backward-button" onClick={handleBackward}>

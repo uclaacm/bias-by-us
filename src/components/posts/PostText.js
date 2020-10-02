@@ -9,6 +9,7 @@ export default function PostText(props) {
       paragraph.bold ? "text-bold " : ""
     } `;
     postClass += `${props.currentVisibleText < index + 1 ? "hidden-text" : ""}`;
+
     return (
       <div key={index} className={postClass}>
         {paragraph.body}

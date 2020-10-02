@@ -93,6 +93,7 @@
   flex-direction: column;
   position: relative;
   margin-top: 5rem;
+
   z-index: 0;
 }
 .sample-post {

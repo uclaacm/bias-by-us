@@ -3,7 +3,7 @@ Eventually, if we run into issues with loading the visuals/interactive portions 
 then they will be their own seperate part inbetween posts and the followups.
 */
 import React from "react";
-import PostHeader from "../components/posts/PostHeader.js";
+import PlaceholderInteractive from "../components/posts/PlaceholderInteractive.js";
 import facebookLogo from "./facebookLogo.svg";
 import classifyingPic from "./classifyingPeople.svg";
 import adsPic from "./personalizedAds.svg";
@@ -48,13 +48,8 @@ export default [
         },
         { body: "INSERT VISUAL HERE", bold: true },
         {
-          body: (
-            <PostHeader
-              profilePic={classifyingPic}
-              header="Placeholder component of our animated visual here"
-              subheader="Will be very fancy"
-            />
-          ),
+          body: <PlaceholderInteractive />,
+          blockRendering: true,
         },
         {
           body: `It is our natural instict to form opinions about others when we first meet them, even if we barely know
@@ -117,13 +112,8 @@ export default [
         },
         { body: "INSERT INTERACTIVE PORTION HERE", bold: true },
         {
-          body: (
-            <PostHeader
-              profilePic={adsPic}
-              header="Placeholder of our interactive module here"
-              subheader="Will be very fancy"
-            />
-          ),
+          body: <PlaceholderInteractive />,
+          blockRendering: true,
         },
         {
           body: `As you can see, the ads you receive change depending on your race, gender, and age. `,

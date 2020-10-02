@@ -15,6 +15,9 @@ export default function Post(props) {
       <PostText
         bodyText={props.postContent.bodyText}
         currentVisibleText={props.currentVisibleText}
+        setCurrentVisibleText={props.setCurrentVisibleText}
+        blockRendering={props.blockRendering}
+        setBlockRendering={props.setBlockRendering}
       />
     </div>
   );

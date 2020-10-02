@@ -22,6 +22,15 @@
   z-index: 4;
 }
 
+.forward-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 100px;
+  z-index: 4;
+}
+
 .button-image {
   z-index: 3;
   height: 80%;
@@ -55,4 +64,8 @@
 
 .text-bold {
   font-weight: bold;
+}
+
+.hidden-button {
+  display: none;
 }
