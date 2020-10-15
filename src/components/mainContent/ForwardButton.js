@@ -16,12 +16,14 @@ export default function ForwardButton(props) {
       console.log("Added");
     } else props.setForwardVisible(true);
   }
+
   useEffect(() => {
     let forwardSection = setInterval(() => addVisibleText(), 1000);
     return function cleanup() {
       console.log("cleared interval");
       clearInterval(forwardSection);
     };
+      // eslint-disable-next-line
   }, [props.visibleSections, props.currentVisibleText]);
 
   function handleForward() {
