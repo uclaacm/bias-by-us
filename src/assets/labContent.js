@@ -49,7 +49,6 @@ export default [
         { body: "INSERT VISUAL HERE", bold: true },
         {
           body: <PlaceholderInteractive />,
-          blockRendering: true,
         },
         {
           body: `It is our natural instict to form opinions about others when we first meet them, even if we barely know
@@ -71,7 +70,7 @@ export default [
   {
     followups: [
       {
-        question: `What are the first things that you notice about other people when you first see them?`,
+        question: `What are some things that you notice about other people when you first see them?`,
       },
       {
         answerHeader: `Studies have shown that we immediately take note of one thing.`,
@@ -113,7 +112,6 @@ export default [
         { body: "INSERT INTERACTIVE PORTION HERE", bold: true },
         {
           body: <PlaceholderInteractive />,
-          blockRendering: true,
         },
         {
           body: `As you can see, the ads you receive change depending on your race, gender, and age. `,

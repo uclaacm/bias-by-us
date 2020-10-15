@@ -3,18 +3,21 @@ import "./mainContent.css";
 import arrows from "../../assets/upArrow.svg";
 
 export default function ForwardButton(props) {
+
   let currentSection = props.content[props.visibleSections];
-  let currentLength = undefined;
-  if (currentSection && currentSection.post)
-    currentLength = currentSection.post.bodyText.length;
-  else if (currentSection && currentSection.followups)
-    currentLength = currentSection.followups.length;
+  let currentLength= (currentSection.post) ?
+  currentSection.post.bodyText.length
+  : currentSection.followups.length;
+
 
   function addVisibleText() {
     if (props.currentVisibleText < currentLength) {
       handleForward();
       console.log("Added");
-    } else props.setForwardVisible(true);
+    } 
+    else {
+      props.setForwardVisible(true);
+    }
   }
 
   useEffect(() => {
@@ -29,14 +32,6 @@ export default function ForwardButton(props) {
   function handleForward() {
     props.setForwardVisible(false);
 
-    let currentSection = props.content[props.visibleSections];
-    let currentLength = undefined;
-    if (currentSection && currentSection.post)
-      currentLength = currentSection.post.bodyText.length;
-    else if (currentSection && currentSection.followups)
-      currentLength = currentSection.followups.length;
-
-    /*Should we use SWITCH statements instead */
     /* If the current section is not the final section and all its text/components,
         is currently visible, then it will load the next section in
         and hide all of its text*/
@@ -46,9 +41,13 @@ export default function ForwardButton(props) {
     ) {
       props.setVisibleSections(props.visibleSections + 1);
       props.setCurrentVisibleText(0);
-    } else if (props.currentVisibleText < currentLength) {
+    } 
+    else 
+    {
+      if (props.currentVisibleText < currentLength) {
       props.setCurrentVisibleText(props.currentVisibleText + 1);
     }
+  }
   }
 
   return (

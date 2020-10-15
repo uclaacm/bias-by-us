@@ -1,11 +1,3 @@
-.divider {
-  width: 90%;
-  margin-bottom: 20px;
-  border: none;
-  height: 2px;
-  background-color: black;
-}
-
 .comments-container {
   border-radius: 0px 0px 25px 25px;
   padding-top: 5px;

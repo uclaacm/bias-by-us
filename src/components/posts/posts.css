@@ -1,3 +1,10 @@
+.divider {
+  width: 90%;
+  margin-top: 20px;
+  border: none;
+  height: 2px;
+  background-color: black;
+}
 .profile-pic {
   float: left;
   width: 65px;

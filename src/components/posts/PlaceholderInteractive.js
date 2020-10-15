@@ -5,7 +5,7 @@ export default function PlaceholderInteractive(props) {
   return (
     <div>
       <button className="body-text post-body-text">
-        Click me to mark this section as "completed"
+        Placeholder Interactive Portion/Animated Visual
       </button>
     </div>
   );

@@ -21,7 +21,7 @@ a corresponding question or answer*/
   let visibleFollowups = allFollowups.slice(0, props.currentVisibleText);
   return (
     <div className="comments-container content-container ">
-      <hr className="divider" />
+      
       {visibleFollowups}
     </div>
   );
