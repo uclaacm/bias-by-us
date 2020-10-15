@@ -1,11 +1,13 @@
 .content-container {
   background-color: white;
   max-width: 1000px;
-  padding-bottom: 20px;
+  padding: 1.25rem;
+  box-shadow:0 3px 6px 0 rgba(0,0,0,0.16);
+  border-radius: 1.25rem;
 }
 .body-text {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
 }
 
 .text-bold {

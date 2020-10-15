@@ -7,8 +7,10 @@
 }
 
 .comments-container {
-  border-radius: 0px 0px 25px 25px;
+  border-radius: 0 0 1.25rem 1.25rem;
   padding-top: 5px;
+  position: relative;
+  top: -1rem;
 }
 
 .comment-bubble {
@@ -16,8 +18,9 @@
   border-radius: 25px;
   width: 80%;
   padding: 10px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  box-shadow:0 3px 4px 0 gray;
 }
 
 .answer-bubble {
