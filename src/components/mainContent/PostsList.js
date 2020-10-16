@@ -24,11 +24,10 @@ export default function PostsList(props) {
           />
         );
       }
-      else {
-        if (section.followups)
+      else if (section.followups)
           return <CommentSection key={index} followups={section.followups} />;
       return "";
-      }
+      
     });
   /* This function takes the section that the user is currently on, and makes it so that its content
     can change depending on how the DirectionButtons are pressed*/
@@ -38,7 +37,7 @@ export default function PostsList(props) {
       /*Not using ternaries since there might be 3 possibilities if we make
     interactive sections seperate from posts in the future
     */
-      if (section.post)
+      if (section.post) {
         return (
           <Post
             key={index}
@@ -47,7 +46,9 @@ export default function PostsList(props) {
             setCurrentVisibleText={props.setCurrentVisibleText}
           />
         );
-      if (section.followups)
+      }
+
+      else if (section.followups){
         return (
           <CommentSection
             key={index}
@@ -56,7 +57,9 @@ export default function PostsList(props) {
             setCurrentVisibleText={props.setCurrentVisibleText}
           />
         );
-      return "";
+      }
+      
+      else return "";
     });
   let forwardVisibility = `${props.forwardVisible ? "" : "hidden-button"}`;
   return (

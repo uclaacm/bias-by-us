@@ -22,7 +22,7 @@ export default function ForwardButton(props) {
 
   useEffect(() => {
     let forwardSection = setInterval(() => addVisibleText(), 1000);
-    return function cleanup() {
+    return () =>{
       console.log("cleared interval");
       clearInterval(forwardSection);
     };
