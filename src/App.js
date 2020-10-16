@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./AppMain.css";
 import PostsList from "./components/mainContent/PostsList";
 import labContent from "./assets/labContent";
@@ -6,18 +6,25 @@ import labContent from "./assets/labContent";
 import Navbar from "./components/mainContent/Navbar";
 
 function App() {
+  const [visibleSections, setVisibleSections] = useState(0);
+  const [currentVisibleText, setCurrentVisibleText] = useState(0);
+  const [forwardVisible, setForwardVisible] = useState(false);
   return (
     <div className="app">
       <div className="navbar">
         <Navbar />
       </div>
 
-      {/* below are Progress Bar and Direction Buttons placeholders*/}
-      <div className="progress-bar">progress bar</div>
-      <div className="direction-buttons">direction buttons</div>
-
       <div className="posts">
-        <PostsList content={labContent} />
+        <PostsList 
+        content={labContent} visibleText={0} 
+        forwardVisible={forwardVisible}
+        setForwardVisible={setForwardVisible}
+        visibleSections={visibleSections}
+        setVisibleSections={setVisibleSections}
+        currentVisibleText={currentVisibleText}
+        setCurrentVisibleText={setCurrentVisibleText}
+        />
       </div>
     </div>
   );

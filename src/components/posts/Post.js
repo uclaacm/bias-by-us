@@ -12,7 +12,13 @@ export default function Post(props) {
         subheader={props.postContent.subheader}
         profilePic={props.postContent.profilePic}
       />
-      <PostText bodyText={props.postContent.bodyText} />
+      <PostText
+        bodyText={props.postContent.bodyText}
+        currentVisibleText={props.currentVisibleText}
+        setCurrentVisibleText={props.setCurrentVisibleText}
+
+      />
+      <hr className="divider" />
     </div>
   );
 }

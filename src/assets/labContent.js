@@ -3,7 +3,7 @@ Eventually, if we run into issues with loading the visuals/interactive portions 
 then they will be their own seperate part inbetween posts and the followups.
 */
 import React from "react";
-import PostHeader from "../components/posts/PostHeader.js";
+import PlaceholderInteractive from "../components/posts/PlaceholderInteractive.js";
 import facebookLogo from "./facebookLogo.svg";
 import classifyingPic from "./classifyingPeople.svg";
 import adsPic from "./personalizedAds.svg";
@@ -48,13 +48,7 @@ export default [
         },
         { body: "INSERT VISUAL HERE", bold: true },
         {
-          body: (
-            <PostHeader
-              profilePic={classifyingPic}
-              header="Placeholder component of our animated visual here"
-              subheader="Will be very fancy"
-            />
-          ),
+          body: <PlaceholderInteractive />,
         },
         {
           body: `It is our natural instict to form opinions about others when we first meet them, even if we barely know
@@ -76,7 +70,7 @@ export default [
   {
     followups: [
       {
-        question: `What are the first things that you notice about other people when you first see them?`,
+        question: `What are some things that you notice about other people when you first see them?`,
       },
       {
         answerHeader: `Studies have shown that we immediately take note of one thing.`,
@@ -100,7 +94,7 @@ export default [
           algorithms do it all the time to optimize efficiency in many things, including advertising.`,
         },
         {
-          body: `. By incorporating these categorizations into advertising algorithms, advertisers 
+          body: `By incorporating these categorizations into advertising algorithms, advertisers 
           are able to maximize the relevancy of their ads and thus maximize their profit. `,
         },
         {
@@ -117,13 +111,7 @@ export default [
         },
         { body: "INSERT INTERACTIVE PORTION HERE", bold: true },
         {
-          body: (
-            <PostHeader
-              profilePic={adsPic}
-              header="Placeholder of our interactive module here"
-              subheader="Will be very fancy"
-            />
-          ),
+          body: <PlaceholderInteractive />,
         },
         {
           body: `As you can see, the ads you receive change depending on your race, gender, and age. `,

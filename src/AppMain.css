@@ -2,6 +2,7 @@
   font-family: "Mulish", sans-serif;
   min-height: 50rem;
   background: #eef0f1;
+  padding-bottom: 200px;
 }
 
 .navbar {
@@ -20,7 +21,7 @@
   white-space: nowrap;
   font-weight: 800;
   z-index: 1;
-  box-shadow:0 3px 6px 0 rgba(0,0,0,0.16);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
 .logo {
@@ -83,7 +84,7 @@
   position: fixed;
   margin-top: 2rem;
   right: 0;
-  box-shadow:0 3px 6px 0 rgba(0,0,0,0.16);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
 .posts {
@@ -94,6 +95,7 @@
   flex-direction: column;
   position: relative;
   margin-top: 5rem;
+
   z-index: 0;
 }
 .sample-post {
@@ -105,7 +107,7 @@
   /*padding: 400px 300px 400px 300px;*/
   background-color: white;
   border-radius: 1.25rem;
-  box-shadow:0 3px 6px 0 rgba(0,0,0,0.16);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
 .progress-bar {
@@ -119,7 +121,7 @@
   max-height: 50rem;
   z-index: 3;
   margin-left: 2.4rem;
-  box-shadow:0px 3px 6px 0 rgba(0,0,0,0.16);
+  box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
 .direction-buttons {
@@ -133,5 +135,5 @@
   max-width: 8.438rem;
   max-height: 30rem;
   z-index: 4;
-  box-shadow:0 3px 6px 0 rgba(0,0,0,0.16);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
