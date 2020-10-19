@@ -71,3 +71,18 @@
 .hidden-button {
   display: none;
 }
+
+.progress-button {
+  background: white;
+  border-radius: 2rem;
+  border: none;
+  padding: 0;
+  width: 65px;
+  height: 65px;
+}
+.progress-button:focus {
+  outline: none;
+}
+.no-margin {
+  margin: 0;
+}
