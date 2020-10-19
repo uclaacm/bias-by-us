@@ -16,13 +16,15 @@ function App() {
         <Navbar />
       </div>
 
-      <div>
-        <ProgressBar 
-          setVisibleSections = {setVisibleSections}
-          setForwardVisible = {setForwardVisible}
-          setCurrentVisibleText = {setCurrentVisibleText}
-        />
-      </div>
+      
+      <ProgressBar 
+        content = {labContent}
+        visibleSections = {visibleSections}
+        setVisibleSections = {setVisibleSections}
+        setForwardVisible = {setForwardVisible}
+        setCurrentVisibleText = {setCurrentVisibleText}
+      />
+      
 
       <div className="posts">
         <PostsList 
