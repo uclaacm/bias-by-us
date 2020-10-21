@@ -4,6 +4,7 @@ import PostsList from "./components/mainContent/PostsList";
 import labContent from "./assets/labContent";
 
 import Navbar from "./components/mainContent/Navbar";
+import ProgressBar from "./components/mainContent/ProgressBar";
 
 function App() {
   const [visibleSections, setVisibleSections] = useState(0);
@@ -14,6 +15,16 @@ function App() {
       <div className="navbar">
         <Navbar />
       </div>
+
+      
+      <ProgressBar 
+        content = {labContent}
+        visibleSections = {visibleSections}
+        setVisibleSections = {setVisibleSections}
+        setForwardVisible = {setForwardVisible}
+        setCurrentVisibleText = {setCurrentVisibleText}
+      />
+      
 
       <div className="posts">
         <PostsList 
