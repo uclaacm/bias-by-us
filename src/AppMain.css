@@ -94,20 +94,9 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  margin-top: 5rem;
-
+  margin: 5rem auto 0 auto;
+  width: 70%;
   z-index: 0;
-}
-.sample-post {
-  font-size: 2rem;
-  border: black 0.0625rem solid;
-  /*width: 59.38rem;*/
-  width: 66%;
-  height: 25rem;
-  /*padding: 400px 300px 400px 300px;*/
-  background-color: white;
-  border-radius: 1.25rem;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
 .progress-bar {
@@ -115,14 +104,15 @@
   margin-top: 2.5rem;
   background-color: white;
   color: black;
-  width: 9.4%;
+  width: 9%;
   height: 78%;
-  max-width: 6.8rem;
-  max-height: 50rem;
+  max-width: 110px;
+  max-height: 800px;
+  min-width: 67px;
   z-index: 3;
   margin-left: 2.4rem;
   box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
-  border-radius: 4rem;
+  border-radius: 64px;
   display: flex;
   flex-direction: column;
   align-items: center;

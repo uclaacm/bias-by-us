@@ -12,18 +12,14 @@ export default function ProgressBar(props) {
         props.setForwardVisible(false);
     }
 
-    const indicies = [0, 1, 3, 5, 7, 9]
-    let content = props.content
+    const indices = [0, 1, 3, 5, 7, 9]
+    let content = props.content.filter((s, index) => indices.includes(index))
         .map((section, index) => {
-            if (indicies.includes(index)) {
-                return (
-                    <button className='progress-button' onClick={() => clickHandler(index)}>
-                        <img className={`profile-pic no-margin ${index > props.visibleSections ? "gray" : ""}`} src={section.post.profilePic} alt={`shortcut: ${section.post.header}`}/>
-                    </button>
-                );
-            } else {
-                return ""; // added because of npm run build warning about a missing return
-            }
+            return (
+                <button className='progress-button' onClick={() => clickHandler(index)}>
+                    <img className={`profile-pic no-margin ${index > props.visibleSections ? "gray" : ""}`} src={section.post.profilePic} alt={`shortcut: ${section.post.header}`}/>
+                </button>
+            );
         });
 
     return (
