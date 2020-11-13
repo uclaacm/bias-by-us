@@ -5,7 +5,7 @@ import "./posts.css";
 import "../mainContent/mainContent.css";
 export default function Post(props) {
   return (
-    <div className="post-container content-container ">
+    <div className="post-container content-container " id={props.name}>
       {/* This renders both the header and text within the same post bubble */}
       <PostHeader
         header={props.postContent.header}

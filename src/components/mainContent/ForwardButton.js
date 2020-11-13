@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./mainContent.css";
 import arrows from "../../assets/upArrow.svg";
+import {scroller as scroll} from "react-scroll";
 
 export default function ForwardButton(props) {
 
@@ -21,7 +22,7 @@ export default function ForwardButton(props) {
   }
 
   useEffect(() => {
-    let forwardSection = setInterval(() => addVisibleText(), 1000);
+    let forwardSection = setInterval(() => addVisibleText(), props.currentVisibleText === 0 ? 0 : 1000);
     return () =>{
       console.log("cleared interval");
       clearInterval(forwardSection);
@@ -44,8 +45,12 @@ export default function ForwardButton(props) {
     } 
     else 
     {
+      if (props.currentVisibleText === 0) {
+        const section = props.content[props.visibleSections];
+        scroll.scrollTo((section.post ? section.post.header : section.followups[0]), {spy: true, smooth:true, offset:-100, duration: 500});
+      }
       if (props.currentVisibleText < currentLength) {
-      props.setCurrentVisibleText(props.currentVisibleText + 1);
+        props.setCurrentVisibleText(props.currentVisibleText + 1);
     }
   }
   }
