@@ -17,7 +17,8 @@ export default function ForwardButton(props) {
       console.log("Added");
     } 
     else {
-      props.setForwardVisible(true);
+      if (!(props.visibleSections === props.content.length - 1)) // make visible if it isn't the last section of the page
+        props.setForwardVisible(true);
     }
   }
 
@@ -47,7 +48,12 @@ export default function ForwardButton(props) {
     {
       if (props.currentVisibleText === 0) {
         const section = props.content[props.visibleSections];
-        scroll.scrollTo((section.post ? section.post.header : section.followups[0]), {spy: true, smooth:true, offset:-100, duration: 500});
+        /* scrollTo configuration options:
+          - smooth: animates the scrolling with smooth movement
+          - offset: scroll additional px (like padding), so that we can see the content under the navbar
+          - duration: total duration of the scroll animation
+        */
+        scroll.scrollTo((section.post ? section.post.header : section.followups[0].question), {smooth:true, offset:-100, duration: 500});
       }
       if (props.currentVisibleText < currentLength) {
         props.setCurrentVisibleText(props.currentVisibleText + 1);

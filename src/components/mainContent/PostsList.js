@@ -19,7 +19,6 @@ export default function PostsList(props) {
             key={index}
             postContent={section.post}
             currentVisibleText={section.post.bodyText.length}
-            name={section.post.header}
           />
         );
       }
@@ -43,7 +42,6 @@ export default function PostsList(props) {
             postContent={section.post}
             currentVisibleText={props.currentVisibleText}
             setCurrentVisibleText={props.setCurrentVisibleText}
-            name={section.post.header}
           />
         );
       }
@@ -55,7 +53,6 @@ export default function PostsList(props) {
             followups={section.followups}
             currentVisibleText={props.currentVisibleText}
             setCurrentVisibleText={props.setCurrentVisibleText}
-            name={section.followups[0]}
           />
         );
       }

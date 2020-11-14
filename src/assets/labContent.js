@@ -11,7 +11,6 @@ export default [
   {
     post: {
       profilePic: facebookLogo,
-      index: 0,
       header: "Introduction To The Case Study",
       subheader: "What Did Facebook Do?",
       bodyText: [
@@ -41,7 +40,6 @@ export default [
       header: "Classifying People",
       subheader: "Why do we divide people into groups?",
       profilePic: classifyingPic,
-      index: 1, 
       bodyText: [
         {
           body: `No two people in the world are exactly alike. To more easily keep track of the diverse set of people
@@ -87,7 +85,6 @@ export default [
   {
     post: {
       profilePic: adsPic,
-      index: 3,
       header: "Stereotypes Within Personalized Advertising",
       subheader:
         "How do algorithms respond to stereotypical trends within data?",
