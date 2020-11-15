@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import teachLogo from "../../assets/teachla-logo.svg";
 import "../../AppMain.css";
 import "../../index.css";
+import './Navbar.css';
 
 export default function NavBar(props) {
   // dropdownOpen: boolean variable for whether the dropdown menu is open or closed
@@ -18,7 +19,17 @@ export default function NavBar(props) {
       <button className="button" onClick={dropdownHandler}>
         <div className={`triangle ${dropdownOpen ? "up" : ""}`}></div>
         {dropdownOpen && (
-          <div className="dropdown-placeholder">dropdown menu</div>
+          <div class="dropdown">
+            <div class="dropdown-content">
+              <a href="#">Landing Page</a>
+              <a href="#">About Us</a>
+              <a href="#">Case Study #1</a>
+              <a href="#">Case Study #2</a>
+              <a href="#">Case Study #3</a>
+              <a href="#">Conclusion</a>
+              <a href="#">Resources</a>
+            </div>
+          </div>
         )}
       </button>
     );
