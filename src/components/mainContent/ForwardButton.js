@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./mainContent.css";
 import arrows from "../../assets/upArrow.svg";
+import {scroller as scroll} from "react-scroll";
 
 export default function ForwardButton(props) {
 
@@ -16,12 +17,13 @@ export default function ForwardButton(props) {
       console.log("Added");
     } 
     else {
-      props.setForwardVisible(true);
+      if (!(props.visibleSections === props.content.length - 1)) // make visible if it isn't the last section of the page
+        props.setForwardVisible(true);
     }
   }
 
   useEffect(() => {
-    let forwardSection = setInterval(() => addVisibleText(), 1000);
+    let forwardSection = setInterval(() => addVisibleText(), props.currentVisibleText === 0 ? 0 : 1000);
     return () =>{
       console.log("cleared interval");
       clearInterval(forwardSection);
@@ -44,8 +46,17 @@ export default function ForwardButton(props) {
     } 
     else 
     {
+      if (props.currentVisibleText === 0) {
+        const section = props.content[props.visibleSections];
+        /* scrollTo configuration options:
+          - smooth: animates the scrolling with smooth movement
+          - offset: scroll additional px (like padding), so that we can see the content under the navbar
+          - duration: total duration of the scroll animation
+        */
+        scroll.scrollTo((section.post ? section.post.header : section.followups[0].question), {smooth:true, offset:-100, duration: 500});
+      }
       if (props.currentVisibleText < currentLength) {
-      props.setCurrentVisibleText(props.currentVisibleText + 1);
+        props.setCurrentVisibleText(props.currentVisibleText + 1);
     }
   }
   }

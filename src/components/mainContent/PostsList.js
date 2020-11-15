@@ -4,8 +4,6 @@ import CommentSection from "../comments/CommentSection";
 import ForwardButton from "./ForwardButton";
 import "./mainContent.css";
 export default function PostsList(props) {
-  
-
   /*This function takes the list of post/followups, takes all the previousSections that are already loaded,
   and makes them show all their text*/
   let completedContent = props.content
@@ -75,7 +73,6 @@ export default function PostsList(props) {
           setVisibleSections={props.setVisibleSections}
           currentVisibleText={props.currentVisibleText}
           setCurrentVisibleText={props.setCurrentVisibleText}
-
         />
       </div>
     </div>
