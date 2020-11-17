@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter, Link } from 'react-router-dom';
 import teachLogo from "../../assets/teachla-logo.svg";
 import "../../AppMain.css";
 import "../../index.css";
@@ -21,13 +22,15 @@ export default function NavBar(props) {
         {dropdownOpen && (
           <div class="dropdown">
             <div class="dropdown-content">
-              <a href="#">Landing Page</a>
-              <a href="#">About Us</a>
-              <a href="#">Case Study #1</a>
-              <a href="#">Case Study #2</a>
-              <a href="#">Case Study #3</a>
-              <a href="#">Conclusion</a>
-              <a href="#">Resources</a>
+              <BrowserRouter>
+                <Link to='/' >Landing Page</Link>
+                <Link to='/'>About Us</Link>
+                <Link to='/'>Case Study #1</Link>
+                <Link to='/'>Case Study #2</Link>
+                <Link to='/'>Case Study #3</Link>
+                <Link to='/'>Conclusion</Link>
+                <Link to='/'>Resources</Link>
+              </BrowserRouter>
             </div>
           </div>
         )}
