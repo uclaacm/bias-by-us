@@ -1,6 +1,5 @@
 .dropdown {
-  position: relative;
-  display: inline-block;
+  position: absolute;
   width: 100%;
   height: 450px;
 }
@@ -18,7 +17,7 @@
   text-align: center;
   /* These numbers align the dropdown with the button right in the middle. 
      TODO: Fix numbers when implementing a responsive design*/
-  top: 46px;
+  top: 27px;
   left: -63px;
 }
 
