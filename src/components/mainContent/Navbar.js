@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import teachLogo from "../../assets/teachla-logo.svg";
 import "../../AppMain.css";
 import "../../index.css";
+import './Navbar.css';
 
 export default function NavBar(props) {
   // dropdownOpen: boolean variable for whether the dropdown menu is open or closed
@@ -15,10 +17,22 @@ export default function NavBar(props) {
   // dropdownArea: arrow function that returns the apporpriate button (and dropdown menu if applicable) depending on whether dropdownOpen is true/false
   const dropdownArea = () => {
     return (
-      <button className="button" onClick={dropdownHandler}>
+      <button className="button" aria-label="Navigation Bar Button" onClick={dropdownHandler}>
         <div className={`triangle ${dropdownOpen ? "up" : ""}`}></div>
         {dropdownOpen && (
-          <div className="dropdown-placeholder">dropdown menu</div>
+          <div class="dropdown">
+            <div class="dropdown-content">
+              <nav>
+                  <Link to='/'>Landing Page</Link>
+                  <Link to='/'>About Us</Link>
+                  <Link to='/'>Case Study #1</Link>
+                  <Link to='/'>Case Study #2</Link>
+                  <Link to='/'>Case Study #3</Link>
+                  <Link to='/'>Conclusion</Link>
+                  <Link to='/'>Resources</Link>
+              </nav>
+            </div>
+          </div>
         )}
       </button>
     );
