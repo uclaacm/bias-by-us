@@ -50,7 +50,7 @@
   border: none;
   position: relative;
   margin-left: auto;
-  margin-right: 4.375rem;
+  margin-right: 70px;
   display: inline-block;
 }
 .button:focus {
@@ -68,7 +68,7 @@
 }
 .up {
   transform: rotate(180deg);
-  top: -0.0625rem;
+  top: -1px;
 }
 
 .posts {
@@ -78,13 +78,13 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  margin: 80px auto 0 160px;
+  margin: 5rem auto 0 160px;
   z-index: 0;
 }
 
 .progress-bar {
   position: fixed;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   margin-left: 55px;
   background-color: white;
   color: black;
@@ -99,16 +99,6 @@
   padding: 30px 0;
 }
 
-.direction-buttons {
-  position: fixed;
-  margin-top: 13.5rem;
-  right: 2.4rem;
-  background-color: white;
-  color: black;
-  width: 9.4%;
-  height: 30%;
-  max-width: 8.438rem;
-  max-height: 30rem;
-  z-index: 4;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+button:focus {
+  outline: none;
 }

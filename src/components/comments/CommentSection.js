@@ -1,25 +1,22 @@
 import React from "react";
 import Question from "./Question.js";
-import Answer from "./Answer.js";
 import "./comments.css";
 import "../mainContent/mainContent.css";
 
 export default function CommentSection(props) {
   /*The mapping function below takes each element within the followups prop array and will render it as 
 a corresponding question or answer*/
-  let allFollowups = props.followups.filter((s, index) => index !== 0).map((followup, index) => {
-    return followup.questionHeader ? (
+  let allFollowups = props.followups.filter((s, index) => index !== 0 && s.questionHeader).map((followup, index) => {
+    return (
       <Question 
         key={index} 
         questionText={followup.question} 
         questionHead={followup.questionHeader}
         pic={props.followups[0]} /* passes profilePic to Question */
-      />
-    ) : (
-      <Answer
-        key={index}
-        answerText={followup.answer}
-        pic={props.followups[0]} /* passes profilePic to Answer */
+        numAnswers={followup.numAnswers}
+
+        /* this is used to render answers to the question */
+        followups={props.followups}
       />
     );
   });

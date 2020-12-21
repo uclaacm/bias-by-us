@@ -5,24 +5,6 @@
   border-radius: 20px;
 }
 
-.direction-container {
-  position: fixed;
-  margin-top: 13.5rem;
-  right: 2.4rem;
-  background-color: #ffffff;
-  width: 9.4%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
-  border-radius: 60px;
-  max-width: 8.438rem;
-  max-height: 30rem;
-  z-index: 4;
-}
-
 .forward-container {
   display: flex;
   flex-direction: column;
@@ -60,7 +42,7 @@
 
 .progress-button {
   background: white;
-  border-radius: 2rem;
+  border-radius: 32px;
   border: none;
   padding: 0;
   width: 65px;
@@ -71,6 +53,8 @@
 }
 .no-margin {
   margin: 0;
+  width: 65px;
+  height: 65px;
 }
 .gray {
   opacity: 0.5;

@@ -1,19 +1,19 @@
 .profile-pic {
   float: left;
-  width: 65px;
-  height: 65px;
+  width: 4.0625rem;
+  height: 4.0625rem;
   margin-left: 15px;
   margin-top: 5px;
-  border-radius: 2rem;
+  border-radius: 32px;
 }
 
 .post-container {
   border-radius: 0px 25px 0px 0px;
-  margin-top: 3rem;
+  margin-top: 48px;
 }
 
 .post-header {
-  margin-left: 100px;
+  margin-left: 6.25rem;
   font-size: 1.875rem;
   position: relative;
   top: 5px;
@@ -21,7 +21,7 @@
 }
 
 .post-subheader {
-  margin-left: 98px;
+  margin-left: 6.125rem;
   color: #606060;
 }
 .post-body-text {

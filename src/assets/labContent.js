@@ -15,7 +15,7 @@ export default [
     post: {
       profilePic: facebookLogo,
       header: "Introduction",
-      subheader: "What Did Facebook Do?",
+      subheader: "What did Facebook do?",
       bodyText: [
         {
           body: `In 2019, the U.S. Department of Housing and Urban development sued Facebook for steering ads toward subsets of the population through an automated image classification mechanism.`
@@ -68,14 +68,16 @@ export default [
       },
       {
         questionHeader: `Reflection Question 1:`,
-        question: `What are some things that you notice about other people when you meet them for the first time?`
+        question: `What are some things that you notice about other people when you meet them for the first time?`,
+        numAnswers: 1
       },
       {
-        answer: `Studies show that we take note of one thing: we immediately try to figure out if someone is a threat to us, and we analyze their facial features to distinguish friend from foe`
+        answer: `Studies show that we take note of one thing: we immediately try to figure out if someone is a threat to us, and we analyze their facial features to distinguish friend from foe.`
       },
       {
         questionHeader: `Reflection Question 2:`,
-        question: `Are we born with stereotypes of others, or are they something we learn over time?`
+        question: `Are we born with stereotypes of others, or are they something we learn over time?`,
+        numAnswers: 0
       },
     ],
   },
@@ -106,11 +108,13 @@ export default [
       },
       {
         questionHeader: `Reflection Question 1:`,
-        question: `What was running through your mind when you were trying to classify people by what job they have?`
+        question: `What was running through your mind when you were trying to classify people by what job they have?`,
+        numAnswers: 0
       },
       {
         questionHeader: `Reflection Question 2:`,
-        question: `What causes us to have these perceptions of other people? Experience, the media, etc?`
+        question: `What causes us to have these perceptions of other people? Experience, the media, etc?`,
+        numAnswers: 0
       },
     ],
   },
@@ -146,7 +150,8 @@ export default [
       },
       {
         questionHeader: `Reflection Question 1:`,
-        question: `What are the pros and cons of personalizing ads in this way?`
+        question: `What are the pros and cons of personalizing ads in this way?`,
+        numAnswers: 2
       },
       {
         answer: `<b>In some cases, personalizing ads is beneficial.</b> For example, sports teams fans would probably want to buy merch for the teams that they are interested in as opposed to any random team, so personalization can help to give ads relevant to the user.`
@@ -156,11 +161,13 @@ export default [
       },
       {
         questionHeader: `Reflection Question 2:`,
-        question: `Would you prefer to have ads relevant to you and your interests or have ads that cover a diverse list of interests?`
+        question: `Would you prefer to have ads relevant to you and your interests or have ads that cover a diverse list of interests?`,
+        numAnswers: 0
       },
       {
         questionHeader: `Reflection Question 3:`,
-        question: `How does discrimination law justify or limit the personalization of ads?`
+        question: `How does discrimination law justify or limit the personalization of ads?`,
+        numAnswers: 3
       },
       {
         answer: `According to law, <b>discrimination</b> is defined as the treatment, consideration, or distinction in favor of or against a person based on the group or class that they belong to rather than on individual merit.`
@@ -212,21 +219,24 @@ export default [
       },
       {
         questionHeader: `Reflection Question 1:`,
-        question: `What caused Facebook's machine learning algorithm to learn and spread biases?`
+        question: `What causes advertising algorithms to learn and spread biases?`,
+        numAnswers: 2
       },
       {
-        answer: `The data that the algorithm was trained on was a <b>skewed sample</b> that reflects our society's biases. Training on such data will cause a <b>feedback loop</b>, which compounds the initial bias over time.`
+        answer: `The data that the algorithm was trained on may be a <b>skewed sample</b> that reflects our society's biases. Training on such data will cause a <b>feedback loop</b>, which compounds the initial bias over time.`
       },
       {
         answer: `<b>Here's how it works:</b> The algorithm observes from the data that people of color (POC) tend to buy cheaper homes on average than non-POC. It then advertises cheaper listings to POC and more expensive listings to non-POC in order to maximize ad views. Naturally, the cheaper housing ads gain more traction by POC accounts simply because that is all they were exposed to. However, the algorithm comes to believe that POC prefer cheaper homes and continues to advertise more and more cheap listings. Because of this, <b>POC would gain less and less opportunities to buy a more expensive house, worsening the initial disparity in housing choices that was observed from the data.</b>`
       },
       {
         questionHeader: `Reflection Question 2:`,
-        question: `How might ads affect how people perceive themselves and each other in society?`
+        question: `How might ads affect how people perceive themselves and each other in society?`,
+        numAnswers: 0
       },
       {
         questionHeader: `Reflection Question 3:`,
-        question: `What are some other harmful effects of stereotypes at play currently?`
+        question: `What are some other harmful effects of stereotypes at play currently?`,
+        numAnswers: 0
       },
     ],
   },
@@ -274,7 +284,8 @@ export default [
       },
       {
         questionHeader: `Links to sources:`,
-        question: `Where can I find additional information on this topic?`
+        question: `Where can I find additional information on this topic?`,
+        numAnswers: 2
       },
       {
         answer: `<a href='https://www.technologyreview.com/2019/04/05/1175/facebook-algorithm-discriminates-ai-bias/'>MIT Technology Review article - Facebook's ad-serving algorithm discriminates by gender and race</a>`,

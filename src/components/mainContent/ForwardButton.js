@@ -8,7 +8,7 @@ export default function ForwardButton(props) {
   let currentSection = props.content[props.visibleSections];
   let currentLength= (currentSection.post) ?
   currentSection.post.bodyText.length
-  : currentSection.followups.length;
+  : currentSection.followups.length - currentSection.followups.filter((s, i) => s.answer || s.profilePic).length;
 
 
   function addVisibleText() {
@@ -23,7 +23,7 @@ export default function ForwardButton(props) {
   }
 
   useEffect(() => {
-    let forwardSection = setInterval(() => addVisibleText(), props.currentVisibleText === 0 ? 0 : 400); /* fade in animation will be added later */
+    let forwardSection = setInterval(() => addVisibleText(), props.currentVisibleText === 0 ? 0 : 300); /* fade in animation will be added later */
     return () =>{
       console.log("cleared interval");
       clearInterval(forwardSection);

@@ -1,8 +1,9 @@
 .comments-container {
-  border-radius: 0 0 1.25rem 1.25rem;
+  border-radius: 0 0 20px 20px;
   padding-top: 5px;
   position: relative;
-  top: -1rem;
+  top: -16px;
+  margin-bottom: -16px;
 }
 
 .comment-bubble {
@@ -10,7 +11,7 @@
   border-radius: 25px;
   width: 815px;
   padding: 15px 30px;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   display: flex;
   flex-direction: column;
 }
@@ -23,9 +24,9 @@
 }
 
 .comment-profile-pic {
-  width: 65px;
-  height: 65px;
-  border-radius: 2rem;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  border-radius: 32px;
   margin: 0 10px 0 0;
 }
 
@@ -36,4 +37,19 @@
 
 .answer {
   margin-left: 104px;
+}
+
+.show-answer {
+  font-family: "Mulish", sans-serif;
+  color: #65676B;
+  font-weight: bold;
+  position: relative;
+  top: -25px;
+  left: 6.25rem;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+}
+.show-answer:hover {
+  text-decoration: underline;
 }
