@@ -23,7 +23,7 @@ export default function ForwardButton(props) {
   }
 
   useEffect(() => {
-    let forwardSection = setInterval(() => addVisibleText(), props.currentVisibleText === 0 ? 0 : 1000);
+    let forwardSection = setInterval(() => addVisibleText(), props.currentVisibleText === 0 ? 0 : 200);
     return () =>{
       console.log("cleared interval");
       clearInterval(forwardSection);
@@ -53,7 +53,7 @@ export default function ForwardButton(props) {
           - offset: scroll additional px (like padding), so that we can see the content under the navbar
           - duration: total duration of the scroll animation
         */
-        scroll.scrollTo((section.post ? section.post.header : section.followups[0].question), {smooth:true, offset:-100, duration: 500});
+        scroll.scrollTo((section.post ? section.post.header : section.followups[1].question), {smooth:true, offset:-100, duration: 500});
       }
       if (props.currentVisibleText < currentLength) {
         props.setCurrentVisibleText(props.currentVisibleText + 1);

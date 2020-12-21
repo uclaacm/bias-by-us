@@ -27,7 +27,7 @@ a corresponding question or answer*/
   /* Only rendering the ones that should be visible at that current moment*/
   let visibleFollowups = allFollowups.slice(0, props.currentVisibleText);
   return (
-    <div className="comments-container content-container " id={props.followups[0].question}>
+    <div className="comments-container content-container " id={props.followups[1].question}>
       <hr className="divider" />
       {visibleFollowups}
     </div>
