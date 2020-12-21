@@ -12,8 +12,8 @@ function PostHeader(props) {
       />
       <div className="post-header text-bold ">{props.header}</div>
 
-      <div className="post-subheader body-text text-bold ">
-        {props.subheader}
+      <div className="post-subheader body-text">
+        <i>{props.subheader}</i>
       </div>
     </div>
   );

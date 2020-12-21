@@ -17,7 +17,7 @@
   text-align: center;
   /* These numbers align the dropdown with the button right in the middle. 
      TODO: Fix numbers when implementing a responsive design*/
-  top: 27px;
+  top: 32px;
   left: -63px;
 }
 

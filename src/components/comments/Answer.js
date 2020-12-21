@@ -1,14 +1,18 @@
 import React from "react";
 import "../mainContent/mainContent.css";
+import "./comments.css";
 export default function Answer(props) {
   return (
-    <div className="answer-bubble comment-bubble ">
-      {/* Puts the answer header and answer together within the same bubble
-      I think having either only answerText or answerHeaderText for Answer components 
-      can make it so that our answers can have just bold text or just unbolded text, what 
-      issues can we run into down the line using this approach?*/}
-      <div className="body-text text-bold">{props.answerHeaderText}</div>
-      <div className="body-text">{props.answerText}</div>
+    <div className="single-comment-container answer">
+      <img
+        className="comment-profile-pic"
+        src={props.pic.profilePic}
+        alt="An icon that matches up with the post"
+      />
+      <div className="comment-bubble ">
+        <div className="body-text text-bold">{props.answerHeaderText}</div>
+        <div className="body-text" dangerouslySetInnerHTML={{ __html: props.answerText}}></div>
+      </div>
     </div>
   );
 }

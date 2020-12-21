@@ -8,19 +8,32 @@
 .comment-bubble {
   background-color: #eef0f1;
   border-radius: 25px;
-  width: 80%;
-  padding: 10px;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  box-shadow:0 3px 4px 0 gray;
+  width: 815px;
+  padding: 15px 30px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.answer-bubble {
-  margin-left: 20%;
-  margin-right: 1.5%;
-  width: 75%;
+.divider {
+  margin-bottom: 30px;
+  border: none;
+  height: 1px;
+  background-color: #CCCCCC;
 }
-.question {
-  margin-left: 1.5%;
-  color: #4267b2;
+
+.comment-profile-pic {
+  width: 65px;
+  height: 65px;
+  border-radius: 2rem;
+  margin: 0 10px 0 0;
+}
+
+.single-comment-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.answer {
+  margin-left: 104px;
 }

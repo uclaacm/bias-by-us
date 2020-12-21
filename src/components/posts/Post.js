@@ -16,9 +16,7 @@ export default function Post(props) {
         bodyText={props.postContent.bodyText}
         currentVisibleText={props.currentVisibleText}
         setCurrentVisibleText={props.setCurrentVisibleText}
-
       />
-      <hr className="divider" />
     </div>
   );
 }

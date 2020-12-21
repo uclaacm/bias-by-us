@@ -23,7 +23,7 @@ export default function PostsList(props) {
         );
       }
       else if (section.followups)
-          return <CommentSection key={index} followups={section.followups} />;
+          return <CommentSection key={index} followups={section.followups}/>;
       return "";
       
     });

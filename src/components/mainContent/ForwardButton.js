@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./mainContent.css";
-import arrows from "../../assets/upArrow.svg";
+import "../../AppMain.css";
 import {scroller as scroll} from "react-scroll";
 
 export default function ForwardButton(props) {
@@ -63,12 +63,8 @@ export default function ForwardButton(props) {
 
   return (
     <div className="forward-container">
-      <button className="nav-button forward-button" onClick={handleForward}>
-        <img
-          className="button-image forward-image"
-          src={arrows}
-          alt="Down arrow to go forwards in Case Study"
-        />
+      <button className="forward-button" onClick={handleForward}>
+        <div className="triangle light"></div>
       </button>
     </div>
   );
