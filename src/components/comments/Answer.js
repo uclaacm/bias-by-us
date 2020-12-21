@@ -12,6 +12,9 @@ export default function Answer(props) {
       <div className="comment-bubble ">
         <div className="body-text text-bold">{props.answerHeaderText}</div>
         <div className="body-text" dangerouslySetInnerHTML={{ __html: props.answerText}}></div>
+        {/* dangerouslySetInnerHTML allows json strings to be interpreted as html. 
+        This is done so that certain segments of the string can be bolded. 
+        dangerouslySetInnerHTML cannot be used for posts because React components for interactive portions cannot be interpreted properly.*/}
       </div>
     </div>
   );

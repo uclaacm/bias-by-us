@@ -23,7 +23,7 @@ export default function ForwardButton(props) {
   }
 
   useEffect(() => {
-    let forwardSection = setInterval(() => addVisibleText(), props.currentVisibleText === 0 ? 0 : 200);
+    let forwardSection = setInterval(() => addVisibleText(), props.currentVisibleText === 0 ? 0 : 400); /* fade in animation will be added later */
     return () =>{
       console.log("cleared interval");
       clearInterval(forwardSection);
@@ -54,6 +54,7 @@ export default function ForwardButton(props) {
           - duration: total duration of the scroll animation
         */
         scroll.scrollTo((section.post ? section.post.header : section.followups[1].question), {smooth:true, offset:-100, duration: 500});
+        /* section.post.header and section.fllowups[1].question are unique id values that will let the react scroller to know where to scroll to */
       }
       if (props.currentVisibleText < currentLength) {
         props.setCurrentVisibleText(props.currentVisibleText + 1);

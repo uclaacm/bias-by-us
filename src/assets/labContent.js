@@ -277,8 +277,10 @@ export default [
         question: `Where can I find additional information on this topic?`
       },
       {
-        answer: `<a href='https://www.technologyreview.com/2019/04/05/1175/facebook-algorithm-discriminates-ai-bias/'>link to article</a><br/>
-        <a href='https://arxiv.org/pdf/1904.02095.pdf'>link to research paper</a>`,
+        answer: `<a href='https://www.technologyreview.com/2019/04/05/1175/facebook-algorithm-discriminates-ai-bias/'>MIT Technology Review article - Facebook's ad-serving algorithm discriminates by gender and race</a>`,
+      },
+      {
+        answer: `<a href='https://arxiv.org/pdf/1904.02095.pdf'>Research Paper - Discrimination through optimization: How Facebook's ad delivery can lead to skewed outcomes</a>`
       },
     ],
   },
