@@ -17,7 +17,7 @@ export default function ProgressBar(props) {
                    - duration: total duration of the scroll animation
                 */
                 <Link activeClass="active" to={section.post.header} smooth={true} offset={-100} duration={500} className='progress-button'>
-                    <img className={`profile-pic no-margin ${props.content.indexOf(section) > props.visibleSections ? "gray" : ""}`} src={section.post.profilePic} alt={`shortcut: ${section.post.header}`}/>
+                    <img className={`profile-pic no-margin static-size ${props.content.indexOf(section) > props.visibleSections ? "gray" : ""}`} src={section.post.profilePic} alt={`shortcut: ${section.post.header}`}/>
                 </Link>
             );
         });

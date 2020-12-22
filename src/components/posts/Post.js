@@ -11,6 +11,7 @@ export default function Post(props) {
         header={props.postContent.header}
         subheader={props.postContent.subheader}
         profilePic={props.postContent.profilePic}
+        profilePicName={props.postContent.profilePicName}
       />
       <PostText
         bodyText={props.postContent.bodyText}

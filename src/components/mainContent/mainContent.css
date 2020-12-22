@@ -53,6 +53,8 @@
 }
 .no-margin {
   margin: 0;
+}
+.static-size {
   width: 65px;
   height: 65px;
 }
@@ -62,7 +64,8 @@
   filter: grayscale(1);
 }
 
-.light {
+/* for the triangle inside ForwardButton, since the triangle is blue by default due to the Navbar button */
+.white {
   border-top: 22px solid #eef0f1;
   left: 0px;
   top: 2px;

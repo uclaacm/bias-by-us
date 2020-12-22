@@ -14,6 +14,7 @@ export default [
   {
     post: {
       profilePic: facebookLogo,
+      profilePicName: "Profile Picture - Facebook logo",
       header: "Introduction",
       subheader: "What did Facebook do?",
       bodyText: [
@@ -35,9 +36,10 @@ export default [
   },
   {
     post: {
-      header: "Classifying Peopple",
+      header: "Classifying People",
       subheader: "Why do we, as humans, divide one another into groups?",
       profilePic: classifyingPic,
+      profilePicName: "Profile Picutre - a circle of people",
       bodyText: [
         {
           body: `No two people in the world are exactly alike.`
@@ -62,24 +64,24 @@ export default [
     },
   },
   {
-    followups: [
-      {
-        profilePic: classifyingPic
-      },
-      {
-        questionHeader: `Reflection Question 1:`,
-        question: `What are some things that you notice about other people when you meet them for the first time?`,
-        numAnswers: 1
-      },
-      {
-        answer: `Studies show that we take note of one thing: we immediately try to figure out if someone is a threat to us, and we analyze their facial features to distinguish friend from foe.`
-      },
-      {
-        questionHeader: `Reflection Question 2:`,
-        question: `Are we born with stereotypes of others, or are they something we learn over time?`,
-        numAnswers: 0
-      },
-    ],
+    commentSection: {
+      profilePic: classifyingPic,
+      profilePicName: "Profile Picture - a circle of people",
+      followups: [
+        {
+          questionHeader: `Reflection Question 1:`,
+          question: `What are some things that you notice about other people when you meet them for the first time?`,
+          answers: [
+            <text>Studies show that we take note of one thing: we immediately try to figure out if someone is a threat to us, and we analyze their facial features to distinguish friend from foe.</text>
+          ]
+        },
+        {
+          questionHeader: `Reflection Question 2:`,
+          question: `Are we born with stereotypes of others, or are they something we learn over time?`,
+          answers: []
+        },
+      ],
+    }
   },
   
   {
@@ -87,6 +89,7 @@ export default [
       header: "The Stereotypes We Hold",
       subheader: "What exepctations and preconceptions do we hold for different groups of people?",
       profilePic: stereotypesPic,
+      profilePicName: "Profile Picture - man with thought bubble",
       bodyText: [
         {
           body: `From a young age, we begin creating personal stereotypes by picking up on patterns in our world and try to fit people into the modls we create in our heads.`
@@ -102,25 +105,27 @@ export default [
     },
   },
   {
-    followups: [
-      {
-        profilePic: stereotypesPic
-      },
-      {
-        questionHeader: `Reflection Question 1:`,
-        question: `What was running through your mind when you were trying to classify people by what job they have?`,
-        numAnswers: 0
-      },
-      {
-        questionHeader: `Reflection Question 2:`,
-        question: `What causes us to have these perceptions of other people? Experience, the media, etc?`,
-        numAnswers: 0
-      },
-    ],
+    commentSection: {
+      profilePic: stereotypesPic,
+      profilePicName: "Profile Picture - man with thought bubble",
+      followups: [
+        {
+          questionHeader: `Reflection Question 1:`,
+          question: `What was running through your mind when you were trying to classify people by what job they have?`,
+          answers: []
+        },
+        {
+          questionHeader: `Reflection Question 2:`,
+          question: `What causes us to have these perceptions of other people? Experience, the media, etc?`,
+          answers: []
+        },
+      ],
+    }
   },
   {
     post: {
       profilePic: adsPic,
+      profilePicName: "Profile Picture - Facebook and its users",
       header: "Stereotypes Within Personalized Advertising",
       subheader: "How do algorithms respond to stereotypical trends within data?",
       bodyText: [
@@ -144,45 +149,39 @@ export default [
     },
   },
   {
-    followups: [
-      {
-        profilePic: adsPic
-      },
-      {
-        questionHeader: `Reflection Question 1:`,
-        question: `What are the pros and cons of personalizing ads in this way?`,
-        numAnswers: 2
-      },
-      {
-        answer: `<b>In some cases, personalizing ads is beneficial.</b> For example, sports teams fans would probably want to buy merch for the teams that they are interested in as opposed to any random team, so personalization can help to give ads relevant to the user.`
-      },
-      {
-        answer: `<b>In other cases, personalizing ads will promote unfairness.</b> For example, if the optimized algorithm observes that men are more likely to respond to software engineer roles, a femaile software engineer would be much less likely to encounter advertisements related to her career.`
-      },
-      {
-        questionHeader: `Reflection Question 2:`,
-        question: `Would you prefer to have ads relevant to you and your interests or have ads that cover a diverse list of interests?`,
-        numAnswers: 0
-      },
-      {
-        questionHeader: `Reflection Question 3:`,
-        question: `How does discrimination law justify or limit the personalization of ads?`,
-        numAnswers: 3
-      },
-      {
-        answer: `According to law, <b>discrimination</b> is defined as the treatment, consideration, or distinction in favor of or against a person based on the group or class that they belong to rather than on individual merit.`
-      },
-      {
-        answer: `<b>Legally protected classes</b> include race, color, sex, religion, national origin, citizenship, age, pregnancy, familial status, disability status, veteran status, and genetic information.`
-      },
-      {
-        answer: `<b>Discrimination law is not only limited to the final decision made (i.e) hiring decision) but also extend to marketing and advertising.</b> If advertising only to a certain demographic can <b>affect other groups’ access to opportunities that affect their life chances</b> (such as their job, money, house, education, or health), then that action is considered discriminatory.`
-      },
-    ],
+    commentSection: {
+      profilePic: adsPic,
+      profilePicName: "Profile Picture - Facebook and its users",
+      followups: [
+        {
+          questionHeader: `Reflection Question 1:`,
+          question: `What are the pros and cons of personalizing ads in this way?`,
+          answers: [
+            <text><b>In some cases, personalizing ads is beneficial.</b> For example, sports teams fans would probably want to buy merch for the teams that they are interested in as opposed to any random team, so personalization can help to give ads relevant to the user.</text>,
+            <text><b>In other cases, personalizing ads will promote unfairness.</b> For example, if the optimized algorithm observes that men are more likely to respond to software engineer roles, a femaile software engineer would be much less likely to encounter advertisements related to her career.</text>
+          ]
+        },
+        {
+          questionHeader: `Reflection Question 2:`,
+          question: `Would you prefer to have ads relevant to you and your interests or have ads that cover a diverse list of interests?`,
+          answers: []
+        },
+        {
+          questionHeader: `Reflection Question 3:`,
+          question: `How does discrimination law justify or limit the personalization of ads?`,
+          answers: [
+            <text>According to law, <b>discrimination</b> is defined as the treatment, consideration, or distinction in favor of or against a person based on the group or class that they belong to rather than on individual merit.</text>,
+            <text><b>Legally protected classes</b> include race, color, sex, religion, national origin, citizenship, age, pregnancy, familial status, disability status, veteran status, and genetic information.</text>,
+            <text><b>Discrimination law is not only limited to the final decision made (i.e) hiring decision) but also extend to marketing and advertising.</b> If advertising only to a certain demographic can <b>affect other groups’ access to opportunities that affect their life chances</b> (such as their job, money, house, education, or health), then that action is considered discriminatory</text>
+          ]
+        },
+      ],
+    }
   },
   {
     post: {
       profilePic: trendsPic,
+      profilePicName: "Profile Picture - arrows indicating upward trend",
       header: "The Influence of Targeted Advertising on Societal Trends",
       subheader: "How deep do the effect of advertisements run in society itself?",
       bodyText: [
@@ -213,36 +212,35 @@ export default [
     },
   },
   {
-    followups: [
-      {
-        profilePic: trendsPic
-      },
-      {
-        questionHeader: `Reflection Question 1:`,
-        question: `What causes advertising algorithms to learn and spread biases?`,
-        numAnswers: 2
-      },
-      {
-        answer: `The data that the algorithm was trained on may be a <b>skewed sample</b> that reflects our society's biases. Training on such data will cause a <b>feedback loop</b>, which compounds the initial bias over time.`
-      },
-      {
-        answer: `<b>Here's how it works:</b> The algorithm observes from the data that people of color (POC) tend to buy cheaper homes on average than non-POC. It then advertises cheaper listings to POC and more expensive listings to non-POC in order to maximize ad views. Naturally, the cheaper housing ads gain more traction by POC accounts simply because that is all they were exposed to. However, the algorithm comes to believe that POC prefer cheaper homes and continues to advertise more and more cheap listings. Because of this, <b>POC would gain less and less opportunities to buy a more expensive house, worsening the initial disparity in housing choices that was observed from the data.</b>`
-      },
-      {
-        questionHeader: `Reflection Question 2:`,
-        question: `How might ads affect how people perceive themselves and each other in society?`,
-        numAnswers: 0
-      },
-      {
-        questionHeader: `Reflection Question 3:`,
-        question: `What are some other harmful effects of stereotypes at play currently?`,
-        numAnswers: 0
-      },
-    ],
+    commentSection: {
+      profilePic: trendsPic,
+      profilePicName: "Profile Picture - arrows indicating upward trend",
+      followups: [
+        {
+          questionHeader: `Reflection Question 1:`,
+          question: `What causes advertising algorithms to learn and spread biases?`,
+          answers: [
+            <text>The data that the algorithm was trained on may be a <b>skewed sample</b> that reflects our society's biases. Training on such data will cause a <b>feedback loop</b>, which compounds the initial bias over time.</text>,
+            <text><b>Here's how it works:</b> The algorithm observes from the data that people of color (POC) tend to buy cheaper homes on average than non-POC. It then advertises cheaper listings to POC and more expensive listings to non-POC in order to maximize ad views. Naturally, the cheaper housing ads gain more traction by POC accounts simply because that is all they were exposed to. However, the algorithm comes to believe that POC prefer cheaper homes and continues to advertise more and more cheap listings. Because of this, <b>POC would gain less and less opportunities to buy a more expensive house, worsening the initial disparity in housing choices that was observed from the data.</b></text>
+          ]
+        },
+        {
+          questionHeader: `Reflection Question 2:`,
+          question: `How might ads affect how people perceive themselves and each other in society?`,
+          answers: []
+        },
+        {
+          questionHeader: `Reflection Question 3:`,
+          question: `What are some other harmful effects of stereotypes at play currently?`,
+          answers: []
+        },
+      ],
+    }
   },
   {
     post: {
       profilePic: insightPic,
+      profilePicName: "Profile Picture - lightbulb",
       header: "Conclusion",
       subheader: "How should we fix this problem?",
       bodyText: [
@@ -278,21 +276,19 @@ export default [
     },
   },
   {
-    followups: [
-      {
-        profilePic: insightPic
-      },
-      {
-        questionHeader: `Links to sources:`,
-        question: `Where can I find additional information on this topic?`,
-        numAnswers: 2
-      },
-      {
-        answer: `<a href='https://www.technologyreview.com/2019/04/05/1175/facebook-algorithm-discriminates-ai-bias/'>MIT Technology Review article - Facebook's ad-serving algorithm discriminates by gender and race</a>`,
-      },
-      {
-        answer: `<a href='https://arxiv.org/pdf/1904.02095.pdf'>Research Paper - Discrimination through optimization: How Facebook's ad delivery can lead to skewed outcomes</a>`
-      },
-    ],
+    commentSection: {
+      profilePic: insightPic,
+      profilePicName: "Profile Picture - lightbulb",
+      followups: [
+        {
+          questionHeader: `Links to sources:`,
+          question: `Where can I find additional information on this topic?`,
+          answers: [
+            <a href='https://www.technologyreview.com/2019/04/05/1175/facebook-algorithm-discriminates-ai-bias/'>MIT Technology Review article - Facebook's ad-serving algorithm discriminates by gender and race</a>,
+            <a href='https://arxiv.org/pdf/1904.02095.pdf'>Research Paper - Discrimination through optimization: How Facebook's ad delivery can lead to skewed outcomes</a>
+          ]
+        },
+      ],
+    }
   },
 ];

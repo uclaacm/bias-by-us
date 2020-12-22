@@ -35,3 +35,7 @@
 .gray-text {
   color: #606060;
 }
+
+.text-italic {
+  font-style: italic;
+}
