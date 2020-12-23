@@ -5,19 +5,18 @@
 }
 
 .dropdown-content {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0 0 10px 10px;
   display: none;
   position: absolute;
   background-color: #f7f7f7;
   /* FIXME: Possible magic number issue in the future when implementing a responsive design */
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px #898F9C;
+  min-width: 180px;
+  box-shadow: 0px 4px 8px 0px #898F9C;
   z-index: 1;
   text-align: center;
   /* These numbers align the dropdown with the button right in the middle. 
      TODO: Fix numbers when implementing a responsive design*/
-  top: 27px;
+  top: 2rem;
   left: -63px;
 }
 

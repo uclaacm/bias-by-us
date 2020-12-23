@@ -22,8 +22,14 @@ export default function PostsList(props) {
           />
         );
       }
-      else if (section.followups)
-          return <CommentSection key={index} followups={section.followups} />;
+      else if (section.commentSection)
+          return (
+            <CommentSection 
+              key={index} 
+              commentSection={section.commentSection}
+              address={section.commentSection.followups[0].question}
+            />
+          );
       return "";
       
     });
@@ -46,11 +52,12 @@ export default function PostsList(props) {
         );
       }
 
-      else if (section.followups){
+      else if (section.commentSection){
         return (
           <CommentSection
             key={index}
-            followups={section.followups}
+            commentSection={section.commentSection}
+            address={section.commentSection.followups[0].question}
             currentVisibleText={props.currentVisibleText}
             setCurrentVisibleText={props.setCurrentVisibleText}
           />

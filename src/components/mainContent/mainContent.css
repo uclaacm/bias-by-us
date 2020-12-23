@@ -1,27 +1,8 @@
 .content-container {
   background-color: white;
-  max-width: 1000px;
-  padding: 1.25rem;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  border-radius: 1.25rem;
-}
-
-.direction-container {
-  position: fixed;
-  margin-top: 13.5rem;
-  right: 2.4rem;
-  background-color: #ffffff;
-  width: 9.4%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
-  border-radius: 60px;
-  max-width: 8.438rem;
-  max-height: 30rem;
-  z-index: 4;
+  width: 1110px;
+  padding: 25px 25px 10px 25px;
+  border-radius: 20px;
 }
 
 .forward-container {
@@ -29,26 +10,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  margin-top: 100px;
+  margin-top: 40px;
   z-index: 4;
 }
 
-.button-image {
-  z-index: 3;
-  height: 80%;
-}
-
-.forward-image {
-  transform: rotate(180deg);
-}
 .body-text {
   font-size: 1.5rem;
-  line-height: 1.875rem;
 }
 
-.nav-button {
-  height: 80px;
-  width: 80px;
+.forward-button {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #4267b2;
   border-width: 0px;
@@ -56,10 +28,6 @@
   justify-content: center;
   align-items: center;
 }
-.backward-button:active {
-  transform: translateY(-5px);
-}
-
 .forward-button:active {
   transform: translateY(5px);
 }
@@ -74,7 +42,7 @@
 
 .progress-button {
   background: white;
-  border-radius: 2rem;
+  border-radius: 32px;
   border: none;
   padding: 0;
   width: 65px;
@@ -86,8 +54,20 @@
 .no-margin {
   margin: 0;
 }
+.static-size {
+  width: 65px;
+  height: 65px;
+}
 .gray {
   opacity: 0.5;
   filter: alpha(opacity=40);
   filter: grayscale(1);
 }
+
+/* for the triangle inside ForwardButton, since the triangle is blue by default due to the Navbar button */
+.white {
+  border-top: 22px solid #eef0f1;
+  left: 0px;
+  top: 2px;
+}
+

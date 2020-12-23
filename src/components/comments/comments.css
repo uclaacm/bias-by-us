@@ -1,26 +1,55 @@
 .comments-container {
-  border-radius: 0 0 1.25rem 1.25rem;
+  border-radius: 0 0 20px 20px;
   padding-top: 5px;
   position: relative;
-  top: -1rem;
+  top: -16px;
+  margin-bottom: -16px;
 }
 
 .comment-bubble {
   background-color: #eef0f1;
   border-radius: 25px;
-  width: 80%;
-  padding: 10px;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  box-shadow:0 3px 4px 0 gray;
+  width: 815px;
+  padding: 15px 30px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
-.answer-bubble {
-  margin-left: 20%;
-  margin-right: 1.5%;
-  width: 75%;
+.divider {
+  margin-bottom: 30px;
+  border: none;
+  height: 1px;
+  background-color: #CCCCCC;
 }
-.question {
-  margin-left: 1.5%;
-  color: #4267b2;
+
+.comment-profile-pic {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  border-radius: 32px;
+  margin: 0 10px 0 0;
+}
+
+.single-comment-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.answer {
+  margin-left: 104px;
+}
+
+.show-answer {
+  font-family: "Mulish", sans-serif;
+  color: #65676B;
+  font-weight: bold;
+  position: relative;
+  top: -25px;
+  left: 6.25rem;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+}
+.show-answer:hover {
+  text-decoration: underline;
 }
