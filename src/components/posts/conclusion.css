@@ -16,11 +16,11 @@
     padding: 1.25rem;
 }
 
-.head {
-    font-weight: bold;
+.card-header {
+    margin: 0;
 }
 
-.img {
+.card-image {
     max-width: 300px;
     width: 18.75rem;
     align-self: center;
@@ -39,7 +39,7 @@
     outline: none;
 }
 
-.arrow {
+.card-arrow {
     width: 0;
     height: 0;
     border-left: 11px solid transparent;

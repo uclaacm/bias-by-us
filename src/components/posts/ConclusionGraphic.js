@@ -5,43 +5,38 @@ export default function ConclusionGraphic() {
 
   const [currentCard, setCurrentCard] = useState(0);
 
-  const currentCardHandler = (dir) => {
-    if (dir === "back")
-        setCurrentCard(currentCard-1);
-    else if (dir === "forward")
-        setCurrentCard(currentCard+1);
-  };
+  const nextCard = () => {
+    if (currentCard + 1 < conclusion.length)
+      setCurrentCard(currentCard + 1);
+  }
+
+  const previousCard = () => {
+    if (currentCard - 1 >= 0)
+    setCurrentCard(currentCard - 1);
+  }
 
   let buttons = () => {
     return (
         <div className="horizontal">
-            {currentCard > 0 && (
-                <button className="card-button" aria-label="Previous Solution"onClick={()=>currentCardHandler("back")}>
-                    <div className="arrow back"></div>
-                </button>
-            )}
-            {currentCard < 2 && (
-                <button className="card-button" aria-label="Next Solution"onClick={()=>currentCardHandler("forward")}>
-                    <div className="arrow"></div>
-                </button>
-            )}
+          <button className={`card-button ${currentCard === 0 ? "gray" : ""}`} aria-label="Previous Solution"onClick={previousCard}>
+              <div className="card-arrow back"></div>
+          </button>
+          <button className={`card-button ${currentCard === conclusion.length-1 ? "gray" : ""}`} aria-label="Next Solution"onClick={nextCard}>
+              <div className="card-arrow"></div>
+          </button>
         </div>
     );
   }
 
-  let content = conclusion.map((section,index) => {
-      if (index === currentCard) {
-        return (
-            <div key={index} className="card">
-                <div className="head">{section.card.head}</div>
-                <img className="img" alt={section.card.alt} src={section.card.pic}></img>
-                <div>{section.card.content}</div>
-                {buttons()}
-            </div>
-        );
-      }
-      else return "";
-  })
+  let currentSection = conclusion[currentCard];
+
+  let content = 
+    <div className="card">
+      <h4 className="card-header">{currentSection.card.head}</h4>
+      <img className="card-image" alt={currentSection.card.alt} src={currentSection.card.pic}></img>
+      <div>{currentSection.card.content}</div>
+      {buttons()}
+    </div>
 
   return (
     <div className="horizontal">
