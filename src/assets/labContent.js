@@ -4,6 +4,7 @@ then they will be their own seperate part inbetween posts and the followups.
 */
 import React from "react";
 import PlaceholderInteractive from "../components/posts/PlaceholderInteractive.js";
+import ConclusionGraphic from "../components/posts/ConclusionGraphic.js";
 import facebookLogo from "./facebookLogo.svg";
 import classifyingPic from "./classifyingPeople.svg";
 import stereotypesPic from "./stereotypes.svg";
@@ -252,25 +253,7 @@ export default [
           bold: true
         },
         {
-          body: `1. Lessening the focus on targeted advertisements at the slight cost of revenue loss.`,
-          bold: true
-        },
-        {
-          body: `Facebook has decided to rely less on trends in demographic data and more on specific qualities that the advertiser chooses to focus on. This would decrease the advertising algorithm's performance, but lessen the influence of biases within data. However, this still leaves room for the advertiser to impose their biases onto the algorithm, which leads to the next point...`
-        },
-        {
-          body: `2. Looking towards other parameters to target advertisements with.`,
-          bold: true
-        },
-        {
-          body: `Such parameters include location, interests, consumer behavior. Facebook also is choosing to prevent advertisers from selecting certain sensitive features such as race. These features are also ignored by the ad algorithm. While this won't completely prevent the algorithm from recognizing demographic trends through other parameters, it will help diminish its impact.`
-        },
-        {
-          body: `3. Introducing the "Why am I seeing this ad?" feature.`,
-          bold: true
-        },
-        {
-          body: `By increasing transparency in its ad targeting practices, Facebook forces itself to recognize and remove personalization parameters that users may view as problematic.`
+          body: <ConclusionGraphic />
         },
       ],
     },
