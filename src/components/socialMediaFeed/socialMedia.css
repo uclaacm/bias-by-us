@@ -1,0 +1,72 @@
+.ad-breakdown {
+}
+
+.divider {
+  margin-bottom: 30px;
+  border: none;
+  height: 1px;
+  background-color: #cccccc;
+}
+.social-media-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.spaced-row {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.screen-container {
+  width: 40%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 2rem black solid;
+  border-bottom-width: 4rem;
+  border-radius: 2rem;
+}
+
+.generated-profile-pic {
+  width: 150px;
+  height: 150px;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.default-button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: #eef0f1;
+}
+
+.male-button-active {
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: #3381ff;
+  color: #eef0f1;
+}
+
+.female-button-active {
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: #ff8cfb;
+  color: #494e50;
+}
+
+.white-button-active {
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: #ffffff;
+  border-color: black;
+}
+
+.black-button-active {
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: #000000;
+  color: #ffffff;
+}

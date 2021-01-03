@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./AppMain.css";
 import PostsList from "./components/mainContent/PostsList";
 import labContent from "./assets/labContent";
@@ -16,25 +16,24 @@ function CaseStudyFacebook() {
         <Navbar />
       </div>
 
-      
-      <ProgressBar 
-        content = {labContent}
-        visibleSections = {visibleSections}
-        setVisibleSections = {setVisibleSections}
-        setForwardVisible = {setForwardVisible}
-        setCurrentVisibleText = {setCurrentVisibleText}
-      />
-      
-
-      <div className="posts">
-        <PostsList 
-        content={labContent} visibleText={0} 
-        forwardVisible={forwardVisible}
-        setForwardVisible={setForwardVisible}
+      <ProgressBar
+        content={labContent}
         visibleSections={visibleSections}
         setVisibleSections={setVisibleSections}
-        currentVisibleText={currentVisibleText}
+        setForwardVisible={setForwardVisible}
         setCurrentVisibleText={setCurrentVisibleText}
+      />
+
+      <div className="posts">
+        <PostsList
+          content={labContent}
+          visibleText={0}
+          forwardVisible={forwardVisible}
+          setForwardVisible={setForwardVisible}
+          visibleSections={visibleSections}
+          setVisibleSections={setVisibleSections}
+          currentVisibleText={currentVisibleText}
+          setCurrentVisibleText={setCurrentVisibleText}
         />
       </div>
     </div>

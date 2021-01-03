@@ -1,32 +1,33 @@
 import React, { useEffect } from "react";
 import "./mainContent.css";
 import "../../AppMain.css";
-import {scroller as scroll} from "react-scroll";
+import { scroller as scroll } from "react-scroll";
 
 export default function ForwardButton(props) {
-
   let currentSection = props.content[props.visibleSections];
-  let currentLength= (currentSection.post) ?
-  currentSection.post.bodyText.length
-  : currentSection.commentSection.followups.length;
-
+  let currentLength = currentSection.post
+    ? currentSection.post.bodyText.length
+    : currentSection.commentSection.followups.length;
 
   function addVisibleText() {
     if (props.currentVisibleText < currentLength) {
       handleForward();
-    } 
-    else {
-      if (!(props.visibleSections === props.content.length - 1)) // make visible if it isn't the last section of the page
+    } else {
+      if (!(props.visibleSections === props.content.length - 1))
+        // make visible if it isn't the last section of the page
         props.setForwardVisible(true);
     }
   }
 
   useEffect(() => {
-    let forwardSection = setInterval(() => addVisibleText(), props.currentVisibleText === 0 ? 0 : 300); /* fade in animation will be added later */
-    return () =>{
+    let forwardSection = setInterval(
+      () => addVisibleText(),
+      props.currentVisibleText === 0 ? 0 : 300
+    ); /* fade in animation will be added later */
+    return () => {
       clearInterval(forwardSection);
     };
-      // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [props.visibleSections, props.currentVisibleText]);
 
   function handleForward() {
@@ -40,28 +41,35 @@ export default function ForwardButton(props) {
     ) {
       props.setVisibleSections(props.visibleSections + 1);
       props.setCurrentVisibleText(0);
-    } 
-    else 
-    {
+    } else {
       if (props.currentVisibleText === 0) {
         const section = props.content[props.visibleSections];
         /* scrollTo configuration options:
-          - smooth: animates the scrolling with smooth movement
-          - offset: scroll additional px (like padding), so that we can see the content under the navbar
-          - duration: total duration of the scroll animation
-        */
-        scroll.scrollTo((section.post ? section.post.header : section.commentSection.followups[0].question), {smooth:true, offset:-100, duration: 500});
+            - smooth: animates the scrolling with smooth movement
+            - offset: scroll additional px (like padding), so that we can see the content under the navbar
+            - duration: total duration of the scroll animation
+          */
+        scroll.scrollTo(
+          section.post
+            ? section.post.header
+            : section.commentSection.followups[0].question,
+          { smooth: true, offset: -100, duration: 500 }
+        );
         /* section.post.header and section.commentSection.followups[0].question are unique id values that will let the react scroller to know where to scroll to */
       }
       if (props.currentVisibleText < currentLength) {
         props.setCurrentVisibleText(props.currentVisibleText + 1);
+      }
     }
-  }
   }
 
   return (
     <div className="forward-container">
-      <button aria-label="Continue to next part of case study" className="forward-button" onClick={handleForward}>
+      <button
+        aria-label="Continue to next part of case study"
+        className="forward-button"
+        onClick={handleForward}
+      >
         <div className="triangle white"></div>
       </button>
     </div>
