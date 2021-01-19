@@ -15,7 +15,7 @@ export default [
       head: `2. Looking towards other parameters to target advertisements with`,
       pic: looking,
       alt: `A hand holding a magnifying glass`,
-      content: `Such parameters include location, interests, consumer behavior. Facebook also is choosing to prevent advertisers from selecting certain sensitive features such as race. These features are also ignored by the ad algorithm. While this won't completely prevent the algorithm from recognizing demographic trends through other parameters, it will help diminish its impact.`
+      content: `Such parameters include interests and consumer behavior. Facebook now also prevents housing, employment, and credit ads from being targeted by race, gender, ZIP code, or multicultural affinity, or any other protected characteristics. While this won't completely prevent the algorithm from recognizing demographic trends through other parameters, it will help diminish its impact.`
     },
   },
   {

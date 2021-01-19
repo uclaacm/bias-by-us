@@ -4,6 +4,7 @@ then they will be their own seperate part inbetween posts and the followups.
 */
 import React from "react";
 import PlaceholderInteractive from "../components/posts/PlaceholderInteractive.js";
+import StereotypeActivity from "../components/mainContent/StereotypeActivity.js";
 import ConclusionGraphic from "../components/posts/ConclusionGraphic.js";
 import facebookLogo from "./facebookLogo.svg";
 import classifyingPic from "./classifyingPeople.svg";
@@ -87,19 +88,19 @@ export default [
   
   {
     post: {
-      header: "The Stereotypes We Hold",
+      header: "The Implicit Biases We Hold",
       subheader: "What exepctations and preconceptions do we hold for different groups of people?",
       profilePic: stereotypesPic,
       profilePicName: "Profile Picture - man with thought bubble",
       bodyText: [
         {
-          body: `From a young age, we begin creating personal stereotypes by picking up on patterns in our world and try to fit people into the modls we create in our heads.`
+          body: `From a young age, we begin forming implicit biases by picking up on patterns in our world and try to fit people into the molds we create in our heads.`
         },
         {
-          body: <PlaceholderInteractive />
+          body: <StereotypeActivity />
         },
         {
-          body: `*While there exists a spectrum of gender identity, it is practically impossible for a machine learning algorithm to differentiate between so many classifications. Because of this, datasets for machine learning algorithms generally only classify gender into two groups: male and female. To reflect this, we decided to only incorporate male and female figures into this exercise.`, 
+          body: `*While there exists a spectrum of gender identity, it is practically impossible for a machine learning algorithm to differentiate between so many classifications. Because of this, datasets for machine learning algorithms generally only classify gender into two groups: male and female.`, 
           gray: true
         },
       ],
@@ -117,7 +118,7 @@ export default [
         },
         {
           questionHeader: `Reflection Question 2:`,
-          question: `What causes us to have these perceptions of other people? Experience, the media, etc?`,
+          question: `What causes us to have these unconscious perceptions of other people? Experience, the media, etc?`,
           answers: []
         },
       ],

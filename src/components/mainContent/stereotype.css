@@ -1,0 +1,53 @@
+.stereotype-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+}
+
+.row-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.curve {
+    position: absolute;
+}
+
+.job {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+.person {
+    position: relative;
+    border-radius: 60px;
+}
+
+.circle-shadow {
+    box-shadow: 0 10px 5px -2px gray;
+}
+
+.stereotype-message {
+    width: 450px;
+    position: relative;
+    text-align: center;
+    top: -1000px;
+}
+
+.stereotype-refresh-button {
+    position: relative;
+    top: -950px;
+    left: 180px;
+    border: none;
+    background: none;
+}
+.stereotype-refresh-button:focus {
+    outline: none;
+}
