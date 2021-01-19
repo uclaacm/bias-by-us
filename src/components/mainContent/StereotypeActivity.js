@@ -104,7 +104,7 @@ export default function ConclusionGraphic() {
         return (
             <div>
                 <p className="stereotype-message">These are the genders that are stereotypically associated with each occupation. How close to these stereotypes were your predictions?</p>
-                <button aria-label="click to restart" className="stereotype-refresh-button" onClick={finishedHandler}><img src={restartButton}/></button>
+                <button aria-label="click to restart" className="stereotype-refresh-button" onClick={finishedHandler}><img alt="restart button" src={restartButton}/></button>
             </div>
         );
     }
