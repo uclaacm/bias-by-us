@@ -60,7 +60,7 @@ export default [
           bold: true
         },
         {
-          body: `Stereotypes cause us to have preconceived notions about people solely based on their identities, clouding us from making accurate and unbiased judgements about the individuals we meet.`
+          body: `Stereotypes cause us to have preconceived notions about people solely based on their appearance, clouding us from making accurate and unbiased judgements about the individuals we meet.`
         },
       ],
     },
