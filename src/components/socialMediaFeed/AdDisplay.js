@@ -10,8 +10,6 @@ export default function AdDisplay(props) {
       <br />
       User's race is {props.raceInput}
       <br />
-      User's income level is {props.incomeInput}
-      <br />
     </div>
   ) : (
     <div>

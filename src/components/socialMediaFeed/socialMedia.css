@@ -1,5 +1,5 @@
-.ad-breakdown {
-}
+/* .ad-breakdown {
+} */
 
 .divider {
   margin-bottom: 30px;
@@ -17,6 +17,14 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+}
+
+.spaced-column {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 90%;
 }
 
 .screen-container {
