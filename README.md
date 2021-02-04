@@ -1,35 +1,17 @@
-# Your Teach LA Project Here!
+# Bias by Us
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3853d389-4eab-44be-93f5-910b7192c9c1/deploy-status)](https://app.netlify.com/sites/infallible-mirzakhani-e36a0d/deploys)
 ![Production Build](https://github.com/uclaacm/bias-by-us/workflows/Production%20Build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
-What's this? This is a template repository that sets up a few minor systems for a React micro-app, which is something that we've done frequently at Teach LA. Here's what it does:
-
-* has the latest, dependabot-certified version of `create-react-app` and dependencies
-* has GitHub Actions automatically set up for testing builds
-* has Netlify redirects set up for multi-route SPAs
-* includes the [Contributor Covenant](https://www.contributor-covenant.org/) in `CODE_OF_CONDUCT.md`
-* has a little bit of documentation for new people!
-
-We are also planning on creating a more opinionated starter (with `react-router-dom`, stricter ESLint checks, auto-formatting, and fonts) soon! Keep an eye out for that!
-
 ## Overview
 
-... explain what your project is here! What technology you used, who made it, and what it was for!
+**Bias by Us** is one of [ACM Teach LA](https://teachla.uclaacm.com)'s learning labs, a set of interactive online web modules designed to make learning easier. This specific learning lab is focused on **bias in machine learning**: we teach students about different ways that machine learning models can become biased/discriminatory through 3 individual case studies, including feedback loops in personalized advertising.
 
-## Things You Should Do (and then delete this section)
+This project was written with React.js. We also make use of react-router, anime.js, (insert more libraries...). It was bootstrapped with Create React App. It is deployed with Netlify.
 
-Thanks for using our template! We hope this makes your life developing singificantly easier.
-
-Things you should do **after using this as a template**:
-
-- [x] find-and-replace `bias-by-us` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
-- [x] set up [Netlify](https://www.netlify.com/) for this app - talk to matt (@malsf21) or leo (@krashanoff) if you need access to the Teach LA Netlify team
-- [x] turn on "Automatically delete head branches" in GitHub `Settings > Options`
-- [x] in `Settings > Branches`, create a branch protection rule that requires PR reviews. You can optionally enable status checks.
-- [ ] update and delete this documentation!
+(This project is currently in the works. More updates will be coming soon!)
 
 ## Development Setup
 
@@ -70,76 +52,3 @@ Want to make a change? Great! Here are the steps:
 ## Licensing & Attribution
 
 This project and its code are licensed under the MIT License. You're free to use them however you wish, though we'd love to hear from you if you found this useful!
-
-## Create React App Artifacts
-
-*You can delete these if you want!*
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
