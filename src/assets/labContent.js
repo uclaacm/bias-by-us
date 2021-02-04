@@ -6,11 +6,11 @@ import React from "react";
 import PlaceholderInteractive from "../components/posts/PlaceholderInteractive.js";
 import ConclusionGraphic from "../components/posts/ConclusionGraphic.js";
 import facebookLogo from "./facebookLogo.svg";
-import classifyingPic from "./classifyingPeople.svg";
-import stereotypesPic from "./stereotypes.svg";
-import adsPic from "./personalizedAds.svg";
+import adPic from "./adPic.png";
+import loopPic from "./loopPic.svg";
 import trendsPic from "./trends.svg";
-import insightPic from "./insight.svg";
+import facebookAds from "./personalizedAds.svg";
+
 export default [
   {
     post: {
@@ -37,101 +37,13 @@ export default [
   },
   {
     post: {
-      header: "Classifying People",
-      subheader: "Why do we, as humans, divide one another into groups?",
-      profilePic: classifyingPic,
-      profilePicName: "Profile Picutre - a circle of people",
+      profilePic: adPic,
+      profilePicName: "Profile Picture - Online Advertisement Logo",
+      header: "The Ads Different Types of Users Receive",
+      subheader: "How do the appearance of ads differ across individual accounts?",
       bodyText: [
         {
-          body: `No two people in the world are exactly alike.`
-        },
-        {
-          body: `To keep track of the diverse set of people we meet, our mind automatically groups and labels people based on easily identifiable features, such as their gender, race, and age.`
-        },
-        {
-          body: <PlaceholderInteractive />
-        },
-        {
-          body: `It is our natural instict to form opinions about others when we first meet them, even if we barely know them. These first impressions, as well as our opinions on those we are more familiar with, all contribute to how we view the groups they belong to.`
-        },
-        {
-          body: `This leads to stereotypes – generalized beliefs about a particular groups of people.`, 
-          bold: true
-        },
-        {
-          body: `Stereotypes cause us to have preconceived notions about people solely based on their identities, clouding us from making accurate and unbiased judgements about the individuals we meet.`
-        },
-      ],
-    },
-  },
-  {
-    commentSection: {
-      profilePic: classifyingPic,
-      profilePicName: "Profile Picture - a circle of people",
-      followups: [
-        {
-          questionHeader: `Reflection Question 1:`,
-          question: `What are some things that you notice about other people when you meet them for the first time?`,
-          answers: [
-            <text>Studies show that we take note of one thing: we immediately try to figure out if someone is a threat to us, and we analyze their facial features to distinguish friend from foe.</text>
-          ]
-        },
-        {
-          questionHeader: `Reflection Question 2:`,
-          question: `Are we born with stereotypes of others, or are they something we learn over time?`,
-          answers: []
-        },
-      ],
-    }
-  },
-  
-  {
-    post: {
-      header: "The Stereotypes We Hold",
-      subheader: "What exepctations and preconceptions do we hold for different groups of people?",
-      profilePic: stereotypesPic,
-      profilePicName: "Profile Picture - man with thought bubble",
-      bodyText: [
-        {
-          body: `From a young age, we begin creating personal stereotypes by picking up on patterns in our world and try to fit people into the modls we create in our heads.`
-        },
-        {
-          body: <PlaceholderInteractive />
-        },
-        {
-          body: `*While there exists a spectrum of gender identity, it is practically impossible for a machine learning algorithm to differentiate between so many classifications. Because of this, datasets for machine learning algorithms generally only classify gender into two groups: male and female. To reflect this, we decided to only incorporate male and female figures into this exercise.`, 
-          gray: true
-        },
-      ],
-    },
-  },
-  {
-    commentSection: {
-      profilePic: stereotypesPic,
-      profilePicName: "Profile Picture - man with thought bubble",
-      followups: [
-        {
-          questionHeader: `Reflection Question 1:`,
-          question: `What was running through your mind when you were trying to classify people by what job they have?`,
-          answers: []
-        },
-        {
-          questionHeader: `Reflection Question 2:`,
-          question: `What causes us to have these perceptions of other people? Experience, the media, etc?`,
-          answers: []
-        },
-      ],
-    }
-  },
-  {
-    post: {
-      profilePic: adsPic,
-      profilePicName: "Profile Picture - Facebook and its users",
-      header: "Stereotypes Within Personalized Advertising",
-      subheader: "How do algorithms respond to stereotypical trends within data?",
-      bodyText: [
-        {
-          body: `It’s not just us who categorize others based off of surface level information; computer algorithms do it all the time to optimize efficiency in many things, including advertising. By incorporating these categorizations into advertising algorithms, advertisers are able to maximize the relevancy of their ads and thus maximize their profit.`
+          body: `Computer programs categorize users based on their demographical characteristics in order to optimize efficiency in many things, including advertising. By incorporating these categorizations into advertising algorithms, advertisers are able to maximize the relevancy of their ads and thus maximize their profit.`
         },
         {
           body: `How do the decisions made by such algorithms impact the type of ads that we receive on social media?`,
@@ -144,22 +56,23 @@ export default [
           body: <PlaceholderInteractive />
         },
         {
-          body: `As you can see, the ads you receive change depending on your race, gender, and age. `
+          body: `As you can see, the ads you receive change depending on your race and gender. `,
+          bold: true
         },
       ],
     },
   },
   {
     commentSection: {
-      profilePic: adsPic,
-      profilePicName: "Profile Picture - Facebook and its users",
+      profilePic: adPic,
+      profilePicName: "Profile Picture - Online Advertisement Logo",
       followups: [
         {
           questionHeader: `Reflection Question 1:`,
           question: `What are the pros and cons of personalizing ads in this way?`,
           answers: [
-            <text><b>In some cases, personalizing ads is beneficial.</b> For example, sports teams fans would probably want to buy merch for the teams that they are interested in as opposed to any random team, so personalization can help to give ads relevant to the user.</text>,
-            <text><b>In other cases, personalizing ads will promote unfairness.</b> For example, if the optimized algorithm observes that men are more likely to respond to software engineer roles, a femaile software engineer would be much less likely to encounter advertisements related to her career.</text>
+            <text><b>In some cases, personalizing ads is beneficial.</b> For example, sports fans would be more likely to buy merch for the team(s) they root for as opposed to any random team.</text>,
+            <text><b>In other cases, personalizing ads will promote unfairness.</b> For example, if the algorithm observes that men are more likely to respond to software engineer roles, a female software engineer would be much less likely to encounter ads related to her career.</text>
           ]
         },
         {
@@ -173,9 +86,58 @@ export default [
           answers: [
             <text>According to law, <b>discrimination</b> is defined as the treatment, consideration, or distinction in favor of or against a person based on the group or class that they belong to rather than on individual merit.</text>,
             <text><b>Legally protected classes</b> include race, color, sex, religion, national origin, citizenship, age, pregnancy, familial status, disability status, veteran status, and genetic information.</text>,
-            <text><b>Discrimination law is not only limited to the final decision made (i.e) hiring decision) but also extend to marketing and advertising.</b> If advertising only to a certain demographic can <b>affect other groups’ access to opportunities that affect their life chances</b> (such as their job, money, house, education, or health), then that action is considered discriminatory</text>
+            <text><b>Discrimination law is not only limited to the final decision made (i.e. hiring decision) but also extend to marketing and advertising.</b> If advertising only to a certain demographic can <b>affect other groups’ access to opportunities that affect their life chances</b> (such as their job, money, house, education, or health), then that action is considered discriminatory</text>
           ]
         },
+      ],
+    }
+  },
+  {
+    post: {
+      profilePic: loopPic,
+      profilePicName: "Profile Picture - A Circular Loop",
+      header: "Feedback Loops Caused by Correlations within Data",
+      subheader: "How do algorithms respond to stereotypical trends within data?",
+      bodyText: [
+        {
+          body: <text>The difference in ads shown across demographics is caused by the algorithm being trained on a <b>skewed sample</b> that reflects our society's biases. Much of the <b>correlations</b> it notices between race/gender and jobs have little to no actual <b>causal relationsip</b>, i.e. the kind of job a person looks for does not depend on their race or gender. However, a machine learning algorithm cannot tell when a trend it notices is correlation or causation, so it incorporates every trend it sees into its calculations for showing its users the most "optimal" ads.</text>
+        },
+        {
+          body: `What happens when the algorithm begins showing different types of ads to different demographics?`,
+          bold: true
+        },
+        {
+          body: <PlaceholderInteractive />
+        },
+        {
+          body: <text>As shown in the animation above, the type of ads users initially receive only vary slightly. However, as time passes, these differences are <b>amplified</b> as users <i>only</i> get to interact with the ads they see. The algorithm recognizes this as <b>positive feedback</b>, and adjusts its parameters to show similar ads in the future - when in reality, the user may be more interested in another type of ad that they have yet to receive!</text>
+        },
+        {
+          body: <text>This process of amplifying trends is a <b>positive feedback loop</b> that compounds initial bias over time.</text>
+        },
+      ],
+    },
+  },
+  {
+    commentSection: {
+      profilePic: loopPic,
+      profilePicName: "Profile Picture - A Circular Loop",
+      followups: [
+        {
+          questionHeader: `Reflection Question 1:`,
+          question: `What is an example of a difference between correlation vs causation?`,
+          answers: [
+            <text>One widely discussed example is the <b>strong positive correlation between ice cream sales and homicide rates</b>. Clearly, ice cream doesn't cause people to commit violent crime! Instead, the correlation comes from the fact that ice cream sales and crime rates both rise in the summer due to the hot weather.</text>
+          ]
+        },
+        {
+          questionHeader: `Reflection Question 2:`,
+          question: `Why do we want to avoid positive feedback loops in advertising, especially for job and housing ads?`,
+          answers: [
+            <text>Here is a situation we want to avoid: Let’s say the algorithm observes from data that people of color (POC) tend to buy cheaper homes on average than non-POC. It then advertises cheaper listings to POC and more expensive listings to non-POC in order to maximize ad views.</text>,
+            <text>Naturally, the cheaper housing ads gain more traction by POC accounts simply because that is all they were exposed to. However, the algorithm comes to believe that POC prefer cheaper homes and continues to advertise more and more cheap listings. Because of this, <b>POC would gain less and less opportunities to buy a more expensive house, worsening the initial disparity in housing choices that was observed from the data.</b></text>
+          ]
+        }
       ],
     }
   },
@@ -219,19 +181,11 @@ export default [
       followups: [
         {
           questionHeader: `Reflection Question 1:`,
-          question: `What causes advertising algorithms to learn and spread biases?`,
-          answers: [
-            <text>The data that the algorithm was trained on may be a <b>skewed sample</b> that reflects our society's biases. Training on such data will cause a <b>feedback loop</b>, which compounds the initial bias over time.</text>,
-            <text><b>Here's how it works:</b> The algorithm observes from the data that people of color (POC) tend to buy cheaper homes on average than non-POC. It then advertises cheaper listings to POC and more expensive listings to non-POC in order to maximize ad views. Naturally, the cheaper housing ads gain more traction by POC accounts simply because that is all they were exposed to. However, the algorithm comes to believe that POC prefer cheaper homes and continues to advertise more and more cheap listings. Because of this, <b>POC would gain less and less opportunities to buy a more expensive house, worsening the initial disparity in housing choices that was observed from the data.</b></text>
-          ]
-        },
-        {
-          questionHeader: `Reflection Question 2:`,
           question: `How might ads affect how people perceive themselves and each other in society?`,
           answers: []
         },
         {
-          questionHeader: `Reflection Question 3:`,
+          questionHeader: `Reflection Question 2:`,
           question: `What are some other harmful effects of stereotypes at play currently?`,
           answers: []
         },
@@ -240,8 +194,8 @@ export default [
   },
   {
     post: {
-      profilePic: insightPic,
-      profilePicName: "Profile Picture - lightbulb",
+      profilePic: facebookAds,
+      profilePicName: "Profile Picture - Facebook and its ads",
       header: "Conclusion",
       subheader: "How should we fix this problem?",
       bodyText: [
@@ -255,13 +209,16 @@ export default [
         {
           body: <ConclusionGraphic />
         },
+        {
+          body: `In the future, Facebook and other advertising platforms could also incorporate state-of-the-art machine learning debiasing methods to further prevent their algorithms from becoming discriminatory.`
+        }
       ],
     },
   },
   {
     commentSection: {
-      profilePic: insightPic,
-      profilePicName: "Profile Picture - lightbulb",
+      profilePic: facebookAds,
+      profilePicName: "Profile Picture - Facebook and its ads",
       followups: [
         {
           questionHeader: `Links to sources:`,
