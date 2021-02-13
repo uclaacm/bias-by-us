@@ -1,6 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./socialMedia.css";
 export default function AdSelectionBar(props){
+    //mapping function that generates a button for each section of the already sorted histogram
     let buttonBar = props.histogramData.map((section) => {
         console.log (section.x);
         return (
@@ -17,6 +18,6 @@ export default function AdSelectionBar(props){
     return(
         <div className = "ad-selection-bar">
             {buttonBar}
-        </div>
+        </div>  
     )
 }

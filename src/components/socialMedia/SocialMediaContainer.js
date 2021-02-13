@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from "react";
+import React, {useState} from "react";
 import ProfileCreator from "./ProfileCreator";
 import AdBreakdown from "./AdBreakdown";
 import AdDisplay from "./AdDisplay";
@@ -13,7 +13,7 @@ export default function SocialMediaContainer(props){
     const [raceInput, setRaceInput] = useState("unselected");
     const [profileCreated, setProfileCreated] = useState(false);
     const [refreshes, setRefreshes] = useState(0);
-    const [adFrequencies, setAdFrequencies] = useState(initialAds.adList);
+    const [adFrequencies] = useState(initialAds.adList); //setAdFrequencies & intervals to be added later
     const [selectedAd, setSelectedAd]= useState();
     const [refreshing, setRefreshing] = useState(true);
 
@@ -40,7 +40,7 @@ export default function SocialMediaContainer(props){
                 }
 
             </div>
-            {profileCreated &&
+            {profileCreated && /* conditionally render the ad breakdown portion */
             <div className = "spaced-row">
                 <AdBreakdown
                 adFrequencies={adFrequencies}

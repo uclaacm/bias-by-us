@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
  import "./socialMedia.css";
  import "../mainContent/mainContent.css";
  import "./socialMedia.css";
@@ -10,6 +10,7 @@ import React, { useEffect, useState } from "react";
         props.setRefreshes(value);
      }
      
+     //will sort the array for histogramData either here or in social media container
      function toggleRefreshing(){
          props.setRefreshing((prevState) => {
              return !prevState;
@@ -47,7 +48,7 @@ import React, { useEffect, useState } from "react";
                     onClick = {toggleRefreshing}
                     /* will add in functionality later */
                     >
-                        {props.refreshing ? "Stop" : "Start"} Refreshing
+                        {props.refreshing ? "Stop" : "Start" /* conditionally render */} Refreshing
                     </button>
 
 

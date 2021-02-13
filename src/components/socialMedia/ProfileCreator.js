@@ -16,7 +16,7 @@ export default function ProfileCreator(props){
 
     function generateProfile() {
 
-        if (currentGender!="unselected" && currentRace != "unselected"){
+        if (currentGender!=="unselected" && currentRace !== "unselected"){
             props.setGenderInput(currentGender);
             props.setRaceInput(currentRace);
             props.setProfileCreated(true);
@@ -48,7 +48,7 @@ export default function ProfileCreator(props){
                 Gender
                 <div className = "spaced-row">
                     <button
-                    className = {
+                    className = { /* conditionally render what button appears*/
                         currentGender === "male"
                         ? "default-button male-button-active"
                         : "default-button hover-button"
