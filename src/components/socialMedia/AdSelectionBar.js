@@ -11,8 +11,8 @@ export default function AdSelectionBar(props){
     });
 
     function selectAd(button){
-        console.log ("value is " + button.target.value)
-        props.setSelectedAd(button.target.value);
+        console.log ("value is " + button.currentTarget.value)
+        props.setSelectedAd(button.currentTarget.value);
     }
     return(
         <div className = "ad-selection-bar">
