@@ -156,14 +156,10 @@ export default [
           body: <PlaceholderInteractive />
         },
         {
-          body: `Did you notice the sudden drop in females? This was caused by advertisements geared towards the male-dominated nerd culture of the 80s.`
+          body: `Did you notice the sudden drop in females?.`
         },
         {
-          body: `At the time, "nerdy" interests such as video games and computers were commonly viewed as interests that women did not want to participate in. Advertisements transferred that misconception to its viewers, causing women to feel alienated from those activities.`
-        },
-        {
-          body: `The results can be seen in the graph: advertisements had turned the misconception into an unfortunate reality.`, 
-          bold: true
+          body: `In the 60s when computers first emerged, women made up most of the computing field. However, in the 70s, personal computers were advertised almost exclusively to men, influencing families to buy computers for boys than girls. While the percentage of women in CS rose in the 80s thanks to , since then it has been in decline.`
         },
         {
           body: `Despite numerous efforts to lower the gender disparity in tech today, the current distribution has a long way to go until we can erase the sever impact of past advertisements.`
@@ -226,7 +222,8 @@ export default [
           question: `Where can I find additional information on this topic?`,
           answers: [
             <a href='https://www.technologyreview.com/2019/04/05/1175/facebook-algorithm-discriminates-ai-bias/'>MIT Technology Review article - Facebook's ad-serving algorithm discriminates by gender and race</a>,
-            <a href='https://arxiv.org/pdf/1904.02095.pdf'>Research Paper - Discrimination through optimization: How Facebook's ad delivery can lead to skewed outcomes</a>
+            <a href='https://arxiv.org/pdf/1904.02095.pdf'>Research Paper - Discrimination through optimization: How Facebook's ad delivery can lead to skewed outcomes</a>,
+            <a href='https://www.computerscience.org/resources/women-in-computer-science/'>Statistics on Women in Computer Science</a>
           ]
         },
       ],
