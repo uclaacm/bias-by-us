@@ -8,7 +8,7 @@
 }
 
 .post-container {
-  border-radius: 0px 25px 0px 0px;
+  border-radius: 0 25px 0 0;
   margin-top: 48px;
 }
 
@@ -24,6 +24,7 @@
   margin-left: 6.125rem;
   color: #606060;
 }
+
 .post-body-text {
   margin: 20px;
 }

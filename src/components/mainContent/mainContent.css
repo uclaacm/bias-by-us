@@ -23,11 +23,12 @@
   height: 60px;
   border-radius: 50%;
   background-color: #4267b2;
-  border-width: 0px;
+  border-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .forward-button:active {
   transform: translateY(5px);
 }
@@ -48,16 +49,20 @@
   width: 65px;
   height: 65px;
 }
+
 .progress-button:focus {
   outline: none;
 }
+
 .no-margin {
   margin: 0;
 }
+
 .static-size {
   width: 65px;
   height: 65px;
 }
+
 .gray {
   opacity: 0.5;
   filter: alpha(opacity=40);
@@ -67,7 +72,6 @@
 /* for the triangle inside ForwardButton, since the triangle is blue by default due to the Navbar button */
 .white {
   border-top: 22px solid #eef0f1;
-  left: 0px;
+  left: 0;
   top: 2px;
 }
-
