@@ -18,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint-css": "stylelint \"**/*.css\" \"**/*.scss\"",
+    "lint-css-fix": "stylelint --fix \"**/*.css\" \"**/*.scss\""
   },
   "eslintConfig": {
     "extends": "react-app"

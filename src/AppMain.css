@@ -53,19 +53,22 @@
   margin-right: 70px;
   display: inline-block;
 }
+
 .button:focus {
   outline: none;
 }
+
 .triangle {
   width: 0;
   height: 0;
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
-  border-top: 22px solid #4267B2;
+  border-top: 22px solid #4267b2;
   position: relative;
   left: 8px;
   top: 4px;
 }
+
 .up {
   transform: rotate(180deg);
   top: -1px;
