@@ -4,6 +4,7 @@ then they will be their own seperate part inbetween posts and the followups.
 */
 import React from "react";
 import PlaceholderInteractive from "../components/posts/PlaceholderInteractive.js";
+import SocialMediaContainer from "../components/socialMedia/SocialMediaContainer";
 import ConclusionGraphic from "../components/posts/ConclusionGraphic.js";
 import facebookLogo from "./facebookLogo.svg";
 import classifyingPic from "./classifyingPeople.svg";
@@ -20,6 +21,10 @@ export default [
       subheader: "What did Facebook do?",
       bodyText: [
         {
+          body: <SocialMediaContainer/> //remove this before submitting PR!!!!!
+        },
+        
+        {
           body: `In 2019, the U.S. Department of Housing and Urban development sued Facebook for steering ads toward subsets of the population through an automated image classification mechanism.`
         },
         {
@@ -31,7 +36,7 @@ export default [
         {
           body: `In this case study, we will explore how such stereotypes were incorporated into Facebook’s algorithm and how such advertising could potentially create large impacts on our society.`,
           bold: true,
-        },
+        }, 
       ],
     },
   },
@@ -141,7 +146,7 @@ export default [
           body: `Let's say you decided to create a profile on a social media app that displays advertisements "catered" to your preferences. How does changing your profile affect the ads that you receive?`
         },
         {
-          body: <PlaceholderInteractive />
+          body: <SocialMediaContainer/>
         },
         {
           body: `As you can see, the ads you receive change depending on your race, gender, and age. `

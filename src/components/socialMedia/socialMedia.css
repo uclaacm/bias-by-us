@@ -1,0 +1,98 @@
+.screen-container {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 2rem black solid;
+    border-bottom-width: 4rem;
+    border-radius: 2rem;
+}
+
+.user-profile-pic {
+    width: 150px;
+    height: 150px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+
+
+.histogram-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.profile-header {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.default-button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    background-color: #eef0f1;
+    margin: 0.5rem;
+    
+  }
+
+.ad-button {
+  font-size: 1rem;
+  background-color: #eef0f1;
+  padding: 0.25rem;
+  margin-top: 5px;
+  margin-bottom: 18px;
+}
+
+
+
+  .male-button-active {
+    background-color: #3381ff;
+    color: #eef0f1;
+  }
+ 
+   .female-button-active {
+    background-color: #ff8cfb;
+    color: #494e50;
+  }
+ 
+   .white-button-active {
+    background-color: #ffffff;
+    border-color: black;
+  }
+ 
+   .black-button-active {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+.hover-button:hover {
+    background-color: #b4b9bb;
+}
+
+.ad-selection-bar {
+  margin-left: 10px;
+  margin-right: 20px;
+  background-color: white;
+  color: black;
+  width: 100px;
+  height: 600px;
+  z-index: 3;
+  border-radius: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px 0;
+}
+
+
+
+.ad-thumbnail {
+  width: 100px;
+  height: 20px;
+}
+

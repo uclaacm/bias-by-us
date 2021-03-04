@@ -14,6 +14,20 @@
   z-index: 4;
 }
 
+.spaced-row {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.flex-column {
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+}
+
 .body-text {
   font-size: 1.5rem;
 }
