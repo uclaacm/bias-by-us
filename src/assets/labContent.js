@@ -54,7 +54,11 @@ export default [
           body: `Let's say you decided to create a profile on a social media app that displays advertisements "catered" to your preferences. How does changing your profile affect the ads that you receive?`
         },
         {
+<<<<<<< HEAD
           body: <SocialMediaContainer />
+=======
+          body: <PlaceholderInteractive />
+>>>>>>> 76e698ca1c675d8919e60cc6793d0d265c2dc13b
         },
         {
           body: `As you can see, the ads you receive change depending on your race and gender. `,
