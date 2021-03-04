@@ -20,7 +20,7 @@
   margin-bottom: 30px;
   border: none;
   height: 1px;
-  background-color: #CCCCCC;
+  background-color: #ccc;
 }
 
 .comment-profile-pic {
@@ -41,7 +41,7 @@
 
 .show-answer {
   font-family: "Mulish", sans-serif;
-  color: #65676B;
+  color: #65676b;
   font-weight: bold;
   position: relative;
   top: -25px;
@@ -50,6 +50,7 @@
   background: none;
   border: none;
 }
+
 .show-answer:hover {
   text-decoration: underline;
 }
