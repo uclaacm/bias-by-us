@@ -10,12 +10,20 @@ export default function AdHistogram(props){
         options: {
             chart: {
                 id: "basic-bar",
+                events: {
+                    dataPointSelection: function(event, chartContext, config){
+                        console.log(config.w.config.series[config.seriesIndex].data[config.dataPointIndex].x)
+                        //Instead of using a button on the side to display ad, user can simply click a section
+                        props.setSelectedAd(config.w.config.series[config.seriesIndex].data[config.dataPointIndex].x)
+                       },
+                }
               },
               plotOptions: {
                 bar: {
                   horizontal: true,
                 },
               },
+              
               yaxis: {
                   labels: {
                       style: {

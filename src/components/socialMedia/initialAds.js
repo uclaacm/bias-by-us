@@ -1,5 +1,6 @@
 
 import placeholderThumbnail from "../../assets/placeholderThumbnail.png";
+import "./socialMedia.css";
 
 const adNames = [ "Lumber", "AI", "Taxi", "Lawyer", "Restaurant", "Doctor", "Nurse",
 "Secretary", "Preschool", "Janitor", "Retail"];

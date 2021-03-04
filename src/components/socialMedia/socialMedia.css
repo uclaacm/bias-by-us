@@ -36,7 +36,16 @@
     font-size: 2rem;
     background-color: #eef0f1;
     margin: 0.5rem;
+    
   }
+
+.ad-button {
+  font-size: 1rem;
+  background-color: #eef0f1;
+  padding: 0.25rem;
+  margin-top: 5px;
+  margin-bottom: 18px;
+}
 
 
 
@@ -81,10 +90,7 @@
 }
 
 
-.ad-button {
-  margin-top: 5px;
-  margin-bottom: 18px;
-}
+
 .ad-thumbnail {
   width: 100px;
   height: 20px;

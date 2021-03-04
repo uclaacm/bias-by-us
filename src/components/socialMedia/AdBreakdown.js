@@ -3,7 +3,6 @@ import React from "react";
  import "../mainContent/mainContent.css";
  import "./socialMedia.css";
  import AdHistogram from "./AdHistogram.js";
- import AdSelectionBar from "./AdSelectionBar";
  export default function AdBreakdown(props) {
      function handleSkipRefreshes(button) {
         let value = button.target.value;
@@ -59,12 +58,10 @@ import React from "react";
              </div>
              
              <div className = "spaced-row">
-                 <AdSelectionBar 
-                 histogramData = {props.adFrequencies}
-                 setSelectedAd= {props.setSelectedAd}/>
 
                 <AdHistogram
                 histogramData={props.adFrequencies}
+                setSelectedAd = {props.setSelectedAd}
                 /> 
              </div>
          </div>
