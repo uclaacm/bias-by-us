@@ -20,6 +20,7 @@ export default function ProfileCreator(props){
             props.setCurrentGender(genderInput);
             props.setCurrentRace(raceInput);
             props.setSelectedAd("default");
+            props.resetAds();
             props.setProfileCreated(true); 
         }        
         
