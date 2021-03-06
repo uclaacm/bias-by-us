@@ -4,16 +4,18 @@ import React from "react";
  import "./socialMedia.css";
  import AdHistogram from "./AdHistogram.js";
  export default function AdBreakdown(props) {
-     function handleSkipRefreshes(button) {
+     function handleAddRefreshes(button) {
         let value = button.target.value;
-        props.setRefreshes(value);
+        props.setRefreshes((prevValue) => {
+            return(
+                parseInt(prevValue) + parseInt(value)
+            )
+        });
+        props.pickAd(value);
      }
      
-     //will sort the array for histogramData either here or in social media container
-     function toggleRefreshing(){
-         props.setRefreshing((prevState) => {
-             return !prevState;
-         });
+     function resetRefreshes(){
+        props.resetAds();
      }
      return(
          <div>
@@ -28,7 +30,7 @@ import React from "react";
                     <button
                     className = "default-button hover-button"
                     value = {100}
-                    onClick= {handleSkipRefreshes}
+                    onClick= {handleAddRefreshes}
                     >
                         Refresh 100 Times
                     </button>
@@ -36,18 +38,17 @@ import React from "react";
                     <button
                     className = "default-button hover-button"
                     value = {1000}
-                    onClick = {handleSkipRefreshes}
+                    onClick = {handleAddRefreshes}
                     >
                         Refresh 1000 Times
                     </button>
 
                     <button
                     className = "default-button hover-button"
-                    value = {1000}
-                    onClick = {toggleRefreshing}
+                    onClick = {resetRefreshes}
                     /* will add in functionality later */
                     >
-                        {props.refreshing ? "Stop" : "Start" /* conditionally render */} Refreshing
+                        Reset Refreshes
                     </button>
 
 

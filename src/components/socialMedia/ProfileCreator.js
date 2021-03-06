@@ -30,7 +30,7 @@ export default function ProfileCreator(props){
         props.setCurrentRace("unselected");
         setgenderInput("unselected");
         setraceInput("unselected");
-        props.setRefreshes(0);
+        props.resetAds();
         props.setSelectedAd(null);
         props.setProfileCreated(false);
         
