@@ -28,25 +28,24 @@ import React from "react";
                 </div>
                 <div className = "spaced-row">
                     <button
-                    className = "default-button hover-button"
-                    value = {100}
-                    onClick= {handleAddRefreshes}
+                        className = "default-button hover-button"
+                        value = {100}
+                        onClick= {handleAddRefreshes}
                     >
                         Refresh 100 Times
                     </button>
 
                     <button
-                    className = "default-button hover-button"
-                    value = {1000}
-                    onClick = {handleAddRefreshes}
+                        className = "default-button hover-button"
+                        value = {1000}
+                        onClick = {handleAddRefreshes}
                     >
                         Refresh 1000 Times
                     </button>
 
                     <button
-                    className = "default-button hover-button"
-                    onClick = {resetRefreshes}
-                    /* will add in functionality later */
+                        className = "default-button hover-button"
+                        onClick = {resetRefreshes}
                     >
                         Reset Refreshes
                     </button>
