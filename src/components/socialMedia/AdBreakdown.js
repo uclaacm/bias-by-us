@@ -4,16 +4,19 @@ import React from "react";
  import "./socialMedia.css";
  import AdHistogram from "./AdHistogram.js";
  export default function AdBreakdown(props) {
-     function handleSkipRefreshes(button) {
+     function handleAddRefreshes(button) {
         let value = button.target.value;
-        props.setRefreshes(value);
+        props.setRefreshes((prevValue) => {
+            return(
+                parseInt(prevValue) + parseInt(value)
+            )
+        });
+        props.pickAd(value);
+        console.log("added to histogram!");
      }
      
-     //will sort the array for histogramData either here or in social media container
-     function toggleRefreshing(){
-         props.setRefreshing((prevState) => {
-             return !prevState;
-         });
+     function resetRefreshes(){
+        props.resetAds();
      }
      return(
          <div>
@@ -26,28 +29,26 @@ import React from "react";
                 </div>
                 <div className = "spaced-row">
                     <button
-                    className = "default-button hover-button"
-                    value = {100}
-                    onClick= {handleSkipRefreshes}
+                        className = "default-button hover-button"
+                        value = {100}
+                        onClick= {handleAddRefreshes}
                     >
                         Refresh 100 Times
                     </button>
 
                     <button
-                    className = "default-button hover-button"
-                    value = {1000}
-                    onClick = {handleSkipRefreshes}
+                        className = "default-button hover-button"
+                        value = {1000}
+                        onClick = {handleAddRefreshes}
                     >
                         Refresh 1000 Times
                     </button>
 
                     <button
-                    className = "default-button hover-button"
-                    value = {1000}
-                    onClick = {toggleRefreshing}
-                    /* will add in functionality later */
+                        className = "default-button hover-button"
+                        onClick = {resetRefreshes}
                     >
-                        {props.refreshing ? "Stop" : "Start" /* conditionally render */} Refreshing
+                        Reset Refreshes
                     </button>
 
 

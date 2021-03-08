@@ -20,6 +20,7 @@ export default function ProfileCreator(props){
             props.setCurrentGender(genderInput);
             props.setCurrentRace(raceInput);
             props.setSelectedAd("default");
+            props.resetAds();
             props.setProfileCreated(true); 
         }        
         
@@ -30,7 +31,7 @@ export default function ProfileCreator(props){
         props.setCurrentRace("unselected");
         setgenderInput("unselected");
         setraceInput("unselected");
-        props.setRefreshes(0);
+        props.resetAds();
         props.setSelectedAd(null);
         props.setProfileCreated(false);
         
