@@ -56,26 +56,29 @@ export default function SocialMediaContainer(props){
     function pickAd(value){
         setAdFrequencies( (prevFrequencies) =>{
             let newAdFrequencies = [...prevFrequencies];
-        //pick an ad the designated number of times
-        for (let i=0; i < value; i++){
-            let prob = Math.random();
-            let threshold=0;
-            //randomly select ad from dataset
-            for (let job of newAdFrequencies){
-                console.log("entered" + job.x);
-                threshold += parseFloat(job.adPercentages[adDataSet]);
-                if (threshold > prob){
-                    //increment its count
-                    job.y++;
-                    break; //exit once ad is selected
+            //pick an ad the designated number of times
+            for (let i=0; i < value; i++){
+                let prob = Math.random();
+                let threshold=0;
+                //randomly select ad from dataset
+                for (let job of newAdFrequencies){
+                    //console.log("entered" + job.x);
+                    threshold += parseFloat(job.adPercentages[adDataSet]);
+                    if (threshold > prob){
+                        //increment its count
+                        job.y++;
+                        //console.log("added");
+                        break; //exit once ad is selected
+                    }
+                    
                 }
+                //console.log("exited loop");
             }
-        }
-        //sort adFrequencies by y value
-        newAdFrequencies.sort( (a,b) => {
-            return b.y - a.y;
-        });
-        return [...newAdFrequencies];
+            //sort adFrequencies by y value
+            newAdFrequencies.sort( (a,b) => {
+                return b.y - a.y;
+            });
+            return [...newAdFrequencies];
         });
     }
     return (
@@ -105,14 +108,14 @@ export default function SocialMediaContainer(props){
                 profileCreated && /* conditionally render the ad breakdown portion */
                 <div className = "spaced-row">
                     <AdBreakdown
-                    adFrequencies = {adFrequencies}
-                    setAdFrequencies = {setAdFrequencies}
-                    refreshes = {refreshes}
-                    setRefreshes = {setRefreshes}
-                    adDataSet = {adDataSet}
-                    setSelectedAd = {setSelectedAd}
-                    pickAd = {pickAd}
-                    resetAds = {resetAds}
+                        adFrequencies = {adFrequencies}
+                        setAdFrequencies = {setAdFrequencies}
+                        refreshes = {refreshes}
+                        setRefreshes = {setRefreshes}
+                        adDataSet = {adDataSet}
+                        setSelectedAd = {setSelectedAd}
+                        pickAd = {pickAd}
+                        resetAds = {resetAds}
                     />
                 </div>
             }
