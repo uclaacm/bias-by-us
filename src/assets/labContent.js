@@ -40,6 +40,7 @@ export default [
       subheader: "How do the appearance of ads differ across individual accounts?",
       bodyText: [
         {
+<<<<<<< HEAD
           body: <text>Computer programs <mark style={{backgroundColor: '#ffedbd', borderRadius: '7px', padding: '0 5px 5px 5px'}}>categorize</mark> users based on their demographical characteristics in order to optimize efficiency in many things, including advertising. Through such categorizations, advertisers are able to <u>maximize the relevancy of their ads and thus maximize their profit.</u></text>
         },
         {
@@ -54,6 +55,24 @@ export default [
         {
           body: <text>As you can see, the ads you receive <mark style={{backgroundColor: '#ffedbd', borderRadius: '7px', padding: '0 5px 5px 5px'}}>change</mark> depending on your race and gender.</text>
         },
+=======
+          body: `Computer programs categorize users based on their demographical characteristics in order to optimize efficiency in many things, including advertising. By incorporating these categorizations into advertising algorithms, advertisers are able to maximize the relevancy of their ads and thus maximize their profit.`
+        },
+        {
+          body: `How do the decisions made by such algorithms impact the type of ads that we receive on social media?`,
+          bold: true
+        },
+        {
+          body: `Let's say you decided to create a profile on a social media app that displays advertisements "catered" to your preferences. How does changing your profile affect the ads that you receive?`
+        },
+        {
+          body: <PlaceholderInteractive />
+        },
+        {
+          body: `As you can see, the ads you receive change depending on your race and gender. `,
+          bold: true
+        },
+>>>>>>> 12b13ffc61985614a945511ef0e04b71c440a3e8
       ],
     },
   },
@@ -66,12 +85,17 @@ export default [
           questionHeader: `Reflection Question 1:`,
           question: `What are the pros and cons of personalizing ads in this way?`,
           answers: [
+<<<<<<< HEAD
             <text>
               <b>In some cases, personalizing ads is beneficial.</b> For example, sports fans would be more likely to buy merch for the team(s) they root for as opposed to any random team.
             </text>,
             <text>
               <b>In other cases, personalizing ads will promote unfairness.</b> For example, if the algorithm observes that men are more likely to respond to software engineer roles, a female software engineer would be much less likely to encounter ads related to her career.
             </text>
+=======
+            <text><b>In some cases, personalizing ads is beneficial.</b> For example, sports fans would be more likely to buy merch for the team(s) they root for as opposed to any random team.</text>,
+            <text><b>In other cases, personalizing ads will promote unfairness.</b> For example, if the algorithm observes that men are more likely to respond to software engineer roles, a female software engineer would be much less likely to encounter ads related to her career.</text>
+>>>>>>> 12b13ffc61985614a945511ef0e04b71c440a3e8
           ]
         },
         {
@@ -83,6 +107,7 @@ export default [
           questionHeader: `Reflection Question 3:`,
           question: `How does discrimination law justify or limit the personalization of ads?`,
           answers: [
+<<<<<<< HEAD
             <text>
               According to law, <mark style={{backgroundColor: '#ffedbd', borderRadius: '7px', padding: '0 5px 5px 5px'}}>discrimination</mark> is defined as the treatment, consideration, or distinction in favor of or against a person based on the group or class that they belong to rather than on individual merit.
             </text>,
@@ -92,6 +117,11 @@ export default [
             <text>
               <b>Discrimination law is not only limited to the final decision made (i.e. hiring decision) but also extend to marketing and advertising.</b> If advertising only to a certain demographic can <u>affect other groups’ access to opportunities that affect their life chances</u> (such as their job, money, house, education, or health), then that action is considered discriminatory
             </text>
+=======
+            <text>According to law, <b>discrimination</b> is defined as the treatment, consideration, or distinction in favor of or against a person based on the group or class that they belong to rather than on individual merit.</text>,
+            <text><b>Legally protected classes</b> include race, color, sex, religion, national origin, citizenship, age, pregnancy, familial status, disability status, veteran status, and genetic information.</text>,
+            <text><b>Discrimination law is not only limited to the final decision made (i.e. hiring decision) but also extend to marketing and advertising.</b> If advertising only to a certain demographic can <b>affect other groups’ access to opportunities that affect their life chances</b> (such as their job, money, house, education, or health), then that action is considered discriminatory</text>
+>>>>>>> 12b13ffc61985614a945511ef0e04b71c440a3e8
           ]
         },
       ],
@@ -105,19 +135,34 @@ export default [
       subheader: "How do algorithms respond to stereotypical trends within data?",
       bodyText: [
         {
+<<<<<<< HEAD
           body: <text>The difference in ads shown across demographics is caused by the algorithm being trained on a <mark style={{backgroundColor: '#ffbdbd', borderRadius: '7px', padding: '0 5px 5px 5px'}}>skewed sample</mark> that reflects our society's biases. Much of the <i>correlations</i> it notices between race/gender and jobs have little to no actual <i>causal relationsip</i>, i.e. the kind of job a person looks for does not depend on their race or gender. However, a machine learning algorithm cannot tell when a trend it notices is correlation or causation, so it incorporates every trend it sees into its calculations for showing its users the most "optimal" ads.</text>
         },
         {
           body: <text><b>What happens when the algorithm begins showing different types of ads to different demographics?</b></text>
+=======
+          body: <text>The difference in ads shown across demographics is caused by the algorithm being trained on a <b>skewed sample</b> that reflects our society's biases. Much of the <b>correlations</b> it notices between race/gender and jobs have little to no actual <b>causal relationsip</b>, i.e. the kind of job a person looks for does not depend on their race or gender. However, a machine learning algorithm cannot tell when a trend it notices is correlation or causation, so it incorporates every trend it sees into its calculations for showing its users the most "optimal" ads.</text>
+        },
+        {
+          body: `What happens when the algorithm begins showing different types of ads to different demographics?`,
+          bold: true
+>>>>>>> 12b13ffc61985614a945511ef0e04b71c440a3e8
         },
         {
           body: <PlaceholderInteractive />
         },
         {
+<<<<<<< HEAD
           body: <text>As shown in the animation above, the type of ads users initially receive only vary slightly. However, as time passes, these differences are <mark style={{backgroundColor: '#ffbdbd', borderRadius: '7px', padding: '0 5px 5px 5px'}}>amplified</mark> as users <i>only</i> get to interact with the ads they see. The algorithm recognizes this as positive feedback, and adjusts its parameters to show similar ads in the future - when in reality, the user may be more interested in another type of ad that they have yet to receive!</text>
         },
         {
           body: <text>This process of amplifying trends is a <mark style={{backgroundColor: '#ffbdbd', borderRadius: '7px', padding: '0 5px 5px 5px'}}>positive feedback loop</mark> that compounds initial bias over time.</text>
+=======
+          body: <text>As shown in the animation above, the type of ads users initially receive only vary slightly. However, as time passes, these differences are <b>amplified</b> as users <i>only</i> get to interact with the ads they see. The algorithm recognizes this as <b>positive feedback</b>, and adjusts its parameters to show similar ads in the future - when in reality, the user may be more interested in another type of ad that they have yet to receive!</text>
+        },
+        {
+          body: <text>This process of amplifying trends is a <b>positive feedback loop</b> that compounds initial bias over time.</text>
+>>>>>>> 12b13ffc61985614a945511ef0e04b71c440a3e8
         },
       ],
     },
@@ -131,21 +176,30 @@ export default [
           questionHeader: `Reflection Question 1:`,
           question: `What is an example of a difference between correlation vs causation?`,
           answers: [
+<<<<<<< HEAD
             <text>
               One widely discussed example is the <b>strong positive correlation between ice cream sales and homicide rates</b>. Clearly, ice cream doesn't cause people to commit violent crime! Instead, the correlation comes from the fact that ice cream sales and crime rates both rise in the summer due to the hot weather.
             </text>
+=======
+            <text>One widely discussed example is the <b>strong positive correlation between ice cream sales and homicide rates</b>. Clearly, ice cream doesn't cause people to commit violent crime! Instead, the correlation comes from the fact that ice cream sales and crime rates both rise in the summer due to the hot weather.</text>
+>>>>>>> 12b13ffc61985614a945511ef0e04b71c440a3e8
           ]
         },
         {
           questionHeader: `Reflection Question 2:`,
           question: `Why do we want to avoid positive feedback loops in advertising, especially for job and housing ads?`,
           answers: [
+<<<<<<< HEAD
             <text>
               <u>Here is a situation we want to avoid:</u> Let’s say the algorithm observes from data that people of color (POC) tend to buy cheaper homes on average than non-POC. It then advertises cheaper listings to POC and more expensive listings to non-POC in order to maximize ad views.
             </text>,
             <text>
               Naturally, the cheaper housing ads gain more traction by POC accounts simply because that is all they were exposed to. However, the algorithm comes to believe that POC prefer cheaper homes and continues to advertise more and more cheap listings. Because of this, <b>POC would gain less and less opportunities to buy a more expensive house, worsening the initial disparity in housing choices that was observed from the data.</b>
             </text>
+=======
+            <text>Here is a situation we want to avoid: Let’s say the algorithm observes from data that people of color (POC) tend to buy cheaper homes on average than non-POC. It then advertises cheaper listings to POC and more expensive listings to non-POC in order to maximize ad views.</text>,
+            <text>Naturally, the cheaper housing ads gain more traction by POC accounts simply because that is all they were exposed to. However, the algorithm comes to believe that POC prefer cheaper homes and continues to advertise more and more cheap listings. Because of this, <b>POC would gain less and less opportunities to buy a more expensive house, worsening the initial disparity in housing choices that was observed from the data.</b></text>
+>>>>>>> 12b13ffc61985614a945511ef0e04b71c440a3e8
           ]
         }
       ],
@@ -211,7 +265,11 @@ export default [
           body: <ConclusionGraphic />
         },
         {
+<<<<<<< HEAD
           body: <text>In the future, Facebook and other advertising platforms could also incorporate state-of-the-art machine learning <mark style={{backgroundColor: '#bdf0ff', borderRadius: '7px', padding: '0 5px 5px 5px'}}>debiasing</mark> methods to further prevent their algorithms from becoming discriminatory.</text>
+=======
+          body: `In the future, Facebook and other advertising platforms could also incorporate state-of-the-art machine learning debiasing methods to further prevent their algorithms from becoming discriminatory.`
+>>>>>>> 12b13ffc61985614a945511ef0e04b71c440a3e8
         }
       ],
     },
