@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import joeBruin from "../../assets/joeBruin.png";
+import joeBruin from "../../assets/joebruin.svg";
 import "./socialMedia.css";
 import "../mainContent/mainContent.css"
 
@@ -38,7 +38,7 @@ export default function ProfileCreator(props){
     }
 
     return (
-        <div>
+        <div className = "flex-column">
             <div className = "profile-header" id= "user-profile">Generated Profile</div>
             <div>
                 <img
@@ -49,7 +49,7 @@ export default function ProfileCreator(props){
             </div>
             <div>
                 <div> Gender </div>
-                <div className = "spaced-row">
+                <div>
                     <button
                         className = 
                             { /* conditionally render what button appears*/
@@ -71,7 +71,7 @@ export default function ProfileCreator(props){
             </div>
             <div>
                 <div> Race </div>
-                <div className = "spaced-row">
+                <div>
                     <button
                         className = {`default-button ${ raceInput === "white" ? "white-button-active" : "hover-button"} ` }
                         value = "white"
