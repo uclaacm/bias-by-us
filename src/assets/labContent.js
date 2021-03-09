@@ -11,6 +11,7 @@ import adPic from "./adPic.png";
 import loopPic from "./loopPic.svg";
 import trendsPic from "./trends.svg";
 import facebookAds from "./personalizedAds.svg";
+import anime from "./animationpic.svg";
 
 export default [
   {
@@ -111,7 +112,7 @@ export default [
           body: <text><b>What happens when the algorithm begins showing different types of ads to different demographics?</b></text>
         },
         {
-          body: <PlaceholderInteractive />
+          body: <img src={anime} alt="a static design of the animation that visualizes how skewed samples amplify biases"></img>
         },
         {
           body: <text>As shown in the animation above, the type of ads users initially receive only vary slightly. However, as time passes, these differences are <mark style={{backgroundColor: '#ffbdbd', borderRadius: '7px', padding: '0 5px 5px 5px'}}>amplified</mark> as users <i>only</i> get to interact with the ads they see. The algorithm recognizes this as positive feedback, and adjusts its parameters to show similar ads in the future - when in reality, the user may be more interested in another type of ad that they have yet to receive!</text>
