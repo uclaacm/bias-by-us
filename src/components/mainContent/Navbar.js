@@ -41,7 +41,7 @@ export default function NavBar(props) {
   return (
     <div className="navbar">
       {/* the TeachLA logo will be a link to ACM TeachLA's website*/}
-      <a href="https://teachla.uclaacm.com">
+      <a href="https://teachla.uclaacm.com" aria-label="go to TeachLA's website">
         <img src={teachLogo} alt="TeachLA icon" className="logo" />
       </a>
       {/* 'Bias by Us' will be a link -- clicking on it will go to the introduction page of our learning lab */}
