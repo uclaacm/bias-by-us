@@ -1,0 +1,43 @@
+p {
+    margin: 0;
+}
+
+.bold {
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.underline {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.italic {
+    font-style: italic;
+    background-color: transparent;
+}
+
+.highlight {
+    border-radius: 7px;
+    padding: 0 5px 3px 5px;
+}
+
+.yellow {
+    background-color: #ffedbd;
+}
+
+.red {
+    background-color: #ffbdbd;
+}
+
+.green {
+    background-color: #c3f7c1;
+}
+
+.blue {
+    background-color: #bdf0ff;
+}
+
+.gray-text {
+    color: gray;
+}
