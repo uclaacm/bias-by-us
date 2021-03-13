@@ -5,9 +5,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    border: 2rem black solid;
+    border: 2rem rgb(36, 36, 36) solid;
     border-bottom-width: 4rem;
     border-radius: 2rem;
+    background-color: rgb(255, 247, 223);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .user-profile-pic {
@@ -23,20 +26,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .profile-header {
   font-weight: bold;
   font-size: 2.5rem;
+  margin: 5px 0;
 }
 
 .default-button {
-    padding: 0.5rem;
-    font-size: 2rem;
+    padding: 0.4rem;
+    font-size: 1.5rem;
     background-color: #eef0f1;
     margin: 0.5rem;
-    
+    font-family: "Mulish", sans-serif;
+    border-radius: 10px;
   }
 
 .ad-button {
@@ -56,7 +61,7 @@
  
    .female-button-active {
     background-color: #ff8cfb;
-    color: #494e50;
+    color: black;
   }
  
    .white-button-active {

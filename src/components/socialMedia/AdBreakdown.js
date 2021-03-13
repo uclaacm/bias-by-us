@@ -21,7 +21,7 @@ import React from "react";
      return(
          <div>
              <div className = "histogram-header">
-                <div>
+                <div className = "text-bold">
                     Most Frequently Displayed Ads
                 </div>
                 <div>
