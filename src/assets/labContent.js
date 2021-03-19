@@ -4,9 +4,9 @@ then they will be their own seperate part inbetween posts and the followups.
 */
 import React from "react";
 import './labContent.css';
-import PlaceholderInteractive from "../components/posts/PlaceholderInteractive.js";
 import SocialMediaContainer from "../components/socialMedia/SocialMediaContainer";
 import ConclusionGraphic from "../components/posts/ConclusionGraphic.js";
+import GenderGraphContainer from "../components/posts/GenderGraphContainer.js";
 import facebookLogo from "./facebookLogo.svg";
 import adPic from "./adPic.png";
 import loopPic from "./loopPic.svg";
@@ -161,16 +161,16 @@ export default [
       subheader: "How deep do the effect of advertisements run in society itself?",
       bodyText: [
         {
-          body: <p>Here is a graph displaying the <mark className="bold">gender distribution of computer scientists from the 1960s to now.</mark></p>
+          body: <p>Here is a graph displaying the <mark className="bold">percentage of women enrolled in computer science degrees from the 1960s to now.</mark> (<a href='https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding' target="_blank" rel="noopener noreferrer">source</a>)</p>
         },
         {
-          body: <PlaceholderInteractive />
+          body: <GenderGraphContainer />
         },
         {
           body: <p>Did you notice the sudden drop in females?</p>
         },
         {
-          body: <p>In the 60s when computers first emerged, women made up most of the computing field. <mark className="underline">However, in the 70s, personal computers were advertised almost exclusively to men,</mark> influencing families to buy computers for boys than girls. While the percentage of women in CS rose in the 80s thanks to the boom of nerd culture, since then it has been in decline.</p>
+          body: <p>While the percentage of women in CS rose in the 80s thanks to the boom of nerd culture, women enrolled in CS degrees at the time found that their male peers had come into college with much greater familiarity and prior experience with computers than they did. This was due to the fact that <mark className="underline">personal computers were advertised almost exclusively to men in the 70s, influencing families to buy computers for boys than girls.</mark></p>
         },
         {
           body: <p>Despite numerous efforts to lower the gender disparity in tech today, the current distribution has a long way to go until we can erase the <mark className="bold">severe <mark className="green highlight">impact</mark> of past advertisements.</mark></p>
@@ -232,6 +232,9 @@ export default [
             </a>,
             <a href='https://arxiv.org/pdf/1904.02095.pdf' target="_blank" rel="noopener noreferrer">
               Research Paper - Discrimination through optimization: How Facebook's ad delivery can lead to skewed outcomes
+            </a>,
+            <a href='https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding' target="_blank" rel="noopener noreferrer">
+              NPR - When Women Stopped Coding
             </a>,
             <a href='https://www.computerscience.org/resources/women-in-computer-science/' target="_blank" rel="noopener noreferrer">
               Statistics on Women in Computer Science
