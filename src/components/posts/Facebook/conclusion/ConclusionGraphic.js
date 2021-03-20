@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./conclusion.css";
-import conclusion from "../../assets/conclusion.js";
+import conclusion from "./conclusion.js";
 export default function ConclusionGraphic() {
 
   const [currentCard, setCurrentCard] = useState(0);

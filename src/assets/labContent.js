@@ -4,9 +4,9 @@ then they will be their own seperate part inbetween posts and the followups.
 */
 import React from "react";
 import './labContent.css';
-import PlaceholderInteractive from "../components/posts/PlaceholderInteractive.js";
-import SocialMediaContainer from "../components/socialMedia/SocialMediaContainer";
-import ConclusionGraphic from "../components/posts/ConclusionGraphic.js";
+import SocialMediaContainer from "../components/posts/Facebook/socialMedia/SocialMediaContainer";
+import ConclusionGraphic from "../components/posts/Facebook/conclusion/ConclusionGraphic.js";
+import GenderGraphContainer from "../components/posts/Facebook/genderGraph/GenderGraphContainer.js";
 import facebookLogo from "./facebookLogo.svg";
 import adPic from "./adPic.png";
 import loopPic from "./loopPic.svg";
@@ -48,7 +48,7 @@ export default [
           body: <p>Let's say you decided to create a profile on a social media app that displays advertisements "catered" to your preferences. <mark className="bold">How does changing your profile affect the ads that you receive?</mark></p>
         },
         {
-          body:<p className="gray-text">Why are the options for gender and race binary, you ask? That's because this activity is based on the data from a <a href='https://arxiv.org/pdf/1904.02095.pdf' target="_blank" rel="noopener noreferrer">research study</a> that only considers these four criteria in order to simplify their experimental process. Teach LA recognizes that race and gender are <mark className="italic">not</mark> binary, and that it is crucial for algorithms to be inclusive of all identities! </p>
+          body:<p className="gray-text">Why are the options for gender and race binary, you ask? That's because this activity is based on the data from a <a href='https://arxiv.org/pdf/1904.02095.pdf' target="_blank" rel="noopener noreferrer">research study</a> that only considers these four criteria in order to simplify their experimental process. Teach LA recognizes that race and gender are <mark className="italic gray-text">not</mark> binary, and that it is crucial for algorithms to be inclusive of all identities! </p>
         },
         {
           body: <SocialMediaContainer />
@@ -161,16 +161,19 @@ export default [
       subheader: "How deep do the effect of advertisements run in society itself?",
       bodyText: [
         {
-          body: <p>Here is a graph displaying the <mark className="bold">gender distribution of computer scientists from the 1960s to now.</mark></p>
+          body: <p className="text-center"><mark className="bold">Percentage of Women Enrolled in Computer Science Degrees from 1960s to Present</mark></p>
         },
         {
-          body: <PlaceholderInteractive />
+          body: <GenderGraphContainer />
+        },
+        {
+          body: <p className="gray-text text-center">Source: <a href='https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding' target="_blank" rel="noopener noreferrer"> NPR - When Women Stopped Coding</a></p>
         },
         {
           body: <p>Did you notice the sudden drop in females?</p>
         },
         {
-          body: <p>In the 60s when computers first emerged, women made up most of the computing field. <mark className="underline">However, in the 70s, personal computers were advertised almost exclusively to men,</mark> influencing families to buy computers for boys than girls. While the percentage of women in CS rose in the 80s thanks to the boom of nerd culture, since then it has been in decline.</p>
+          body: <p>While the percentage of women in CS rose in the 80s thanks to the boom of nerd culture, women enrolled in CS degrees at the time found that their male peers had come into college with much greater familiarity and prior experience with computers than they did. This was due to the fact that <mark className="underline">personal computers were advertised almost exclusively to men in the 70s, influencing families to buy computers for boys than girls.</mark></p>
         },
         {
           body: <p>Despite numerous efforts to lower the gender disparity in tech today, the current distribution has a long way to go until we can erase the <mark className="bold">severe <mark className="green highlight">impact</mark> of past advertisements.</mark></p>
@@ -232,6 +235,9 @@ export default [
             </a>,
             <a href='https://arxiv.org/pdf/1904.02095.pdf' target="_blank" rel="noopener noreferrer">
               Research Paper - Discrimination through optimization: How Facebook's ad delivery can lead to skewed outcomes
+            </a>,
+            <a href='https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding' target="_blank" rel="noopener noreferrer">
+              NPR - When Women Stopped Coding
             </a>,
             <a href='https://www.computerscience.org/resources/women-in-computer-science/' target="_blank" rel="noopener noreferrer">
               Statistics on Women in Computer Science

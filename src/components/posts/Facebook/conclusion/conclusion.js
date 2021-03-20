@@ -1,8 +1,8 @@
 import React from 'react';
-import './labContent.css'
-import dial from "./dial.jpg";
-import looking from "./looking.jpg";
-import whyad from "./whyamiseeingthisad.png";
+import '../../../../assets/labContent.css'
+import dial from "../../../../assets/dial.jpg";
+import looking from "../../../../assets/looking.jpg";
+import whyad from "../../../../assets/whyamiseeingthisad.png";
 export default [
   {
     card: {
