@@ -1,5 +1,5 @@
 
-import placeholderThumbnail from "../../assets/placeholderThumbnail.png";
+import placeholderThumbnail from "../../../../assets/placeholderThumbnail.png";
 import "./socialMedia.css";
 const adData = [ 
     [ 0.27966767, 0.10170184,0.04216069, 0.01245083,], //lumber

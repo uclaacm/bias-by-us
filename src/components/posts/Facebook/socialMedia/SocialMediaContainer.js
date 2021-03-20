@@ -3,8 +3,8 @@ import ProfileCreator from "./ProfileCreator";
 import AdBreakdown from "./AdBreakdown";
 import AdDisplay from "./AdDisplay";
 import "./socialMedia.css";
-import "../mainContent/mainContent.css";
-import "../../assets/labContent";
+import "../../../mainContent/mainContent.css";
+import "../../../../assets/labContent";
 import initialAds from "./initialAds.js";
 export default function SocialMediaContainer(props){
 
