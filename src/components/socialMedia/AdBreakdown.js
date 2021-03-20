@@ -12,7 +12,6 @@ import React from "react";
             )
         });
         props.pickAd(value);
-        console.log("added to histogram!");
      }
      
      function resetRefreshes(){
