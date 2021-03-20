@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import joeBruin from "../../assets/joebruin.svg";
+import joeBruin from "../../../../assets/joebruin.svg";
 import "./socialMedia.css";
-import "../mainContent/mainContent.css"
+import "../../../mainContent/mainContent.css"
 
 export default function ProfileCreator(props){
     const [genderInput, setgenderInput] = useState("unselected");

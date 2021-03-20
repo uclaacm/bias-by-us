@@ -1,6 +1,6 @@
 import React from "react";
  import "./socialMedia.css";
- import "../mainContent/mainContent.css";
+ import "../../../mainContent/mainContent.css";
  import "./socialMedia.css";
  import AdHistogram from "./AdHistogram.js";
  export default function AdBreakdown(props) {

@@ -20,8 +20,8 @@ export default function NavBar(props) {
       <button className="button" aria-label="Navigation Bar Button" onClick={dropdownHandler}>
         <div className={`triangle ${dropdownOpen ? "up" : ""}`}></div>
         {dropdownOpen && (
-          <div class="dropdown">
-            <div class="dropdown-content">
+          <div className="dropdown">
+            <div className="dropdown-content">
               <nav>
                   <Link to='/'>Landing Page</Link>
                   <Link to='/'>About Us</Link>

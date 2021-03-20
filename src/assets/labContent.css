@@ -41,3 +41,15 @@ p {
 .gray-text {
     color: gray;
 }
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    color: #004fee;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
