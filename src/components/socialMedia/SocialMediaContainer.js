@@ -26,7 +26,7 @@ const reducer = (adFrequencies, action) => {
                 (job) => {
                     if (job.x === action.payload)
                         return {...job,  y: job.y +1};
-                    else return job; //Should this use spread operator?
+                    else return job;
                 }
             )
         }
