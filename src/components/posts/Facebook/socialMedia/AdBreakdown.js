@@ -18,7 +18,7 @@ import React from "react";
         props.resetAds();
      }
      return(
-         <div>
+         <div className="ad-breakdown-container">
              <div className = "histogram-header">
                 <div className = "text-bold">
                     Most Frequently Displayed Ads

@@ -17,8 +17,9 @@ export default function GenderGraphContainer() {
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" dy={5}/>
+                <XAxis dataKey="name" dy={5} fontSize='1.1rem'/>
                 <YAxis 
+                    fontSize='1.1rem'
                     tickFormatter={(tick) => { // formats y-axis labels to have '%'
                         return `${tick}%`;
                     }}

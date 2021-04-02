@@ -45,12 +45,12 @@ export default function AdHistogram(props){
     };
     return(
       
-        <div>
+        <div className="ad-histogram-container">
             <Chart
             options = {histogramConfig.options}
             series = {histogramConfig.series}
             type = "bar"
-            width = "1000"
+            height = '600px'
             />
 
         </div>

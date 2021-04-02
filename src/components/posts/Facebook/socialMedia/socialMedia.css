@@ -1,5 +1,6 @@
 .screen-container {
     width: 40%;
+    min-width: 250px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -101,3 +102,20 @@
   height: 20px;
 }
 
+.ad-breakdown-container {
+  width: 75vw;
+  max-width: 800px;
+}
+
+.ad-histogram-container {
+  position: relative;
+  width: 100%;
+  min-width: 350px;
+  left: -10px;
+}
+
+#shown-ad {
+  height: 600px;
+  display: flex;
+  align-items: center;
+}

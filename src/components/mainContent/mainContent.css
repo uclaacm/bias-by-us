@@ -1,8 +1,10 @@
 .content-container {
   background-color: white;
-  width: 1110px;
+  width: 80%;
+  max-width: 1200px;
   padding: 25px 25px 10px 25px;
   border-radius: 20px;
+  margin: 2rem auto;
 }
 
 .forward-container {
@@ -19,6 +21,8 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .flex-column {
@@ -62,6 +66,7 @@
   padding: 0;
   width: 65px;
   height: 65px;
+  margin: 10px;
 }
 
 .progress-button:focus {

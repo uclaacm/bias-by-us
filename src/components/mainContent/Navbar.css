@@ -11,15 +11,15 @@
   background-color: #f7f7f7;
 
   /* FIXME: Possible magic number issue in the future when implementing a responsive design */
-  min-width: 180px;
+  min-width: 120px;
   box-shadow: 0 4px 8px 0 #898f9c;
   z-index: 1;
   text-align: center;
 
   /* These numbers align the dropdown with the button right in the middle.
      TODO: Fix numbers when implementing a responsive design */
-  top: 2rem;
-  left: -63px;
+  top: 12px;
+  left: -8vh;
 }
 
 .dropdown-content a {
@@ -27,7 +27,7 @@
   text-decoration: none;
   display: block;
   font-family: 'Mulish', sans-serif;
-  font-size: 1.3rem;
+  font-size: min(4vw, 1.3rem);
   font-weight: bold;
   color: #4267b2;
   text-align: center;
@@ -40,3 +40,10 @@
 .dropdown-content a:hover { background-color: #ddd; }
 
 .dropdown .dropdown-content { display: block; }
+
+.nav-button {
+  width: min(10vw, 55px);
+  height: 55px;
+  position: relative;
+  right: 15px;
+}

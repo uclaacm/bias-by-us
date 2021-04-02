@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./mainContent.css";
 import "../../AppMain.css";
 import {scroller as scroll} from "react-scroll";
+import forwardButton from "../../assets/forwardButton.svg";
 
 export default function ForwardButton(props) {
 
@@ -62,7 +63,7 @@ export default function ForwardButton(props) {
   return (
     <div className="forward-container">
       <button aria-label="Continue to next part of case study" className="forward-button" onClick={handleForward}>
-        <div className="triangle white"></div>
+        <img src={forwardButton} alt="downward arrow towards next section"></img>
       </button>
     </div>
   );
