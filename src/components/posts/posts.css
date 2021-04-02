@@ -14,7 +14,7 @@
 
 .post-header {
   margin-left: 6.25rem;
-  font-size: 1.875rem;
+  font-size: min(5.5vw, 1.875rem);
   position: relative;
   top: 5px;
   margin-bottom: 2px;

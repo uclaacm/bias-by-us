@@ -18,8 +18,8 @@ export default function NavBar(props) {
   // dropdownArea: arrow function that returns the apporpriate button (and dropdown menu if applicable) depending on whether dropdownOpen is true/false
   const dropdownArea = () => {
     return (
-      <button className="button" aria-label="Navigation Bar Button" onClick={dropdownHandler}>
-        <img className="nav-button" src={navButton} alt="arrow to expand table of contents"></img>
+      <button className="nav-button" aria-label="Navigation Bar Button" onClick={dropdownHandler}>
+        <img className="nav-button-image" src={navButton} alt="arrow to expand table of contents"></img>
         {dropdownOpen && (
           <div className="dropdown">
             <div className="dropdown-content">

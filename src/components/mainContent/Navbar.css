@@ -1,13 +1,27 @@
+.nav-button {
+  background: none;
+  width: min(20vw, 55px);
+  height: min(20vw, 55px);
+  border-radius: 50%;
+  border: none;
+  margin-left: auto;
+  margin-right: min(12vw, 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .dropdown {
   position: absolute;
-  width: 100%;
+  min-width: 120px;
   height: 450px;
+  margin-top: 70px;
 }
 
 .dropdown-content {
   border-radius: 0 0 10px 10px;
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #f7f7f7;
 
   /* FIXME: Possible magic number issue in the future when implementing a responsive design */
@@ -15,11 +29,6 @@
   box-shadow: 0 4px 8px 0 #898f9c;
   z-index: 1;
   text-align: center;
-
-  /* These numbers align the dropdown with the button right in the middle.
-     TODO: Fix numbers when implementing a responsive design */
-  top: 12px;
-  left: -8vh;
 }
 
 .dropdown-content a {
@@ -41,9 +50,9 @@
 
 .dropdown .dropdown-content { display: block; }
 
-.nav-button {
+.nav-button-image {
   width: min(10vw, 55px);
   height: 55px;
   position: relative;
-  right: 15px;
+  right: -2px;
 }

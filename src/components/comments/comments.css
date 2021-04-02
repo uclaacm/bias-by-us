@@ -48,7 +48,7 @@
   position: relative;
   top: -25px;
   left: 6.25rem;
-  font-size: 1.25rem;
+  font-size: min(4.5vw, 1.25rem);
   background: none;
   border: none;
 }
