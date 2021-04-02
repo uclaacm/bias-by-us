@@ -13,7 +13,7 @@ function CaseStudyFacebook() {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
+    const { innerWidth: width } = window;
     return width;
   }
 
