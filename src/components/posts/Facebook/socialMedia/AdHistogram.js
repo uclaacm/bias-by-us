@@ -27,7 +27,7 @@ export default function AdHistogram(props){
               yaxis: {
                   labels: {
                       style: {
-                          fontSize: "20px",
+                          fontSize: "min(4vw,20px)",
                           fontWeight: 600
                       }
                   }
@@ -45,12 +45,12 @@ export default function AdHistogram(props){
     };
     return(
       
-        <div>
+        <div className="ad-histogram-container">
             <Chart
             options = {histogramConfig.options}
             series = {histogramConfig.series}
             type = "bar"
-            width = "1000"
+            height = '600px'
             />
 
         </div>

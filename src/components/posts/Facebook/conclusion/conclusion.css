@@ -9,17 +9,20 @@
   background-color: #f0f0f0;
   border-radius: 20px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  width: 620px;
-  height: 42.5rem;
+  max-width: 620px;
+  min-height: 42.5rem;
   padding: 1.25rem;
 }
 
 .card-image {
   max-width: 300px;
-  width: 18.75rem;
+  width: 16rem;
   align-self: center;
+  margin: 10px 0;
+  border-radius: 20px;
 }
 
 .card-button {
@@ -28,7 +31,7 @@
   width: 50px;
   height: 50px;
   background-color: #4267b2;
-  margin: 0 5px;
+  margin: 5px 5px 0 5px;
   position: relative;
 }
 

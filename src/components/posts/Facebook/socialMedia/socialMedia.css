@@ -1,5 +1,6 @@
 .screen-container {
     width: 40%;
+    min-width: 230px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -26,31 +27,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: min(6vw, 1.8rem);
 }
 
 .profile-header {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: min(6vw, 2.5rem);
   margin: 5px 0;
 }
 
 .default-button {
     padding: 0.4rem;
-    font-size: 1.5rem;
+    font-size: min(5vw, 1.5rem);
     background-color: #eef0f1;
     margin: 0.5rem;
     font-family: "Mulish", sans-serif;
     border-radius: 10px;
   }
-
-.ad-button {
-  font-size: 1rem;
-  background-color: #eef0f1;
-  padding: 0.25rem;
-  margin-top: 5px;
-  margin-bottom: 18px;
-}
 
 
 
@@ -101,3 +94,21 @@
   height: 20px;
 }
 
+.ad-breakdown-container {
+  width: 75vw;
+  max-width: 800px;
+}
+
+.ad-histogram-container {
+  position: relative;
+  width: 100%;
+  min-width: 350px;
+  left: -10px;
+}
+
+#shown-ad {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}

@@ -113,7 +113,7 @@ export default [
           body: <p><mark className="bold">What happens when the algorithm begins showing different types of ads to different demographics?</mark></p>
         },
         {
-          body: <img src={anime} alt="a static design of the animation that visualizes how skewed samples amplify biases"></img>
+          body: <img style={{maxWidth: '900px', width: '75vw', marginLeft: '1vw'}} src={anime} alt="a static design of the animation that visualizes how skewed samples amplify biases"></img> // we will remove this once we implement the animation
         },
         {
           body: <p>As shown in the animation above, the type of ads users initially receive only vary slightly. However, as time passes, these differences are <mark className="red highlight">amplified</mark> as users <mark className="italic">only</mark> get to interact with the ads they see. The algorithm recognizes this as positive feedback, and adjusts its parameters to show similar ads in the future - when in reality, the user may be more interested in another type of ad that they have yet to receive!</p>

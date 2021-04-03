@@ -18,14 +18,14 @@ import React from "react";
         props.resetAds();
      }
      return(
-         <div>
+         <div className="ad-breakdown-container">
              <div className = "histogram-header">
-                <div className = "text-bold">
+                <p className = "text-bold">
                     Most Frequently Displayed Ads
-                </div>
-                <div>
+                </p>
+                <p>
                     Refreshed: {props.refreshes} times
-                </div>
+                </p>
                 <div className = "spaced-row">
                     <button
                         className = "default-button hover-button"

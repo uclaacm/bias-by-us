@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import teachLogo from "../../assets/teachla-logo.svg";
+import navButton from "../../assets/navButton.svg";
 import "../../AppMain.css";
 import "../../index.css";
 import './Navbar.css';
@@ -17,8 +18,8 @@ export default function NavBar(props) {
   // dropdownArea: arrow function that returns the apporpriate button (and dropdown menu if applicable) depending on whether dropdownOpen is true/false
   const dropdownArea = () => {
     return (
-      <button className="button" aria-label="Navigation Bar Button" onClick={dropdownHandler}>
-        <div className={`triangle ${dropdownOpen ? "up" : ""}`}></div>
+      <button className="nav-button" aria-label="Navigation Bar Button" onClick={dropdownHandler}>
+        <img className="nav-button-image" src={navButton} alt="arrow to expand table of contents"></img>
         {dropdownOpen && (
           <div className="dropdown">
             <div className="dropdown-content">
@@ -45,8 +46,10 @@ export default function NavBar(props) {
         <img src={teachLogo} alt="TeachLA icon" className="logo" />
       </a>
       {/* 'Bias by Us' will be a link -- clicking on it will go to the introduction page of our learning lab */}
-      <h1 className="title">Bias by Us</h1>
-      <h2 className="subtitle">Case Study #2: Facebook Ads</h2>
+      <div className="title-container">
+        <h1 className="title">Bias by Us</h1>
+        <h2 className="subtitle">Case Study #2: Facebook Ads</h2>
+      </div>
       {dropdownArea()}
     </div>
   );
