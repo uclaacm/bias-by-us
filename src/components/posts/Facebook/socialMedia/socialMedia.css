@@ -109,6 +109,8 @@
 #shown-ad {
   height: 600px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px;
 }

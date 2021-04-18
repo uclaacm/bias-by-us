@@ -24,7 +24,7 @@ export default function NavBar(props) {
         onClick={dropdownHandler}
       >
         <img
-          className="nav-button-image"
+          className={`nav-button-image ${dropdownOpen && `rotate`}`}
           src={navButton}
           alt="arrow to expand table of contents"
         ></img>
@@ -32,13 +32,27 @@ export default function NavBar(props) {
           <div className="dropdown">
             <div className="dropdown-content">
               <nav>
-                <Link to="/">Landing Page</Link>
-                <Link to="/aboutUs">About Us</Link>
-                <Link to="/college">Case Study #1</Link>
-                <Link to="/facebook">Case Study #2</Link>
-                <Link to="/facialRecognition">Case Study #3</Link>
-                <Link to="/conclusion">Conclusion</Link>
-                <Link to="/resources">Resources</Link>
+                <Link className={props.path === '/' && 'current-link'} to="/">
+                  Landing Page
+                </Link>
+                <Link className={props.path === 'aboutUs' && 'current-link'} to="/aboutUs">
+                  About Us
+                </Link>
+                <Link className={props.path === 'college' && 'current-link'} to="/college">
+                  Case Study #1
+                </Link>
+                <Link className={props.path === 'facebook' && 'current-link'} to="/facebook">
+                  Case Study #2
+                </Link>
+                <Link className={props.path === 'facialRecognition' && 'current-link'} to="/facialRecognition">
+                  Case Study #3
+                </Link>
+                <Link className={props.path === 'conclusion' && 'current-link'} to="/conclusion">
+                  Conclusion
+                </Link>
+                <Link className={props.path === 'resources' && 'current-link'} to="/resources">
+                  Resources
+                </Link>
               </nav>
             </div>
           </div>
@@ -58,7 +72,9 @@ export default function NavBar(props) {
       </a>
       {/* 'Bias by Us' will be a link -- clicking on it will go to the introduction page of our learning lab */}
       <div className="title-container">
-        <h1 className="title">Bias by Us</h1>
+        <Link className="title-link" to="/">
+          <h1 className="title">Bias by Us</h1>
+        </Link>
         <h2 className="subtitle">{props.subtitle}</h2>
       </div>
       {dropdownArea()}
