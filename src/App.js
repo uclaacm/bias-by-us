@@ -17,7 +17,7 @@ function App() {
         {/* conditionally render the heading in navbar */}
         <Switch>
           {/* render default navbar if URL is empty */}
-          <Route exact={true} path="/">
+          <Route exact path="/">
             <div className="navbar">
               <Navbar subtitle={getHeader()} />
             </div>
@@ -34,7 +34,7 @@ function App() {
         </Switch>
 
         <Switch>
-          <Route exact={true} path="/"><LandingPage /></Route>
+          <Route exact path="/"><LandingPage /></Route>
           <Route path="/aboutUs"><AboutUsPage /></Route>
           <Route path="/college"><CollegeAdmissionsUT /></Route>
           <Route path="/facebook"><CaseStudyFacebook /></Route>
@@ -61,9 +61,9 @@ function getHeader(path) {
     resources: "To Learn More...",
   };
   //return default dictionary value if path is falsy
-  if (!path) return subtitle;
 
-  //get the subtitle from our pageNames dictionary
-  ({ [path]: subtitle } = pageNames);
+  //get the subtitle from our pageNames dictionary if path exists
+  if (path)
+    ({ [path]: subtitle } = pageNames);
   return subtitle;
 }
