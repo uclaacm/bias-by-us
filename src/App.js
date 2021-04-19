@@ -19,7 +19,10 @@ function App() {
           {/* render default navbar if URL is empty */}
           <Route exact path="/">
             <div className="navbar">
-              <Navbar subtitle={getHeader()} />
+              <Navbar 
+                path="/" 
+                subtitle={getHeader()} 
+              />
             </div>
           </Route>
           {/* pass in URL through params if it's not the default URL */}
@@ -27,7 +30,10 @@ function App() {
             path="/:currentPage"
             render={(input) => (
               <div className="navbar">
-                <Navbar subtitle={getHeader(input.match.params.currentPage)} />
+                <Navbar 
+                  path={input.match.params.currentPage} 
+                  subtitle={getHeader(input.match.params.currentPage)} 
+                />
               </div>
             )}
           ></Route>

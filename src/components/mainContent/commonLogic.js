@@ -23,7 +23,7 @@ export function useWindowDimensions() {
     }
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resizeWidth", handleResize);
-  }, [windowWidth, windowHeight]);
+  }, []);
 
   return [windowWidth, windowHeight];
 }

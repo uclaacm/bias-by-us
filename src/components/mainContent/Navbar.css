@@ -15,7 +15,7 @@
   position: absolute;
   min-width: 120px;
   height: 450px;
-  margin-top: 70px;
+  margin-top: 69px;
 }
 
 .dropdown-content {
@@ -55,4 +55,17 @@
   height: 55px;
   position: relative;
   right: -2px;
+  cursor: pointer;
+}
+
+.nav-button-image:hover {
+  filter: brightness(85%);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.current-link {
+  background-color: #ddd;
 }
