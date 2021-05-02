@@ -4,7 +4,7 @@ then they will be their own seperate part inbetween posts and the followups.
 */
 import React from "react";
 import './labContent.css';
-import SocialMediaContainer from "../components/posts/Facebook/socialMedia/SocialMediaContainer";
+import { SocialMediaSection } from "../components/posts/Facebook/socialMedia/socialMediaHandler";
 import ConclusionGraphic from "../components/posts/Facebook/conclusion/ConclusionGraphic.js";
 import GenderGraphContainer from "../components/posts/Facebook/genderGraph/GenderGraphContainer.js";
 import facebookLogo from "./facebookLogo.svg";
@@ -51,7 +51,7 @@ export default [
           body:<p className="gray-text">Why are the options for gender and race binary, you ask? That's because this activity is based on the data from a <a href='https://arxiv.org/pdf/1904.02095.pdf' target="_blank" rel="noopener noreferrer">research study</a> that only considers these four criteria in order to simplify their experimental process. Teach LA recognizes that race and gender are <mark className="italic gray-text">not</mark> binary, and that it is crucial for algorithms to be inclusive of all identities! </p>
         },
         {
-          body: <SocialMediaContainer />
+          body: <SocialMediaSection />
         },
         {
           body: <p>As you can see, the ads you receive <mark className="yellow highlight">change</mark> depending on your race and gender.</p>
