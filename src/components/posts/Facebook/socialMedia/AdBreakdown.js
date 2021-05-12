@@ -16,9 +16,7 @@ export default function AdBreakdown(props) {
   } = useContext(SocialMediaContext);
   function handleAddRefreshes(button) {
     let value = button.target.value;
-    setRefreshes((prevValue) => {
-      return parseInt(prevValue) + parseInt(value);
-    });
+    setRefreshes((prevValue) => parseInt(prevValue) + parseInt(value));
     pickAd(value);
   }
 
