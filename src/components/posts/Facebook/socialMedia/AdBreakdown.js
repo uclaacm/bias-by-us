@@ -14,6 +14,7 @@ export default function AdBreakdown(props) {
     dispatchAdFrequencies,
     adDataSet,
   } = useContext(SocialMediaContext);
+
   function handleAddRefreshes(button) {
     let value = button.target.value;
     setRefreshes((prevValue) => parseInt(prevValue) + parseInt(value));
@@ -21,21 +22,11 @@ export default function AdBreakdown(props) {
   }
 
   function pickAd(value) {
-    let newAdFrequencies = [...adFrequencies];
-    for (let i = 0; i < value; i++) {
-      let prob = Math.random();
-      let threshold = 0;
-      //randomly select ad from dataset
-      for (let job of newAdFrequencies) {
-        threshold += parseFloat(job.adPercentages[adDataSet]);
-        if (threshold > prob) {
-          dispatchAdFrequencies({ type: "increment", payload: job.x });
-          break; //exit once ad is selected
-        }
-      }
-    }
-    //sort adFrequencies by y value
-    dispatchAdFrequencies({ type: "sort" });
+    dispatchAdFrequencies({
+      type: "pickAd",
+      payload: value,
+      adDataSet: adDataSet,
+    });
   }
 
   function resetRefreshes() {

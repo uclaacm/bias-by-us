@@ -16,19 +16,31 @@ const adReducer = (adFrequencies, action) => {
       });
     }
 
-    case "increment": {
-      //increment just one part of the ad (more efficent than using state)
-      return adFrequencies.map((job) => {
-        if (job.x === action.payload) return { ...job, y: job.y + 1 };
-        else return job;
-      });
-    }
+    //takes in # of times to pick ad, and the index # of the adDataSet
+    case "pickAd": {
+      let newAdFrequencies = [...adFrequencies];
+      //randomly select ad from dataset action.payload times
+      for (let i = 0; i < action.payload; i++) {
+        let prob = Math.random();
+        let threshold = 0;
 
-    case "sort": {
-      //sort the ads
-      return adFrequencies.sort((a, b) => {
-        return b.y - a.y;
-      });
+        //choose by weighted percentages of each ad
+        for (let job of newAdFrequencies) {
+          threshold += parseFloat(job.adPercentages[action.adDataSet]);
+
+          //increment new section if reached percentage threshold
+          if (threshold > prob) {
+            newAdFrequencies = newAdFrequencies.map((newJob) =>
+              newJob.x === job.x ? { ...newJob, y: newJob.y + 1 } : newJob
+            );
+            break; //move on to next ad to select once an ad is selected
+          }
+        }
+      }
+
+      //sort the newAdFrequencies in descending order once all displayed hads have been chosen
+      newAdFrequencies.sort((a, b) => b.y - a.y);
+      return newAdFrequencies;
     }
 
     default:
@@ -89,7 +101,6 @@ export const SocialMediaProvider = ({ children }) => {
         selectedAd,
         setSelectedAd,
         adDataSet,
-        setAdDataSet,
         adFrequencies,
         dispatchAdFrequencies,
         //helper functions
