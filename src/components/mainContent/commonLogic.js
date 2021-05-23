@@ -22,7 +22,7 @@ export function useWindowDimensions() {
       setWindowHeight(getWindowHeight());
     }
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resizeWidth", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return [windowWidth, windowHeight];
