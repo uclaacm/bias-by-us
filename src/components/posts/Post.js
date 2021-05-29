@@ -3,9 +3,15 @@ import PostText from "./PostText";
 import PostHeader from "./PostHeader";
 import "./posts.css";
 import "../mainContent/mainContent.css";
+
+/* Post must pass down currentVisibleText through props 
+since it depends on if it's the last post to be shown or not */
 export default function Post(props) {
   return (
-    <div className="post-container content-container " id={props.postContent.header}>
+    <div
+      className="post-container content-container "
+      id={props.postContent.header}
+    >
       {/* This renders both the header and text within the same post bubble */}
       <PostHeader
         header={props.postContent.header}
@@ -16,7 +22,6 @@ export default function Post(props) {
       <PostText
         bodyText={props.postContent.bodyText}
         currentVisibleText={props.currentVisibleText}
-        setCurrentVisibleText={props.setCurrentVisibleText}
       />
     </div>
   );

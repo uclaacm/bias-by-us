@@ -3,10 +3,10 @@ Eventually, if we run into issues with loading the visuals/interactive portions 
 then they will be their own seperate part inbetween posts and the followups.
 */
 import React from "react";
-import "./labContent.css";
-import { SocialMediaSection } from "../components/posts/Facebook/socialMedia/socialMediaHandler";
-import ConclusionGraphic from "../components/posts/Facebook/conclusion/ConclusionGraphic.js";
-import GenderGraphContainer from "../components/posts/Facebook/genderGraph/GenderGraphContainer.js";
+import "./facebookLabContent.css";
+import { SocialMediaSection } from "../../components/posts/Facebook/socialMedia/socialMediaHandler";
+import ConclusionGraphic from "../../components/posts/Facebook/conclusion/ConclusionGraphic.js";
+import GenderGraphContainer from "../../components/posts/Facebook/genderGraph/GenderGraphContainer.js";
 import facebookLogo from "./facebookLogo.svg";
 import adPic from "./adPic.png";
 import loopPic from "./loopPic.svg";
