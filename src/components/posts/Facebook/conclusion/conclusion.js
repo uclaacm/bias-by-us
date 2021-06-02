@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../assets/labContent.css'
+import '../../../../assets/Facebook/facebookLabContent.css'
 import dial from "../../../../assets/dial.jpg";
 import looking from "../../../../assets/looking.jpg";
 import whyad from "../../../../assets/whyamiseeingthisad.png";

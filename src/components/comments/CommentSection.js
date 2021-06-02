@@ -8,9 +8,9 @@ export default function CommentSection(props) {
 a corresponding question or answer*/
   let allFollowups = props.commentSection.followups.map((followup, index) => {
     return (
-      <Question 
-        key={index} 
-        questionText={followup.question} 
+      <Question
+        key={index}
+        questionText={followup.question}
         questionHead={followup.questionHeader}
         profilePic={props.commentSection.profilePic}
         profilePicName={props.commentSection.profilePicName}
@@ -19,6 +19,7 @@ a corresponding question or answer*/
     );
   });
   /* Only rendering the ones that should be visible at that current moment*/
+  // if currentVisibleText is null, show everything
   let visibleFollowups = allFollowups.slice(0, props.currentVisibleText);
   return (
     <div className="comments-container content-container " id={props.address}>

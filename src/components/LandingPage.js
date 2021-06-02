@@ -1,24 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import "../AppMain.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "./mainContent/PostsList";
+import { VisibilityProvider } from "./mainContent/commonLogic";
 
 export default function LandingPage() {
-  const [visibleSections, setVisibleSections] = useState(0);
-  const [currentVisibleText, setCurrentVisibleText] = useState(0);
-  const [forwardVisible, setForwardVisible] = useState(false);
+  return (
+    <VisibilityProvider>
+      <LandingPageContent />
+    </VisibilityProvider>
+  );
+}
+
+function LandingPageContent() {
   return (
     <div className="posts">
-      <PostsList
-        content={landingPageInfo}
-        visibleText={0}
-        forwardVisible={forwardVisible}
-        setForwardVisible={setForwardVisible}
-        visibleSections={visibleSections}
-        setVisibleSections={setVisibleSections}
-        currentVisibleText={currentVisibleText}
-        setCurrentVisibleText={setCurrentVisibleText}
-      />
+      <PostsList content={landingPageInfo} />
     </div>
   );
 }

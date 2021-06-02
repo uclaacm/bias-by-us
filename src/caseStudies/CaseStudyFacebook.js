@@ -1,35 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import "../AppMain.css";
 import PostsList from "../components/mainContent/PostsList";
-import labContent from "../assets/labContent";
+import labContent from "../assets/Facebook/facebookLabContent";
 import ProgressBar from "../components/mainContent/ProgressBar";
-function CaseStudyFacebook() {
-  const [visibleSections, setVisibleSections] = useState(0);
-  const [currentVisibleText, setCurrentVisibleText] = useState(0);
-  const [forwardVisible, setForwardVisible] = useState(false);
+import { VisibilityProvider } from "../components/mainContent/commonLogic";
+
+export default function CaseStudyFacebook() {
+  return (
+    <VisibilityProvider>
+      <CaseStudyFacebookContent />
+    </VisibilityProvider>
+  );
+}
+
+function CaseStudyFacebookContent() {
   return (
     <div className="app">
-      <ProgressBar
-        content={labContent}
-        visibleSections={visibleSections}
-        setVisibleSections={setVisibleSections}
-        setForwardVisible={setForwardVisible}
-        setCurrentVisibleText={setCurrentVisibleText}
-      />
+      <ProgressBar content={labContent} />
 
       <div className="posts">
-        <PostsList
-          content={labContent}
-          visibleText={0}
-          forwardVisible={forwardVisible}
-          setForwardVisible={setForwardVisible}
-          visibleSections={visibleSections}
-          setVisibleSections={setVisibleSections}
-          currentVisibleText={currentVisibleText}
-          setCurrentVisibleText={setCurrentVisibleText}
-        />
+        <PostsList content={labContent} />
       </div>
     </div>
   );
 }
-export default CaseStudyFacebook;

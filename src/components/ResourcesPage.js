@@ -1,24 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import "../AppMain.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "./mainContent/PostsList";
+import { VisibilityProvider } from "./mainContent/commonLogic";
 
 export default function ResourcesPage() {
-  const [visibleSections, setVisibleSections] = useState(0);
-  const [currentVisibleText, setCurrentVisibleText] = useState(0);
-  const [forwardVisible, setForwardVisible] = useState(false);
+  return (
+    <VisibilityProvider>
+      <ResourcesPageContent />
+    </VisibilityProvider>
+  );
+}
+
+function ResourcesPageContent() {
   return (
     <div className="posts">
-      <PostsList
-        content={resourcesPageInfo}
-        visibleText={0}
-        forwardVisible={forwardVisible}
-        setForwardVisible={setForwardVisible}
-        visibleSections={visibleSections}
-        setVisibleSections={setVisibleSections}
-        currentVisibleText={currentVisibleText}
-        setCurrentVisibleText={setCurrentVisibleText}
-      />
+      <PostsList content={resourcesPageInfo} />
     </div>
   );
 }

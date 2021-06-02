@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import Post from "../posts/Post";
 import CommentSection from "../comments/CommentSection";
 import ForwardButton from "./ForwardButton";
+import { VisibilityContext } from "./commonLogic";
 import "./mainContent.css";
 export default function PostsList(props) {
+  const { visibleSections, forwardVisible, currentVisibleText } =
+    useContext(VisibilityContext);
   /*This function takes the list of post/followups, takes all the previousSections that are already loaded,
   and makes them show all their text*/
   let completedContent = props.content
-    .slice(0, props.visibleSections)
+    .slice(0, visibleSections)
     .map((section, index) => {
       /*Not using ternaries since there might be 3 possibilities if we make
       interactive sections seperate from posts in the future
       */
-      if (section.post)
-      {
+      //Must pass in props because currentVisibleText is conditional for each thing
+      if (section.post) {
         return (
           <Post
             key={index}
@@ -21,22 +24,20 @@ export default function PostsList(props) {
             currentVisibleText={section.post.bodyText.length}
           />
         );
-      }
-      else if (section.commentSection)
-          return (
-            <CommentSection 
-              key={index} 
-              commentSection={section.commentSection}
-              address={section.commentSection.followups[0].question}
-            />
-          );
+      } else if (section.commentSection)
+        return (
+          <CommentSection
+            key={index}
+            commentSection={section.commentSection}
+            address={section.commentSection.followups[0].question}
+          />
+        );
       return "";
-      
     });
   /* This function takes the section that the user is currently on, and makes it so that its content
     can change depending on how the DirectionButtons are pressed*/
   let currentContent = props.content
-    .slice(props.visibleSections, props.visibleSections + 1)
+    .slice(visibleSections, visibleSections + 1)
     .map((section, index) => {
       /*Not using ternaries since there might be 3 possibilities if we make
     interactive sections seperate from posts in the future
@@ -46,41 +47,27 @@ export default function PostsList(props) {
           <Post
             key={index}
             postContent={section.post}
-            currentVisibleText={props.currentVisibleText}
-            setCurrentVisibleText={props.setCurrentVisibleText}
+            currentVisibleText={currentVisibleText}
           />
         );
-      }
-
-      else if (section.commentSection){
+      } else if (section.commentSection) {
         return (
           <CommentSection
             key={index}
             commentSection={section.commentSection}
             address={section.commentSection.followups[0].question}
-            currentVisibleText={props.currentVisibleText}
-            setCurrentVisibleText={props.setCurrentVisibleText}
+            currentVisibleText={currentVisibleText}
           />
         );
-      }
-      
-      else return "";
+      } else return "";
     });
-  let forwardVisibility = `${props.forwardVisible ? "" : "hidden-button"}`;
+  let forwardVisibility = `${forwardVisible ? "" : "hidden-button"}`;
   return (
     <div>
       {completedContent}
       {currentContent}
       <div className={forwardVisibility}>
-        <ForwardButton
-          content={props.content}
-          forwardVisible={props.forwardVisible}
-          setForwardVisible={props.setForwardVisible}
-          visibleSections={props.visibleSections}
-          setVisibleSections={props.setVisibleSections}
-          currentVisibleText={props.currentVisibleText}
-          setCurrentVisibleText={props.setCurrentVisibleText}
-        />
+        <ForwardButton content={props.content} />
       </div>
     </div>
   );

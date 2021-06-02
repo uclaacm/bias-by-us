@@ -1,24 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import "../AppMain.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "../components/mainContent/PostsList";
+import { VisibilityProvider } from "../components/mainContent/commonLogic";
 
 export default function CollegeAdmissionsUT() {
-  const [visibleSections, setVisibleSections] = useState(0);
-  const [currentVisibleText, setCurrentVisibleText] = useState(0);
-  const [forwardVisible, setForwardVisible] = useState(false);
+  return (
+    <VisibilityProvider>
+      <CollegeAdmissionsUTContent />
+    </VisibilityProvider>
+  );
+}
+
+function CollegeAdmissionsUTContent() {
   return (
     <div className="posts">
-      <PostsList
-        content={CollegeAdmissionsInfo}
-        visibleText={0}
-        forwardVisible={forwardVisible}
-        setForwardVisible={setForwardVisible}
-        visibleSections={visibleSections}
-        setVisibleSections={setVisibleSections}
-        currentVisibleText={currentVisibleText}
-        setCurrentVisibleText={setCurrentVisibleText}
-      />
+      <PostsList content={CollegeAdmissionsInfo} />
     </div>
   );
 }
