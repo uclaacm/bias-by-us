@@ -11,15 +11,16 @@ export default function ProfileCreator(props) {
     setSelectedAd,
     resetAds,
     setProfileCreated,
+    profileCreated,
   } = useContext(SocialMediaContext);
   const [genderInput, setgenderInput] = useState("unselected");
   const [raceInput, setraceInput] = useState("unselected");
   function handleGenderClick(e) {
-    setgenderInput(e.target.value);
+    if (!profileCreated) setgenderInput(e.target.value);
   }
 
   function handleRaceClick(e) {
-    setraceInput(e.target.value);
+    if (!profileCreated) setraceInput(e.target.value);
   }
 
   function generateProfile() {
