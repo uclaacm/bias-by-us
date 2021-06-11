@@ -15,6 +15,8 @@ export default function Post(props) {
       {/* This renders both the header and text within the same post bubble */}
       <PostHeader
         header={props.postContent.header}
+        headerLink={props.postContent.headerLink}
+        linkTo={props.postContent.linkTo}
         subheader={props.postContent.subheader}
         profilePic={props.postContent.profilePic}
         profilePicName={props.postContent.profilePicName}

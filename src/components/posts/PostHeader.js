@@ -1,6 +1,17 @@
 import React from "react";
 import "./posts.css";
 import "../mainContent/mainContent.css";
+import { Link } from "react-router-dom";
+
+function HeaderLinkWrapper(props) {
+  return props.headerLink ? (
+    <Link to={props.linkTo}>
+      <PostHeader {...props} />
+    </Link>
+  ) : (
+    <PostHeader {...props} />
+  );
+}
 
 function PostHeader(props) {
   return (
@@ -19,4 +30,4 @@ function PostHeader(props) {
   );
 }
 
-export default PostHeader;
+export default HeaderLinkWrapper;

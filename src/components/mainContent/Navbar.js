@@ -15,6 +15,47 @@ export default function NavBar(props) {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const navSections = [
+    {
+      path: "/",
+      name: "Landing Page",
+    },
+    {
+      path: "/aboutUs",
+      name: "About Us",
+    },
+    {
+      path: "/college",
+      name: "Case Study #1",
+    },
+    {
+      path: "/facebook",
+      name: "Case Study #2",
+    },
+    {
+      path: "/facialRecognition",
+      name: "Case Study #3",
+    },
+    {
+      path: "/conclusion",
+      name: "Conclusion",
+    },
+    {
+      path: "/resources",
+      name: "Resources",
+    },
+  ];
+
+  //arrow function that maps all our links to dropdown
+  const getNavlinks = (path) =>
+    navSections.map((section) => (
+      <Link
+        className={path === section.path && "current-link"}
+        to={section.path}
+      >
+        {section.name}
+      </Link>
+    ));
   // dropdownArea: arrow function that returns the apporpriate button (and dropdown menu if applicable) depending on whether dropdownOpen is true/false
   const dropdownArea = () => {
     return (
@@ -31,29 +72,7 @@ export default function NavBar(props) {
         {dropdownOpen && (
           <div className="dropdown">
             <div className="dropdown-content">
-              <nav>
-                <Link className={props.path === '/' && 'current-link'} to="/">
-                  Landing Page
-                </Link>
-                <Link className={props.path === 'aboutUs' && 'current-link'} to="/aboutUs">
-                  About Us
-                </Link>
-                <Link className={props.path === 'college' && 'current-link'} to="/college">
-                  Case Study #1
-                </Link>
-                <Link className={props.path === 'facebook' && 'current-link'} to="/facebook">
-                  Case Study #2
-                </Link>
-                <Link className={props.path === 'facialRecognition' && 'current-link'} to="/facialRecognition">
-                  Case Study #3
-                </Link>
-                <Link className={props.path === 'conclusion' && 'current-link'} to="/conclusion">
-                  Conclusion
-                </Link>
-                <Link className={props.path === 'resources' && 'current-link'} to="/resources">
-                  Resources
-                </Link>
-              </nav>
+              <nav>{getNavlinks(props.path)}</nav>
             </div>
           </div>
         )}
