@@ -47,10 +47,10 @@ export default function NavBar(props) {
   ];
 
   //arrow function that maps all our links to dropdown
-  const getNavlinks = (path) =>
+  const getNavlinks = () =>
     navSections.map((section) => (
       <Link
-        className={path === section.path && "current-link"}
+        className={props.path === section.path && "current-link"}
         to={section.path}
       >
         {section.name}
@@ -72,7 +72,7 @@ export default function NavBar(props) {
         {dropdownOpen && (
           <div className="dropdown">
             <div className="dropdown-content">
-              <nav>{getNavlinks(props.path)}</nav>
+              <nav>{getNavlinks()}</nav>
             </div>
           </div>
         )}
