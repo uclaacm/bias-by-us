@@ -31,7 +31,7 @@ function App() {
             render={(input) => (
               <div className="navbar">
                 <Navbar 
-                  path={input.match.params.currentPage} 
+                  path={"/" + input.match.params.currentPage} 
                   subtitle={getHeader(input.match.params.currentPage)} 
                 />
               </div>
