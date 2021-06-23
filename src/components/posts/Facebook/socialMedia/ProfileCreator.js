@@ -45,6 +45,7 @@ export default function ProfileCreator(props) {
 
   return (
     <div className="flex-column">
+      <div className="iphone-top"></div>
       <div className="profile-header" id="user-profile">
         Generated Profile
       </div>
@@ -106,14 +107,14 @@ export default function ProfileCreator(props) {
       </div>
       <div>
         <button
-          className="default-button hover-button"
+          className="default-button long-button hover-button"
           onClick={generateProfile}
         >
           Generate Profile
         </button>
       </div>
       <div>
-        <button className="default-button hover-button" onClick={resetProfile}>
+        <button className="default-button long-button hover-button" onClick={resetProfile}>
           Reset Profile
         </button>
       </div>

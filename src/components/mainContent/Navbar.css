@@ -15,7 +15,7 @@
   position: absolute;
   min-width: 120px;
   height: 450px;
-  margin-top: 69px;
+  margin-top: 62px;
 }
 
 .dropdown-content {
@@ -36,7 +36,7 @@
   text-decoration: none;
   display: block;
   font-family: 'Mulish', sans-serif;
-  font-size: min(4vw, 1.3rem);
+  font-size: min(4vw, 1.125rem);
   font-weight: bold;
   color: #4267b2;
   text-align: center;
@@ -51,7 +51,7 @@
 .dropdown .dropdown-content { display: block; }
 
 .nav-button-image {
-  width: min(10vw, 55px);
+  width: 45px;
   height: 55px;
   position: relative;
   right: -2px;

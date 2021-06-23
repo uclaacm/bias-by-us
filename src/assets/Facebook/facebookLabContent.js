@@ -92,7 +92,7 @@ export default [
         {
           body: (
             <p className="gray-text">
-              Why are the options for gender and race binary, you ask? That's
+              The options for gender and race here are binary
               because this activity is based on the data from a{" "}
               <a
                 href="https://arxiv.org/pdf/1904.02095.pdf"
@@ -234,7 +234,7 @@ export default [
         {
           body: (
             <img
-              style={{ maxWidth: "900px", width: "75vw", marginLeft: "1vw" }}
+              style={{ maxWidth: "680px", width: "75vw" }}
               src={anime}
               alt="a static design of the animation that visualizes how skewed samples amplify biases"
             ></img>

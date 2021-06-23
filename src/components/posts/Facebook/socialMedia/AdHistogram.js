@@ -35,7 +35,7 @@ export default function AdHistogram(props) {
       yaxis: {
         labels: {
           style: {
-            fontSize: "min(4vw,20px)",
+            fontSize: "min(4vw,18px)",
             fontWeight: 600,
           },
         },
