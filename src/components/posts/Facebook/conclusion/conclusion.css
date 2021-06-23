@@ -12,9 +12,9 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 620px;
-  min-height: 42.5rem;
-  padding: 1.25rem;
+  max-width: 500px;
+  min-height: 35rem;
+  padding: 1.75rem;
 }
 
 .card-image {
@@ -56,19 +56,23 @@
   left: 5px;
 }
 
-.fade-enter{
+.fade-enter {
   opacity: 0;
 }
-.fade-exit{
+
+.fade-exit {
   opacity: 1;
 }
-.fade-enter-active{
+
+.fade-enter-active {
   opacity: 1;
 }
-.fade-exit-active{
+
+.fade-exit-active {
   opacity: 0;
 }
+
 .fade-enter-active,
-.fade-exit-active{
+.fade-exit-active {
   transition: opacity 500ms;
 }

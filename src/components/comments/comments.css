@@ -1,16 +1,17 @@
 .comments-container {
   border-radius: 0 0 20px 20px;
   padding-top: 5px;
+  padding-bottom: 0;
   position: relative;
   top: -50px;
-  margin-bottom: -16px;
+  margin-bottom: -36px;
 }
 
 .comment-bubble {
   background-color: #eef0f1;
   border-radius: 25px;
   max-width: 815px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
@@ -26,10 +27,10 @@
 }
 
 .comment-profile-pic {
-  width: 4.0625rem;
-  height: 4.0625rem;
+  width: min(10vw, 3.5rem);
+  height: min(10vw, 3.5rem);
   border-radius: 32px;
-  margin: 0 10px 0 0;
+  margin: 0 20px 0 0;
 }
 
 .single-comment-container {
@@ -38,7 +39,14 @@
 }
 
 .answer {
-  margin-left: min(10vw, 104px);
+  margin-left: min(15vw, 75px);
+}
+
+.answer-profile-pic {
+  width: min(8vw, 3rem);
+  height: min(8vw, 3rem);
+  border-radius: 32px;
+  margin: 0 20px 0 0;
 }
 
 .show-answer {
@@ -47,8 +55,8 @@
   font-weight: bold;
   position: relative;
   top: -25px;
-  left: 6.25rem;
-  font-size: min(4.5vw, 1.25rem);
+  left: 5.75rem;
+  font-size: min(4vw, 1rem);
   background: none;
   border: none;
 }

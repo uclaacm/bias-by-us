@@ -33,7 +33,7 @@ export default function ProgressBar(props) {
         >
           <img
             className={`profile-pic no-margin static-size ${
-              props.content.indexOf(section) > visibleSections ? "gray" : ""
+              props.content.indexOf(section) > visibleSections ? "gray-image" : ""
             }`}
             src={section.post.profilePic}
             alt={`the icon for the "${section.post.header}" section`}

@@ -1,74 +1,81 @@
 .screen-container {
-    width: 40%;
-    min-width: 230px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    border: 2rem rgb(36, 36, 36) solid;
-    border-bottom-width: 4rem;
-    border-radius: 2rem;
-    background-color: rgb(255, 247, 223);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  width: 40%;
+  min-width: 230px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 1rem rgb(36, 36, 36) solid;
+  border-radius: 2rem;
+  background-color: rgb(255, 247, 223);
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.iphone-top {
+  background-color: rgb(36, 36, 36);
+  margin: 0 auto;
+  width: 150px;
+  height: 20px;
+  border-radius: 0 0 15px 15px;
 }
 
 .user-profile-pic {
-    width: 150px;
-    height: 150px;
-    margin-left: 15px;
-    margin-top: 5px;
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
 }
-
-
 
 .histogram-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: min(6vw, 1.8rem);
+  font-size: min(5vw, 1.625rem);
 }
 
 .profile-header {
   font-weight: bold;
-  font-size: min(6vw, 2.5rem);
-  margin: 5px 0;
+  font-size: min(5vw, 1.625rem);
+  margin-top: 20px;
 }
 
 .default-button {
-    padding: 0.4rem;
-    font-size: min(5vw, 1.5rem);
-    background-color: #eef0f1;
-    margin: 0.5rem;
-    font-family: "Mulish", sans-serif;
-    border-radius: 10px;
-  }
+  padding: 0.4rem;
+  font-size: min(4vw, 1.125rem);
+  width: 80px;
+  background-color: #eef0f1;
+  margin: 0.5rem;
+  font-family: "Mulish", sans-serif;
+  border-radius: 10px;
+}
 
+.long-button {
+  width: 175px;
+}
 
+.male-button-active {
+  background-color: #3381ff;
+  color: #eef0f1;
+}
 
-  .male-button-active {
-    background-color: #3381ff;
-    color: #eef0f1;
-  }
- 
-   .female-button-active {
-    background-color: #ff8cfb;
-    color: black;
-  }
- 
-   .white-button-active {
-    background-color: #ffffff;
-    border-color: black;
-  }
- 
-   .black-button-active {
-    background-color: #000000;
-    color: #ffffff;
-  }
+.female-button-active {
+  background-color: #ff8cfb;
+  color: black;
+}
+
+.white-button-active {
+  background-color: #fff;
+  border-color: black;
+}
+
+.black-button-active {
+  background-color: #000;
+  color: #fff;
+}
 
 .hover-button:hover {
-    background-color: #b4b9bb;
+  background-color: #b4b9bb;
 }
 
 .ad-selection-bar {
@@ -83,11 +90,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 30px 0;
 }
-
-
 
 .ad-thumbnail {
   width: 100px;
@@ -107,7 +111,7 @@
 }
 
 #shown-ad {
-  height: 600px;
+  height: 425px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

@@ -1,9 +1,7 @@
 .profile-pic {
   float: left;
-  width: 4.0625rem;
-  height: 4.0625rem;
-  margin-left: 15px;
-  margin-top: 5px;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 32px;
 }
 
@@ -13,20 +11,18 @@
 }
 
 .post-header {
-  margin-left: 6.25rem;
-  font-size: min(5.5vw, 1.875rem);
+  margin-left: 5rem;
+  font-size: min(5vw, 1.625rem);
   position: relative;
-  top: 5px;
-  margin-bottom: 2px;
 }
 
 .post-subheader {
-  margin-left: 6.125rem;
+  margin-left: 5rem;
   color: #606060;
 }
 
 .post-body-text {
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .hidden-text {
@@ -35,8 +31,4 @@
 
 .gray-text {
   color: #606060;
-}
-
-.text-italic {
-  font-style: italic;
 }

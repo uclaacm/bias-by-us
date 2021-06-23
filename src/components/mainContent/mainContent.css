@@ -1,7 +1,7 @@
 .content-container {
   background-color: white;
   width: 80%;
-  max-width: 1200px;
+  max-width: 800px;
   padding: 25px 25px 10px 25px;
   border-radius: 20px;
   margin: 2rem auto;
@@ -26,19 +26,19 @@
 }
 
 .flex-column {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-content: center;
   width: 100%;
 }
 
 .body-text {
-  font-size: min(4.5vw,1.5rem);
+  font-size: min(4vw, 1.125rem);
 }
 
 .forward-button {
-  width: 60px;
-  height: 60px;
+  width: min(20vw, 55px);
+  height: min(20vw, 55px);
   border-radius: 50%;
   background-color: #4267b2;
   border-width: 0;
@@ -65,8 +65,8 @@
   border-radius: 32px;
   border: none;
   padding: 0;
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   margin: 10px;
 }
 
@@ -79,21 +79,14 @@
 }
 
 .static-size {
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
 
-.gray {
+.gray-image {
   opacity: 0.5;
   filter: alpha(opacity=40);
   filter: grayscale(1);
   cursor: default;
-}
-
-/* for the triangle inside ForwardButton, since the triangle is blue by default due to the Navbar button */
-.white {
-  border-top: 22px solid #eef0f1;
-  left: 0;
-  top: 2px;
 }

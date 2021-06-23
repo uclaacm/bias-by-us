@@ -39,7 +39,7 @@ export default function AdBreakdown(props) {
         <p>Refreshed: {refreshes} times</p>
         <div className="spaced-row">
           <button
-            className="default-button hover-button"
+            className="default-button long-button hover-button"
             value={100}
             onClick={handleAddRefreshes}
           >
@@ -47,7 +47,7 @@ export default function AdBreakdown(props) {
           </button>
 
           <button
-            className="default-button hover-button"
+            className="default-button long-button hover-button"
             value={1000}
             onClick={handleAddRefreshes}
           >
@@ -55,7 +55,7 @@ export default function AdBreakdown(props) {
           </button>
 
           <button
-            className="default-button hover-button"
+            className="default-button long-button hover-button"
             onClick={resetRefreshes}
           >
             Reset Refreshes
