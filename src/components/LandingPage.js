@@ -144,7 +144,7 @@ const landingPageInfo = [
       header: "Case Study #3: Facial Recognition",
       headerLink: true,
       linkTo: "facialRecognition",
-      subheader: "Social Media Targets Ads Through Demographics",
+      subheader: "Facial Recognition Technology And Its Implications",
       bodyText: [
         {
           body: (

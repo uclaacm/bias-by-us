@@ -13,6 +13,7 @@ import loopPic from "./loopPic.svg";
 import trendsPic from "./trends.svg";
 import facebookAds from "./personalizedAds.svg";
 import anime from "./animationpic.svg";
+import teachLogo from "../../assets/teachla-logo.svg";
 
 export default [
   {
@@ -492,6 +493,45 @@ export default [
               Statistics on Women in Computer Science
             </a>,
           ],
+        },
+      ],
+    },
+  },
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - Facial Recognition",
+      header: "Case Study #3: Facial Recognition",
+      headerLink: true,
+      linkTo: "facialRecognition",
+      subheader: "Facial Recognition Technology And Its Implications",
+      bodyText: [
+        {
+          body: (
+            <p className="bold">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p>
+              <mark className="bold">{`TODO: `} </mark>Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          ),
         },
       ],
     },
