@@ -52,6 +52,10 @@
   transform: translateY(5px);
 }
 
+.hidden-button {
+  display: none;
+}
+
 .text-bold {
   font-weight: bold;
 }
