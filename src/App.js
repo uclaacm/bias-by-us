@@ -1,5 +1,5 @@
 import React from "react";
-import "./AppMain.css";
+import "./main.css";
 import Navbar from "./components/mainContent/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage";

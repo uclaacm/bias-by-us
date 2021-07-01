@@ -1,3 +1,14 @@
+.posts {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+  margin: 4.375rem 15px 0 15px;
+}
+
 .profile-pic {
   float: left;
   width: 3.5rem;

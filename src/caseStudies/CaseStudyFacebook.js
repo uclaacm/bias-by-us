@@ -1,5 +1,5 @@
 import React from "react";
-import "../AppMain.css";
+import "../main.css";
 import PostsList from "../components/mainContent/PostsList";
 import labContent from "../assets/Facebook/facebookLabContent";
 import ProgressBar from "../components/mainContent/ProgressBar";

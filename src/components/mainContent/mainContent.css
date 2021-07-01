@@ -56,8 +56,21 @@
   font-weight: bold;
 }
 
-.hidden-button {
-  display: none;
+.progress-bar {
+  position: fixed;
+  margin-top: 2.5rem;
+  margin-left: 4.2vw;
+  background-color: white;
+  color: black;
+  height: 45vh;
+  min-height: 350px;
+  z-index: 3;
+  border-radius: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
 }
 
 .progress-button {
@@ -72,6 +85,10 @@
 
 .progress-button:focus {
   outline: none;
+}
+
+.hidden-button {
+  display: none;
 }
 
 .no-margin {
