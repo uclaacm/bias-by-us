@@ -1,0 +1,27 @@
+.app {
+  font-family: "Mulish", sans-serif;
+  min-height: 50rem;
+  background: #eef0f1;
+  padding-bottom: 200px;
+}
+
+.button {
+  background: none;
+  width: min(20vw, 55px);
+  height: min(20vw, 55px);
+  border-radius: 50%;
+  border: none;
+  margin-left: auto;
+  margin-right: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}

@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import "../../AppMain.css";
+import "../../main.css";
 import "../../index.css";
 import "../posts/posts.css";
 import "./mainContent.css";
+import "./progressBar.css";
 import { useWindowDimensions } from "./commonLogic";
 import { Link } from "react-scroll";
 import { VisibilityContext } from "./commonLogic";
