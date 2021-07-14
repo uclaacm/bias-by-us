@@ -9,10 +9,16 @@ import { Link } from "react-scroll";
 import { VisibilityContext } from "./commonLogic";
 
 export default function ProgressBar(props) {
-  const [windowWidth] = useWindowDimensions();
+  const [windowWidth, windowHeight] = useWindowDimensions();
   const { visibleSections } = useContext(VisibilityContext);
+  
+  // Gets the indices of the post sections
+  const indices = props.content.reduce((posts, cur, index) => {
+    if(cur.post)
+      posts.push(index)
+    return posts
+  }, [])
 
-  const indices = [0, 1, 3, 5, 7, 9];
   let content = props.content
     .filter((s, index) => indices.includes(index))
     .map((section, index) => {
@@ -45,7 +51,7 @@ export default function ProgressBar(props) {
 
   /*conditionally render either null or the progress bar 
   depending on the window width */
-  return windowWidth > 1300 ? (
+  return windowWidth > 1300 && windowHeight > 95 * indices.length ? (
     <div className="progress-bar">{content}</div>
   ) : null;
 }
