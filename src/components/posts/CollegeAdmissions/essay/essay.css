@@ -32,6 +32,12 @@
     background-color: aqua;
 }
 
+.selected-word-suggestion {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    background-color: aqua;
+}
+
 
 .changeable-word {
     background-color: rgb(211, 211, 211);

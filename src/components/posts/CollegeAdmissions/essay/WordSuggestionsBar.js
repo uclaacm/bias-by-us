@@ -37,7 +37,7 @@ function WordSuggestion(props){
     return(
         <div 
             onClick = {props.onClick}
-            className = {`word-suggestion ${props.selected ? "selected-word" : ""}`} >
+            className = {props.selected ? "selected-word-suggestion" : "word-suggestion"} >
             {props.word}
         </div>
     )

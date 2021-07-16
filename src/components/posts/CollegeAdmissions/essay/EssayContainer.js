@@ -55,7 +55,7 @@ const wordReducer = (prevWords, action) => {
         } 
         //can't use spreadOperator because of nested array data
         case "resetWords": {
-            return prevWords.map(section => section.plain ? section 
+            return prevWords.map(section => section.plain ? {...section} 
                 : {
                     ...section,
                     displayed: 1
