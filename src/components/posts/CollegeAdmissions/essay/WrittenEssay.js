@@ -32,9 +32,9 @@ function PlainSection(props){
 function ChangeableSection(props){
     return(
         <div 
-            className = "essay-sentence"
             onClick = {props.onClick}
-            className = {props.selected ? "selected-word" : "changeable-word"}>
+            className = {`essay-sentence ${props.selected ? "selected-word" : "changeable-word"}`}
+        >
             {props.text} 
         </div>
     )
