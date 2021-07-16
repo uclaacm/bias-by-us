@@ -10,6 +10,17 @@
     margin-bottom: 2vh;
 }
 
+.essay-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.essay-sentence {
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+}
+
 .word-suggestions-bar {
     display: flex;
     width: 100%;

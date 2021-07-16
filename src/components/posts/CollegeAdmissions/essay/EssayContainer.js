@@ -25,7 +25,17 @@ const wordSections = [
     },
     {
         plain: "to cook?"
-    }
+    },
+    {
+        plain: "I know that I love"
+    },
+    {
+        changeable: ["fried rice", "spam masubi", "sushi"],
+        scores: [10,20,30]
+    },
+    {
+        plain: "at any time."
+    },
 ];
 
 //set the displayed property to the middle index of the changeableWords

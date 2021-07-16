@@ -15,7 +15,7 @@ export default function WrittenEssay(props){
           />
         );
     return(
-        <div>
+        <div className = "essay-section">
             {sections}
         </div>
     )
@@ -23,7 +23,7 @@ export default function WrittenEssay(props){
 
 function PlainSection(props){
     return(
-        <div>
+        <div className = "essay-sentence">
             {props.text}
         </div>
     )
@@ -32,6 +32,7 @@ function PlainSection(props){
 function ChangeableSection(props){
     return(
         <div 
+            className = "essay-sentence"
             onClick = {props.onClick}
             className = {props.selected ? "selected-word" : "changeable-word"}>
             {props.text} 
