@@ -93,8 +93,8 @@ export default [
         {
           body: (
             <p className="gray-text">
-              The options for gender and race here are binary
-              because this activity is based on the data from a{" "}
+              The options for gender and race here are binary because this
+              activity is based on the data from a{" "}
               <a
                 href="https://arxiv.org/pdf/1904.02095.pdf"
                 target="_blank"
