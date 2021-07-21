@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import teachLogo from "../../assets/teachla-logo.svg";
 import navButton from "../../assets/navButton.svg";
-import "../../AppMain.css";
+import "../../main.css";
 import "../../index.css";
-import "./Navbar.css";
+import "./navbar.css";
 
 export default function NavBar(props) {
   // dropdownOpen: boolean variable for whether the dropdown menu is open or closed

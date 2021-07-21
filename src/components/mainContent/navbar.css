@@ -1,3 +1,56 @@
+.navbar {
+  width: 100%;
+  min-height: 4.375rem;
+  text-align: center;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  background: #4267b2;
+  color: white;
+  min-width: 50%;
+  white-space: nowrap;
+  font-weight: 800;
+  z-index: 1;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.title-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: center;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+.title-link {
+  margin: 0 1.5rem 0 0;
+  color: white;
+}
+
+.title-link:hover {
+  text-decoration: none;
+}
+
+.title {
+  font-size: min(6vw, 2.125rem);
+  margin: 0 1rem 0 0;
+}
+
+.subtitle {
+  font-size: min(3.5vw, 1.125rem);
+  margin: 0 0 0.3rem 0;
+}
+
 .nav-button {
   background: none;
   width: min(20vw, 55px);

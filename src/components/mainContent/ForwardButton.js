@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import "./mainContent.css";
-import "../../AppMain.css";
+import "../../main.css";
 import { scroller as scroll } from "react-scroll";
 import forwardButton from "../../assets/forwardButton.svg";
 import { VisibilityContext } from "./commonLogic";

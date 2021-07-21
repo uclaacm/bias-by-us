@@ -1,0 +1,47 @@
+.progress-bar {
+  position: fixed;
+  margin-top: 2.5rem;
+  margin-left: 4.2vw;
+  background-color: white;
+  color: black;
+  height: auto;
+  min-height: 350px;
+  z-index: 3;
+  border-radius: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.progress-button {
+  background: white;
+  border-radius: 32px;
+  border: none;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.progress-button:focus {
+  outline: none;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.static-size {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.gray-image {
+  opacity: 0.5;
+  filter: alpha(opacity=40);
+  filter: grayscale(1);
+  cursor: default;
+}
