@@ -1,5 +1,5 @@
 import React from "react";
-import "../AppMain.css";
+import "../main.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "./mainContent/PostsList";
 import { VisibilityProvider } from "./mainContent/commonLogic";

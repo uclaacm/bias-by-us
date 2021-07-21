@@ -52,41 +52,10 @@
   transform: translateY(5px);
 }
 
-.text-bold {
-  font-weight: bold;
-}
-
 .hidden-button {
   display: none;
 }
 
-.progress-button {
-  background: white;
-  border-radius: 32px;
-  border: none;
-  padding: 0;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-}
-
-.progress-button:focus {
-  outline: none;
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.static-size {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
-
-.gray-image {
-  opacity: 0.5;
-  filter: alpha(opacity=40);
-  filter: grayscale(1);
-  cursor: default;
+.text-bold {
+  font-weight: bold;
 }
