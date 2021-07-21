@@ -1,4 +1,3 @@
-import React from "react";
 import lumber from "./ads/lumber.svg";
 import ai from "./ads/ai.svg";
 import taxi from "./ads/taxi.svg";
