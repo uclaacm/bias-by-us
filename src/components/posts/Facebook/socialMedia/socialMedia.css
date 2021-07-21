@@ -116,5 +116,49 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px;
+  padding: 15px 15px 0 15px;
+}
+
+.ad-image {
+  width: 180px;
+  height: 150px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.ad-apply-link {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #4267b2;
+  padding: 0.3rem;
+  border-radius: 10px;
+  width: 50%;
+  margin: 5px;
+}
+
+.ad-section-bar {
+  border: 1px solid gray;
+  border-radius: 20px;
+  width: 100%;
+  margin: 0.3rem 0;
+}
+
+.ad-specs {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  padding-top: 0.3rem;
+}
+
+.ad-specs-title {
+  margin-right: 0.3rem;
 }
