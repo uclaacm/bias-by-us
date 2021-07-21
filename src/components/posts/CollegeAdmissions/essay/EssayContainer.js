@@ -24,10 +24,7 @@ const wordSections = [
         scores: [10,20,30]
     },
     {
-        plain: "to cook?"
-    },
-    {
-        plain: "I know that I love"
+        plain: "to cook? I know that I love"
     },
     {
         changeable: ["fried rice", "spam masubi", "sushi"],
@@ -46,9 +43,11 @@ const defaultWords = wordSections.map(section => section.plain ? {...section}
     }
 );
 
-//get the default score by tallying up score of all changeable words
-const defaultScore = defaultWords.reduce((total,curr) => curr.plain ? total 
-: total + curr.scores[curr.displayed], 0);
+//helper function to calculate score based off of a list of words
+function calcScore(wordsList){
+    return wordsList.reduce((total,curr) => curr.plain ? total 
+    : total + curr.scores[curr.displayed], 0);
+}
 
 //action has type, index, newWord
 //reducer function that handles changing our wordList or resetting it
@@ -80,17 +79,15 @@ const wordReducer = (prevWords, action) => {
 }
 
 export default function EssayContainer(){
-    const [essayScore, setEssayScore] = useState(defaultScore);
+    const [essayScore, setEssayScore] = useState(calcScore(defaultWords));
     const [selectedIndex, setSelectedIndex] = useState(null);
     const [wordsList, dispatchWordsList] = useReducer(wordReducer,defaultWords);
     
     //function to update essay score when the words list changes
     useEffect(() => {
-        setEssayScore(wordsList.reduce((total,curr) => curr.plain ? total 
-        : total + curr.scores[curr.displayed], 0) 
-        )
+        setEssayScore(calcScore(wordsList));
         console.log("WordsList has changed!");
-    },[wordsList])
+    }, [wordsList]);
 
     return (
         <div className = "essay-container">

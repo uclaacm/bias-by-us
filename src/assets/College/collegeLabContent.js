@@ -1,6 +1,6 @@
 import teachLogo from "../teachla-logo.svg";
 import React from "react";
-import "../../AppMain.css";
+import "../../main.css";
 import EssayContainer from "../../components/posts/CollegeAdmissions/essay/EssayContainer";
 export default [
     {

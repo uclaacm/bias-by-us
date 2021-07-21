@@ -6,8 +6,7 @@
 }
 
 .written-essay {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin: 2vh 0;
 }
 
 .essay-section {
@@ -17,8 +16,7 @@
 }
 
 .essay-sentence {
-    margin-left: 0.3vw;
-    margin-right: 0.3vw;
+    margin: 0 0.2vw;
 }
 
 .word-suggestions-bar {
@@ -30,8 +28,7 @@
 }
 
 .word-suggestion {
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin: 0 2vw;
 }
 
 .word-suggestion:hover {
@@ -44,8 +41,7 @@
 }
 
 .selected-word-suggestion {
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin: 0 2vw;
     background-color: aqua;
 }
 
