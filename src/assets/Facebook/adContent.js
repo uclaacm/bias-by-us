@@ -28,7 +28,7 @@ export default {
     link: "https://web.archive.org/web/20210320212422/https://waymo.com/joinus/2551515/",
     summary:
       "You will be working on all aspects of the modeling life cycle, put your models to work, and measure impact on the overall system.",
-    reqs: "BS, MS, or Ph.D Computer Science or equivalent degree",
+    reqs: "BS, MS, or Ph.D Computer Science",
     pay: "varies / negotiable",
   },
   Taxi: {
