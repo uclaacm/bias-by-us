@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+glove.6B.100d.txt
+glove.6B.100d.txt.word2vec
