@@ -28,12 +28,14 @@ npm install
 To start our app, you just need to run `npm start`!
 
 ```
+cd website
 npm start
 ```
 
 And to build our project for production (with CRA's webpack bundling and all that goodness),
 
 ```
+cd website
 npm run build
 ```
 

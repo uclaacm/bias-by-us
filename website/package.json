@@ -21,7 +21,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint-css": "stylelint \"**/*.css\" \"**/*.scss\"",
-    "lint-css-fix": "stylelint --fix \"**/*.css\" \"**/*.scss\""
+    "lint-css-fix": "stylelint --fix \"**/*.css\" \"**/*.scss\"",
+    "lint-staged": "lint-staged",
+    "format": "prettier --write *.{js,css,html}"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,8 +41,12 @@
     ]
   },
   "devDependencies": {
-    "prettier": "2.3.1",
+    "lint-staged": "^11.1.1",
+    "prettier": "^2.3.1",
     "stylelint": "^13.11.0",
     "stylelint-config-standard": "^20.0.0"
+  },
+  "lint-staged": {
+    "*.(js|css|html)": "prettier --write"
   }
 }
