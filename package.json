@@ -1,6 +1,7 @@
 {
   "name": "bias-by-us",
   "version": "1.0.0",
+  "private": true,
   "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/3853d389-4eab-44be-93f5-910b7192c9c1/deploy-status)](https://app.netlify.com/sites/infallible-mirzakhani-e36a0d/deploys) ![Production Build](https://github.com/uclaacm/bias-by-us/workflows/Production%20Build/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,11 +13,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/uclaacm/bias-by-us/issues"
   },
-  "homepage": "https://github.com/uclaacm/bias-by-us#readme",
   "devDependencies": {
     "husky": "^7.0.0"
   }
