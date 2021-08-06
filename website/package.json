@@ -23,7 +23,7 @@
     "lint-css": "stylelint \"**/*.css\" \"**/*.scss\"",
     "lint-css-fix": "stylelint --fix \"**/*.css\" \"**/*.scss\"",
     "lint-staged": "lint-staged",
-    "format": "prettier --write *.{js,css,html}"
+    "format": "prettier --write \"**/*.js\""
   },
   "eslintConfig": {
     "extends": "react-app"
