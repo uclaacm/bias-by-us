@@ -22,9 +22,7 @@ function PostHeader(props) {
         alt={props.profilePicName}
       />
       <div className="post-header text-bold ">{props.header}</div>
-      <div className="post-subheader body-text">
-        {props.subheader}
-      </div>
+      <div className="post-subheader body-text">{props.subheader}</div>
     </div>
   );
 }

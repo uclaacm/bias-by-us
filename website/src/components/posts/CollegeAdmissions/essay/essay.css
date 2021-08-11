@@ -1,67 +1,61 @@
 .essay-container {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
 .written-essay {
-    margin: 2vh 0;
+  margin: 2vh 0;
 }
 
 .essay-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .essay-sentence {
-    margin: 0 0.2vw;
+  margin: 0 0.2vw;
 }
 
 .word-suggestions-bar {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-   
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .word-suggestion {
-    margin: 0 2vw;
+  margin: 0 2vw;
 }
 
 .word-suggestion:hover {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
-
 .selected-word {
-    background-color: aqua;
+  background-color: aqua;
 }
 
 .selected-word-suggestion {
-    margin: 0 2vw;
-    background-color: aqua;
+  margin: 0 2vw;
+  background-color: aqua;
 }
 
-
 .changeable-word {
-    background-color: rgb(211, 211, 211);
+  background-color: rgb(211, 211, 211);
 }
 
 .changeable-word:hover {
-    background-color: lightslategray;
+  background-color: lightslategray;
 }
 
 .reset-button {
-    background-color: rgb(211, 211, 211);
-    margin-top: 2vh;
+  background-color: rgb(211, 211, 211);
+  margin-top: 2vh;
 }
 
 .reset-button:hover {
-    background-color: lightslategray;
-    
+  background-color: lightslategray;
 }
-
-

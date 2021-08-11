@@ -3,16 +3,16 @@ import "../mainContent/mainContent.css";
 import "./comments.css";
 import Answer from "./Answer.js";
 export default function Question(props) {
-
   /* keeps track of whether or not the answers are hidden*/
-  const [hidden, setHidden] = useState(true); 
+  const [hidden, setHidden] = useState(true);
 
   const hiddenHandler = () => {
     setHidden(!hidden);
   };
 
   /* renders all of the answers associated with the question */
-  const answerList = () => props.answerList.map((answer, index) => {
+  const answerList = () =>
+    props.answerList.map((answer, index) => {
       return (
         <Answer
           key={index}
@@ -21,7 +21,7 @@ export default function Question(props) {
           profilePicName={props.profilePicName}
         />
       );
-  });
+    });
 
   return (
     <div>
