@@ -114,7 +114,10 @@ export default function ProfileCreator(props) {
         </button>
       </div>
       <div>
-        <button className="default-button long-button hover-button" onClick={resetProfile}>
+        <button
+          className="default-button long-button hover-button"
+          onClick={resetProfile}
+        >
           Reset Profile
         </button>
       </div>

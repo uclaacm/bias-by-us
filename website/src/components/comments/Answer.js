@@ -10,9 +10,7 @@ export default function Answer(props) {
         alt={props.profilePicName}
       />
       <div className="comment-bubble">
-        <div className="body-text">
-          {props.answerText}
-        </div>
+        <div className="body-text">{props.answerText}</div>
       </div>
     </div>
   );

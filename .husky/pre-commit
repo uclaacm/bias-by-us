@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "Fixing any formatting on staged files!"
+echo "Fixing any formatting on staged html/css/js files!"
 cd website
 npm run lint-staged

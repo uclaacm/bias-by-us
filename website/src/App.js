@@ -20,10 +20,7 @@ function App() {
           {/* render default navbar if URL is empty */}
           <Route exact path="/">
             <div className="navbar">
-              <Navbar 
-                path="/" 
-                subtitle={getHeader()} 
-              />
+              <Navbar path="/" subtitle={getHeader()} />
             </div>
           </Route>
           {/* pass in URL through params if it's not the default URL */}
@@ -31,9 +28,9 @@ function App() {
             path="/:currentPage"
             render={(input) => (
               <div className="navbar">
-                <Navbar 
-                  path={"/" + input.match.params.currentPage} 
-                  subtitle={getHeader(input.match.params.currentPage)} 
+                <Navbar
+                  path={"/" + input.match.params.currentPage}
+                  subtitle={getHeader(input.match.params.currentPage)}
                 />
               </div>
             )}
@@ -41,13 +38,27 @@ function App() {
         </Switch>
 
         <Switch>
-          <Route exact path="/"><LandingPage /></Route>
-          <Route path="/aboutUs"><AboutUsPage /></Route>
-          <Route path="/college"><CollegeAdmissionsUT /></Route>
-          <Route path="/facebook"><CaseStudyFacebook /></Route>
-          <Route path="/facialRecognition"><FacialRecognition /></Route>
-          <Route path="/conclusion"><ConclusionPage /></Route>
-          <Route path="/resources"><ResourcesPage /></Route>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
+          <Route path="/aboutUs">
+            <AboutUsPage />
+          </Route>
+          <Route path="/college">
+            <CollegeAdmissionsUT />
+          </Route>
+          <Route path="/facebook">
+            <CaseStudyFacebook />
+          </Route>
+          <Route path="/facialRecognition">
+            <FacialRecognition />
+          </Route>
+          <Route path="/conclusion">
+            <ConclusionPage />
+          </Route>
+          <Route path="/resources">
+            <ResourcesPage />
+          </Route>
         </Switch>
       </Router>
     </div>
@@ -70,7 +81,6 @@ function getHeader(path) {
   //return default dictionary value if path is falsy
 
   //get the subtitle from our pageNames dictionary if path exists
-  if (path)
-    ({ [path]: subtitle } = pageNames);
+  if (path) ({ [path]: subtitle } = pageNames);
   return subtitle;
 }

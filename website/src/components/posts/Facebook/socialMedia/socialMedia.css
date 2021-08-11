@@ -55,22 +55,22 @@
 }
 
 .male-button-active {
-  background-color: #8BB6FF;
+  background-color: #8bb6ff;
   color: black;
 }
 
 .female-button-active {
-  background-color: #FFC0FE;
+  background-color: #ffc0fe;
   color: black;
 }
 
 .white-button-active {
-  background-color: #D7D7D7;
+  background-color: #d7d7d7;
   border-color: black;
 }
 
 .black-button-active {
-  background-color: #2C2C2C;
+  background-color: #2c2c2c;
   color: #fff;
 }
 

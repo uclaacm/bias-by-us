@@ -11,13 +11,12 @@ import { VisibilityContext } from "./commonLogic";
 export default function ProgressBar(props) {
   const [windowWidth, windowHeight] = useWindowDimensions();
   const { visibleSections } = useContext(VisibilityContext);
-  
+
   // Gets the indices of the post sections
   const indices = props.content.reduce((posts, cur, index) => {
-    if(cur.post)
-      posts.push(index)
-    return posts
-  }, [])
+    if (cur.post) posts.push(index);
+    return posts;
+  }, []);
 
   let content = props.content
     .filter((s, index) => indices.includes(index))
@@ -40,7 +39,9 @@ export default function ProgressBar(props) {
         >
           <img
             className={`profile-pic no-margin static-size ${
-              props.content.indexOf(section) > visibleSections ? "gray-image" : ""
+              props.content.indexOf(section) > visibleSections
+                ? "gray-image"
+                : ""
             }`}
             src={section.post.profilePic}
             alt={`the icon for the "${section.post.header}" section`}
