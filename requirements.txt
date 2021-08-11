@@ -1,0 +1,4 @@
+gensim==4.0.1
+numpy==1.21.1
+scipy==1.7.1
+smart-open==5.1.0
