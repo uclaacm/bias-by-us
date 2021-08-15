@@ -37,8 +37,6 @@ def lambda_handler(event, context):
             }
         )
         }
-    # model = KeyedVectors.load("s3://bias-by-us-nlp-models/college-models/word_embedding_model.kv")
-    # model = pickle.load(open("s3://bias-by-us-nlp-models/college-models/word_embedding_model.p", "rb"))
     s3 =boto3.resource('s3')
     model = pickle.loads(s3.Bucket(os.environ.get("MODEL_BUCKET")).Object(os.environ.get("MODEL_KEY")).get()['Body'].read())
     #default score
