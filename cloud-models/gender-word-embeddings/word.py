@@ -1,5 +1,6 @@
 from gensim.scripts.glove2word2vec import glove2word2vec
 from gensim.models import KeyedVectors
+import pickle
 
 # download glove.6B.100d.txt from
 # https://www.kaggle.com/danielwillgeorge/glove6b100dtxt
