@@ -13,6 +13,10 @@ word2vec_output_file = glove_filename+'.word2vec'
 def setupfiles():
     glove2word2vec(glove_path, word2vec_output_file)
 
+#function to save model into kv file
+def savemodel():
+    model = KeyedVectors.load_word2vec_format(word2vec_output_file, binary=False)
+    model.save("word_embedding_model.kv")
 # run this once
 # setupfiles()
 
