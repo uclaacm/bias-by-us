@@ -16,7 +16,7 @@ def setupfiles():
 #function to save model into kv file
 def savemodel():
     model = KeyedVectors.load_word2vec_format(word2vec_output_file, binary=False)
-    model.save("word_embedding_model.kv")
+    pickle.dump(model, open("word_embedding_model.p", "wb"))
 # run this once
 # setupfiles()
 
