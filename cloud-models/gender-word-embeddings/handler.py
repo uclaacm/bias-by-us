@@ -4,7 +4,8 @@ import os
 import pickle
 import boto3
 
-
+s3 =boto3.resource('s3')
+model = pickle.loads(s3.Bucket("bias-by-us-nlp-models").Object("college-models/word_embedding_model.p").get()['Body'].read())
 def lambda_handler(event, context):
     """
     Parameters
@@ -37,8 +38,7 @@ def lambda_handler(event, context):
             }
         )
         }
-    s3 =boto3.resource('s3')
-    model = pickle.loads(s3.Bucket(os.environ.get("MODEL_BUCKET")).Object(os.environ.get("MODEL_KEY")).get()['Body'].read())
+
     #default score
     try: 
         word_index = model.key_to_index[word]
