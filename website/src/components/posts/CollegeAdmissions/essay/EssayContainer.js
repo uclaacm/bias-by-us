@@ -8,6 +8,7 @@ import "./essay.css";
 
 //our wordSections
 //changeable sections will also have a displayed property
+const INITIAL_WORD_LENGTH = 3;
 const wordSections = [
   {
     plain: "This is our example",
@@ -35,7 +36,7 @@ const wordSections = [
   },
 ];
 
-//set the displayed property to the middle index of the changeableWords
+/*set the displayed property to the middle index of the changeableWords*/
 const defaultWords = wordSections.map((section) =>
   section.plain
     ? { ...section }
@@ -47,19 +48,24 @@ const defaultWords = wordSections.map((section) =>
 
 //helper function to calculate score based off of a list of words
 function calcScore(wordsList) {
+  /*add 0 to total if the word is plain text,
+  or add its index in the scores array if it's a changeable word
+  */
   return wordsList.reduce(
     (total, curr) => (curr.plain ? total : total + curr.scores[curr.displayed]),
     0
   );
 }
 
-//action has type, index, newWord
-//reducer function that handles changing our wordList or resetting it
+/*action has type, index, newWord, customScore
+new word is either an index for regular words, or a string for the 
+new word if it is custom
+reducer function that handles changing our wordList or resetting it*/
 const wordReducer = (prevWords, action) => {
   switch (action.type) {
     case "changeWord": {
       const changeIndex = action.index;
-      //only changing the requested word
+      //only changing the requested word, and setting custom false
       return prevWords.map((section, index) =>
         index === changeIndex
           ? {
@@ -69,7 +75,27 @@ const wordReducer = (prevWords, action) => {
           : { ...section }
       );
     }
+    case "customWord": {
+      const changeIndex = action.index;
+      return prevWords.map((section, index) =>
+        index === changeIndex
+          ? {
+              ...section,
+              displayed: INITIAL_WORD_LENGTH,
+              changeable: [
+                ...section.changeable.slice(0, INITIAL_WORD_LENGTH),
+                action.newWord,
+              ],
+              scores: [
+                ...section.scores.slice(0, INITIAL_WORD_LENGTH),
+                action.customScore,
+              ],
+            }
+          : { ...section }
+      );
+    }
     //can't use spreadOperator because of nested array data
+    //reset to
     case "resetWords": {
       return prevWords.map((section) =>
         section.plain
@@ -77,6 +103,8 @@ const wordReducer = (prevWords, action) => {
           : {
               ...section,
               displayed: 1,
+              changeable: [...section.changeable.slice(0, INITIAL_WORD_LENGTH)],
+              scores: [...section.scores.slice(0, INITIAL_WORD_LENGTH)],
             }
       );
     }
@@ -98,6 +126,35 @@ export default function EssayContainer() {
     console.log("WordsList has changed!");
   }, [wordsList]);
 
+  //helper function for accepting custom words
+  async function tryCustomWord(customWord, chosenIndex) {
+    //catch empty word or multiple word errors
+    if (!customWord || customWord.indexOf(" ") > -1) {
+      window.alert("Custom words must be a single word!");
+      return;
+    }
+    console.log(
+      "entry point is: " + process.env.REACT_APP_WORD_EMBEDDING_ENTRY_POINT
+    );
+    const queryUrl =
+      process.env.REACT_APP_WORD_EMBEDDING_ENTRY_POINT + "?word=" + customWord;
+    const wordRes = await fetch(queryUrl);
+    if (wordRes.status >= 400) {
+      window.alert("Invalid word, must be a word in the dictionary!");
+      return;
+    } else {
+      const wordData = await wordRes.json();
+      const newScore = wordData["message"];
+      dispatchWordsList({
+        type: "customWord",
+        index: chosenIndex,
+        customScore: newScore,
+        newWord: customWord,
+      });
+      console.log("Successfully chosen custom word!");
+    }
+  }
+
   return (
     <div className="essay-container">
       <div>
@@ -118,6 +175,7 @@ export default function EssayContainer() {
             selectedIndex={selectedIndex}
             wordsList={wordsList}
             dispatchWordsList={dispatchWordsList}
+            tryCustomWord={tryCustomWord}
           />
         ) : (
           "Select a highlighted word to get started!"

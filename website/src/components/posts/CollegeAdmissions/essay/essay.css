@@ -26,6 +26,12 @@
   justify-content: space-between;
 }
 
+.essay-lower-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .word-suggestion {
   margin: 0 2vw;
 }

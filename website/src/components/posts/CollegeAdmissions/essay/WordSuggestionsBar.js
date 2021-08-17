@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./essay.css";
 export default function WordSuggestionsBar(props) {
+  const [customWordInput, setCustomWordInput] = useState("");
   const optionObj = props.wordsList[props.selectedIndex];
   const wordOptions = optionObj.changeable;
 
@@ -24,7 +25,34 @@ export default function WordSuggestionsBar(props) {
     )
   );
 
-  return <div className="word-suggestions-bar">{displayedOptions}</div>;
+  return (
+    <div>
+      <div className="word-suggestions-bar">{displayedOptions}</div>
+      <div className="essay-lower-bar">
+        {`Selected Word's Score: 
+        ${optionObj.scores[optionObj.displayed].toFixed(2)}
+        `}
+      </div>
+      <div className="essay-lower-bar">
+        <div>Custom word: </div>
+        <input
+          type="text"
+          value={customWordInput}
+          onChange={(event) => {
+            setCustomWordInput(event.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            props.tryCustomWord(customWordInput, props.selectedIndex);
+            setCustomWordInput("");
+          }}
+        >
+          Use Custom Word
+        </button>
+      </div>
+    </div>
+  );
 }
 
 function WordSuggestion(props) {
