@@ -28,7 +28,7 @@ def lambda_handler(event, context):
     """
 
     WORD_WEIGHT = 100
-    word = event['word']
+    word = event['queryStringParameters']['word']
     if word is None:
         return {
         'statusCode':400,
