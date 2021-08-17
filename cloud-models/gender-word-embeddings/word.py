@@ -1,5 +1,6 @@
 from gensim.scripts.glove2word2vec import glove2word2vec
 from gensim.models import KeyedVectors
+import pickle
 
 # download glove.6B.100d.txt from
 # https://www.kaggle.com/danielwillgeorge/glove6b100dtxt
@@ -13,6 +14,10 @@ word2vec_output_file = glove_filename+'.word2vec'
 def setupfiles():
     glove2word2vec(glove_path, word2vec_output_file)
 
+#function to save model into kv file
+def savemodel():
+    model = KeyedVectors.load_word2vec_format(word2vec_output_file, binary=False)
+    pickle.dump(model, open("word_embedding_model.p", "wb"))
 # run this once
 # setupfiles()
 
