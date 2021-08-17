@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../main.css";
 import PostsList from "../components/mainContent/PostsList";
 import { VisibilityProvider } from "../components/mainContent/commonLogic";
@@ -12,6 +12,15 @@ export default function CollegeAdmissionsUT() {
 }
 
 function CollegeAdmissionsUTContent() {
+  useEffect(() => {
+    async function warmupModel() {
+      const queryUrl =
+        process.env.REACT_APP_WORD_EMBEDDING_ENTRY_POINT + "?word=test";
+      await fetch(queryUrl);
+      console.log("Warming up our model!");
+    }
+    warmupModel();
+  }, []);
   return (
     <div className="posts">
       <PostsList content={labContent} />

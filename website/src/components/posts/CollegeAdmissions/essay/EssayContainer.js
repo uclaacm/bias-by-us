@@ -49,7 +49,7 @@ const defaultWords = wordSections.map((section) =>
 //helper function to calculate score based off of a list of words
 function calcScore(wordsList) {
   /*add 0 to total if the word is plain text,
-  or add its index in the scores array if it's a changeable word
+  or add the value of its entry in the scores array if it's a changeable word
   */
   return wordsList.reduce(
     (total, curr) => (curr.plain ? total : total + curr.scores[curr.displayed]),
@@ -58,14 +58,13 @@ function calcScore(wordsList) {
 }
 
 /*action has type, index, newWord, customScore
-new word is either an index for regular words, or a string for the 
-new word if it is custom
+new word is either an index for regular words, or a string for the new word if it is custom
 reducer function that handles changing our wordList or resetting it*/
 const wordReducer = (prevWords, action) => {
   switch (action.type) {
     case "changeWord": {
       const changeIndex = action.index;
-      //only changing the requested word, and setting custom false
+      //only changing the requested word
       return prevWords.map((section, index) =>
         index === changeIndex
           ? {
@@ -95,7 +94,7 @@ const wordReducer = (prevWords, action) => {
       );
     }
     //can't use spreadOperator because of nested array data
-    //reset to
+    //reset to base with only INITIAL_WORD_LENGTH to remove custom words
     case "resetWords": {
       return prevWords.map((section) =>
         section.plain
