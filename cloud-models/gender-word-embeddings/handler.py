@@ -28,17 +28,7 @@ def lambda_handler(event, context):
     """
 
     WORD_WEIGHT = 100
-    word = event['word']
-    if word is None:
-        return {
-        'statusCode':400,
-        'body': json.dumps(
-            {
-                "message": "Invalid word",
-            }
-        )
-        }
-
+    word = event['queryStringParameters']['word']
     #default score
     try: 
         word_index = model.key_to_index[word]
@@ -46,6 +36,10 @@ def lambda_handler(event, context):
         score = result * WORD_WEIGHT
         return {
         'statusCode':200,
+        'headers': {
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Origin': '*'
+        },
         'body': json.dumps(
             {
                 "message": score,
@@ -56,6 +50,10 @@ def lambda_handler(event, context):
         score =0
         return {
         'statusCode':400,
+        'headers': {
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Origin': '*'
+        },
         'body': json.dumps(
             {
                 "message": "Invalid word",
