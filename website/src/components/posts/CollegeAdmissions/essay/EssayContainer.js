@@ -132,9 +132,6 @@ export default function EssayContainer() {
       window.alert("Custom words must be a single word!");
       return;
     }
-    console.log(
-      "entry point is: " + process.env.REACT_APP_WORD_EMBEDDING_ENTRY_POINT
-    );
     const queryUrl =
       process.env.REACT_APP_WORD_EMBEDDING_ENTRY_POINT + "?word=" + customWord;
     const wordRes = await fetch(queryUrl);
