@@ -127,6 +127,14 @@ export default function EssayContainer() {
 
   //helper function for accepting custom words
   async function tryCustomWord(customWord, chosenIndex) {
+    const currWords = wordsList[chosenIndex].changeable;
+    //catch if the word's already among the options
+    for (let word of currWords) {
+      if (customWord === word) {
+        alert("This word's already an option!");
+        return;
+      }
+    }
     //catch empty word or multiple word errors
     if (!customWord || customWord.indexOf(" ") > -1) {
       window.alert("Custom words must be a single word!");
