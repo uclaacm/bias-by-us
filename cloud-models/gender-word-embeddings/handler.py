@@ -33,7 +33,9 @@ def lambda_handler(event, context):
     try: 
         word_index = model.key_to_index[word]
         result = model.similarity('man', word)
+        woman_result = model.similarity('woman', word)
         score = result * WORD_WEIGHT
+        woman_score =woman_result * WORD_WEIGHT
         return {
         'statusCode':200,
         'headers': {
@@ -42,7 +44,8 @@ def lambda_handler(event, context):
         },
         'body': json.dumps(
             {
-                "message": score,
+                "score": score,
+                "womanScore": woman_score
             }
         )
         }

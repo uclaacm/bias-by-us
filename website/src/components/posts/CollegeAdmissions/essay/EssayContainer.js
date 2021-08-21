@@ -16,6 +16,7 @@ const wordSections = [
   {
     changeable: ["essay", "activity", "game"],
     scores: [10, 20, 30],
+    womanScores: [5, 10, 15],
   },
   {
     plain: "made by our devs! What's your favorite",
@@ -23,6 +24,7 @@ const wordSections = [
   {
     changeable: ["meal", "food", "dish"],
     scores: [10, 20, 30],
+    womanScores: [5, 10, 15],
   },
   {
     plain: "to cook? I know that I love",
@@ -30,6 +32,7 @@ const wordSections = [
   {
     changeable: ["fried rice", "spam masubi", "sushi"],
     scores: [10, 20, 30],
+    womanScores: [5, 10, 15],
   },
   {
     plain: "at any time.",
@@ -64,7 +67,7 @@ function calcScore(wordsList) {
   );
 }
 
-/*action has type, index, newWord, customScore
+/*action has type, index, newWord, customScore, customWomanScore
 new word is either an index for regular words, or a string for the new word if it is custom
 reducer function that handles changing our wordList or resetting it*/
 const wordReducer = (prevWords, action) => {
@@ -96,6 +99,10 @@ const wordReducer = (prevWords, action) => {
                 ...section.scores.slice(0, INITIAL_WORD_LENGTH),
                 action.customScore,
               ],
+              womanScores: [
+                ...section.womanScores.slice(0, INITIAL_WORD_LENGTH),
+                action.customWomanScore,
+              ],
             }
           : { ...section }
       );
@@ -111,6 +118,7 @@ const wordReducer = (prevWords, action) => {
               displayed: 1,
               changeable: [...section.changeable.slice(0, INITIAL_WORD_LENGTH)],
               scores: [...section.scores.slice(0, INITIAL_WORD_LENGTH)],
+              womanScores: [...section.scores.slice(0, INITIAL_WORD_LENGTH)],
             }
       );
     }
@@ -147,11 +155,13 @@ export default function EssayContainer() {
       return;
     } else {
       const wordData = await wordRes.json();
-      const newScore = wordData["message"];
+      const newScore = wordData["score"];
+      const newWomanScore = wordData["womanScore"];
       dispatchWordsList({
         type: "customWord",
         index: chosenIndex,
         customScore: newScore,
+        customWomanScore: newWomanScore,
         newWord: customWord,
       });
       console.log("Successfully chosen custom word!");
