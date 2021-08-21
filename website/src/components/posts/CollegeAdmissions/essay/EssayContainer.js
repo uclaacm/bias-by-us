@@ -51,9 +51,16 @@ function calcScore(wordsList) {
   /*add 0 to total if the word is plain text,
   or add the value of its entry in the scores array if it's a changeable word
   */
-  return wordsList.reduce(
-    (total, curr) => (curr.plain ? total : total + curr.scores[curr.displayed]),
+  const changeablesLength = wordsList.reduce(
+    (changeables, curr) => (curr.changeable ? changeables + 1 : changeables),
     0
+  );
+  return (
+    wordsList.reduce(
+      (total, curr) =>
+        curr.plain ? total : total + curr.scores[curr.displayed],
+      0
+    ) / changeablesLength
   );
 }
 
