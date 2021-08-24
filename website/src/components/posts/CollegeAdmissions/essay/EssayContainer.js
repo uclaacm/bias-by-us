@@ -61,7 +61,12 @@ function calcScore(wordsList) {
   return (
     wordsList.reduce(
       (total, curr) =>
-        curr.plain ? total : total + curr.scores[curr.displayed],
+        curr.plain
+          ? total
+          : total +
+            (20 +
+              curr.scores[curr.displayed] -
+              curr.womanScores[curr.displayed]),
       0
     ) / changeablesLength
   );

@@ -30,7 +30,11 @@ export default function WordSuggestionsBar(props) {
       <div className="word-suggestions-bar">{displayedOptions}</div>
       <div className="essay-lower-bar">
         {`Selected Word's Score: 
-        ${optionObj.scores[optionObj.displayed].toFixed(2)}
+        ${(
+          20 +
+          optionObj.scores[optionObj.displayed] -
+          optionObj.womanScores[optionObj.displayed]
+        ).toFixed(2)}
         `}
       </div>
       <div className="essay-lower-bar">
