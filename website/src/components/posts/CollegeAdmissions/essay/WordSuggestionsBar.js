@@ -32,8 +32,8 @@ export default function WordSuggestionsBar(props) {
         {`Selected Word's Score: 
         ${(
           20 +
-          optionObj.scores[optionObj.displayed] -
-          optionObj.womanScores[optionObj.displayed]
+          optionObj.heScores[optionObj.displayed] -
+          optionObj.sheScores[optionObj.displayed]
         ).toFixed(2)}
         `}
       </div>

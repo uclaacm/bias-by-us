@@ -15,24 +15,24 @@ const wordSections = [
   },
   {
     changeable: ["essay", "activity", "game"],
-    scores: [10, 20, 30],
-    womanScores: [5, 10, 15],
+    heScores: [10, 20, 30],
+    sheScores: [5, 10, 15],
   },
   {
     plain: "made by our devs! What's your favorite",
   },
   {
     changeable: ["meal", "food", "dish"],
-    scores: [10, 20, 30],
-    womanScores: [5, 10, 15],
+    heScores: [10, 20, 30],
+    sheScores: [5, 10, 15],
   },
   {
     plain: "to cook? I know that I love",
   },
   {
     changeable: ["fried rice", "spam masubi", "sushi"],
-    scores: [10, 20, 30],
-    womanScores: [5, 10, 15],
+    heScores: [10, 20, 30],
+    sheScores: [5, 10, 15],
   },
   {
     plain: "at any time.",
@@ -65,14 +65,14 @@ function calcScore(wordsList) {
           ? total
           : total +
             (20 +
-              curr.scores[curr.displayed] -
-              curr.womanScores[curr.displayed]),
+              curr.heScores[curr.displayed] -
+              curr.sheScores[curr.displayed]),
       0
     ) / changeablesLength
   );
 }
 
-/*action has type, index, newWord, customScore, customWomanScore
+/*action has type, index, newWord, customHeScore, customSheScore
 new word is either an index for regular words, or a string for the new word if it is custom
 reducer function that handles changing our wordList or resetting it*/
 const wordReducer = (prevWords, action) => {
@@ -100,13 +100,13 @@ const wordReducer = (prevWords, action) => {
                 ...section.changeable.slice(0, INITIAL_WORD_LENGTH),
                 action.newWord,
               ],
-              scores: [
-                ...section.scores.slice(0, INITIAL_WORD_LENGTH),
-                action.customScore,
+              heScores: [
+                ...section.heScores.slice(0, INITIAL_WORD_LENGTH),
+                action.customHeScore,
               ],
-              womanScores: [
-                ...section.womanScores.slice(0, INITIAL_WORD_LENGTH),
-                action.customWomanScore,
+              sheScores: [
+                ...section.sheScores.slice(0, INITIAL_WORD_LENGTH),
+                action.customSheScore,
               ],
             }
           : { ...section }
@@ -122,8 +122,8 @@ const wordReducer = (prevWords, action) => {
               ...section,
               displayed: 1,
               changeable: [...section.changeable.slice(0, INITIAL_WORD_LENGTH)],
-              scores: [...section.scores.slice(0, INITIAL_WORD_LENGTH)],
-              womanScores: [...section.scores.slice(0, INITIAL_WORD_LENGTH)],
+              heScores: [...section.heScores.slice(0, INITIAL_WORD_LENGTH)],
+              sheScores: [...section.sheScores.slice(0, INITIAL_WORD_LENGTH)],
             }
       );
     }
@@ -160,13 +160,13 @@ export default function EssayContainer() {
       return;
     } else {
       const wordData = await wordRes.json();
-      const newScore = wordData["score"];
-      const newWomanScore = wordData["womanScore"];
+      const newHeScore = wordData["heScore"];
+      const newSheScore = wordData["sheScore"];
       dispatchWordsList({
         type: "customWord",
         index: chosenIndex,
-        customScore: newScore,
-        customWomanScore: newWomanScore,
+        customHeScore: newHeScore,
+        customSheScore: newSheScore,
         newWord: customWord,
       });
       console.log("Successfully chosen custom word!");
