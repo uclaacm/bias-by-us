@@ -1,0 +1,10 @@
+.ads-background {
+    /* Vector */
+    height: 354px;
+    background: linear-gradient(74.82deg, rgba(250, 0, 255, 0.45) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(285.18deg, rgba(0, 117, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(255.06deg, rgba(21, 255, 16, 0.9) 0%, rgba(255, 255, 255, 0) 99.66%), linear-gradient(105.3deg, #FFF500 0%, rgba(255, 255, 255, 0) 99.33%), #FFFFFF;
+    /* Note: backdrop-filter has minimal browser support */
+}
+
+.ad-plane {
+    padding: 70px 30%;
+}

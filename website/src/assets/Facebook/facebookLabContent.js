@@ -7,6 +7,7 @@ import "./facebookLabContent.css";
 import { SocialMediaSection } from "../../components/posts/Facebook/socialMedia/socialMediaHandler";
 import ConclusionGraphic from "../../components/posts/Facebook/conclusion/ConclusionGraphic.js";
 import GenderGraphContainer from "../../components/posts/Facebook/genderGraph/GenderGraphContainer.js";
+import LoopAnimation from "../../components/posts/Facebook/feedbackLoops/LoopAnimation";
 import facebookLogo from "./facebookLogo.svg";
 import adPic from "./adPic.png";
 import loopPic from "./loopPic.svg";
@@ -42,6 +43,11 @@ export default [
                 race, gender, and income.
               </mark>
             </p>
+          ),
+        },
+        {
+          body: (
+            <LoopAnimation/>
           ),
         },
         {
@@ -234,11 +240,7 @@ export default [
         },
         {
           body: (
-            <img
-              style={{ maxWidth: "680px", width: "75vw" }}
-              src={anime}
-              alt="a static design of the animation that visualizes how skewed samples amplify biases"
-            ></img>
+            <LoopAnimation/>
           ), // we will remove this once we implement the animation
         },
         {
