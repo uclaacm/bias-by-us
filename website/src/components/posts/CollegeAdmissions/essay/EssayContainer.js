@@ -2,6 +2,7 @@ import React, { useEffect, useReducer, useState } from "react";
 import WrittenEssay from "./WrittenEssay";
 import ScoreBar from "./ScoreBar";
 import WordSuggestionsBar from "./WordSuggestionsBar";
+import ScatterPlot from "./ScatterPlot";
 import "./essay.css";
 
 //words reducer set-up
@@ -217,6 +218,8 @@ export default function EssayContainer() {
       >
         Reset The Essay
       </div>
+      <div>Similarity of Words to He/She</div>
+      <ScatterPlot wordsList={wordsList} />
     </div>
   );
 }
