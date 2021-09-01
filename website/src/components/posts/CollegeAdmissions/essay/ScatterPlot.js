@@ -39,8 +39,8 @@ export default function ScatterPlot(props) {
   /*If the heScore/sheScore are within 5% of each other */
   const equalSelected = selected.filter(
     (wordObj) =>
-      wordObj.heScore - wordObj.sheScore < 5 &&
-      wordObj.heScore - wordObj.sheScore > -5
+      wordObj.heScore - wordObj.sheScore <= 5 &&
+      wordObj.heScore - wordObj.sheScore >= -5
   );
   const listOfScatters = [];
   //append heLeaning words
