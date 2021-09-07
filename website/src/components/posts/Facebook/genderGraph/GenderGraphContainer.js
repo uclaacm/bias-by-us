@@ -26,19 +26,14 @@ export default function GenderGraphContainer() {
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" dy={5} fontSize="1.1rem" />
-        <YAxis
-          fontSize="1.1rem"
-          tickFormatter={(tick) => {
-            // formats y-axis labels to have '%'
-            return `${tick}%`;
-          }}
-        />
+        <YAxis fontSize="1.1rem" unit="%" />
         <Tooltip />
         <Line
           type="monotone"
-          dataKey="percentage"
+          dataKey="women enrolled"
           stroke="#68b068"
           activeDot={{ r: 8 }}
+          unit="%"
         />
       </LineChart>
     </ResponsiveContainer>

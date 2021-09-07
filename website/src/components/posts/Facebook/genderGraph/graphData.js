@@ -4,7 +4,7 @@ const data = percentages.map((p) => {
   year += 5; // years will range from 1965 to 2020
   return {
     name: year,
-    percentage: p,
+    "women enrolled": p,
   };
 });
 
