@@ -1,8 +1,9 @@
-import React, { Component, useEffect, useState } from "react";
-import Anime, {anime} from "react-anime";
+import React, { useState } from "react";
 import userIcon from "../../../../assets/Facebook/userIcon.svg"
 import "./loopAnimation.css"
 
+// quadruplets showing the top left, top right, bottom left, bottom right "ads"
+// first is a variety, the rest are possible homogenous ad groups post-feedback loop
 const allAds = [
     ["💐", "⚽", "🍔", "🎷" ],
     ["💐", "🌼", "🌺", "🌹" ],
@@ -11,12 +12,22 @@ const allAds = [
     ["🎷", "🎸", "🥁", "🎧" ]
 ]
 
+// text for the ads
 const translations = {
     0: "buy flowers!",
     1: "play sports!",
     2: "eat food!",
-    3: "enjoy music!",
+    3: "live music!",
 }
+
+// set of x,y coordinates relative to origin (0,0) to place the ads on corners of the gradient background
+const quads = [
+    [0,0],
+    [-120,-50],
+    [120,-50],
+    [-120,50],
+    [120,50]
+]
 
 const Ad = (icon, quad, click, i) =>
 (
@@ -29,75 +40,41 @@ const Ad = (icon, quad, click, i) =>
 function MovableUserIconComponent() {
         let ads = []
         let [quad, setQuad] = useState(0)
-        let translateX = 0
-        let translateY = 0
 
         for(let i = 0; i < 4; i++) {
-            let which = quad ? i : i;
-            let icon = allAds[quad][which]
+            let which = quad ? quad-1 : i;
+            let icon = allAds[quad][i]
             let cap = translations[which]
             ads.push(Ad(icon, cap, setQuad, i+1))
         }
 
-        switch(quad) {
-            case 1: translateX = -120; translateY = -50; break;
-            case 3: translateX = -120; translateY = 50; break;
-            case 2: translateX =  120; translateY = -50; break;
-            case 4: translateX =  120; translateY = 50; break;
-            default: break;
-        }
-
         return(
-            <Anime 
-                translateX={[0, translateX]} //quad ? quad % 2 ? -100: 100 : 0]} 
-                translateY={[0, translateY]} //quad ? quad % 2 ? -50: 50 : 0]}
-            >{console.log(translateX)}
-                <div style={{alignItems:"center"}}> 
-                    <div style={{display: "flex", flexDirection: "row"}}> 
-                        {ads[0]}
-                        {ads[1]} 
-                    </div>
-                    <div style={{display: "flex", justifyContent:"center"}}>
-                        <img src={userIcon} height="50px"></img>
-                    </div>
-                    <div style={{display: "flex", flexDirection:"row"}}> 
-                        {ads[2]}
-                        {ads[3]}
-                    </div>
+            <div style={{
+                transform: "translate("+quads[quad][0]+"px,"+quads[quad][1]+"px", 
+                transition:"transform 0.2s"
+            }}>
+                <div style={{display: "flex", flexDirection: "row"}}> 
+                    {ads[0]}
+                    {ads[1]} 
                 </div>
-            </Anime>
-            
-        )
+                <div style={{display: "flex", justifyContent:"center"}}>
+                    <img src={userIcon} height="50px" alt="user"></img>
+                </div>
+                <div style={{display: "flex", flexDirection:"row"}}> 
+                    {ads[2]}
+                    {ads[3]}
+                </div>
+            </div>
+    )
     }
 
 export default function LoopAnimation () {
         return(
         <div className="ads-background">
-            <div className="ad-plane" style={{display: "flex", flexWrap: "wrap"}}>
+            <div className="ad-plane" >
                 <MovableUserIconComponent/>
+                {/** TODO: make a reset button that restarts the user/ad at the origin, so can see diff ad biases */}
             </div>
         </div>
     )
 }
-
-
-// const userIconComponent = (props) => {
-//     return(
-//         <Anime delay={Math.random()*100} >
-//             <img src={userIcon} height="50px"></img>
-//         </Anime>
-//     )
-// }
-// const bunchUsers = () => {
-//     let users = [];
-//     for (let i = 0; i < 10; i++) {
-//         users.push(userIconComponent())
-//     }
-//     return(
-//     {users.map((user) => (
-//         <div style={{padding: Math.random()*15+"px"/*, filter:"blur(0px) brightness:(100%)" , paddingLeft: Math.random()*10+"px", paddingRight: Math.random()*10+"px"*/ }}>
-//             {user}
-//         </div>
-//         ))}
-//     )
-// }

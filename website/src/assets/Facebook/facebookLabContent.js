@@ -13,7 +13,6 @@ import adPic from "./adPic.png";
 import loopPic from "./loopPic.svg";
 import trendsPic from "./trends.svg";
 import facebookAds from "./personalizedAds.svg";
-import anime from "./animationpic.svg";
 import teachLogo from "../../assets/teachla-logo.svg";
 
 export default [
