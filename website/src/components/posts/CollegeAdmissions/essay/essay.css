@@ -36,8 +36,8 @@
   margin: 0 2vw;
   background-color: lightgray;
   border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -56,8 +56,8 @@
   margin: 0 2vw;
   background-color: rgb(124, 255, 255);
   border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
