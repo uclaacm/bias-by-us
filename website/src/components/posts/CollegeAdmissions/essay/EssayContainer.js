@@ -12,7 +12,7 @@ import "./essay.css";
 const INITIAL_WORD_LENGTH = 3;
 const wordSections = [
   {
-    plain: "This is our example",
+    plain: "This is our example ",
   },
   {
     changeable: ["essay", "activity", "game"],
@@ -20,7 +20,8 @@ const wordSections = [
     sheScores: [5, 10, 15],
   },
   {
-    plain: "made by our devs! What's your favorite",
+    plain:
+      "made by our devs! Our devs really enjoy cooking a lot of different foods. I'm curious, what's your favorite",
   },
   {
     changeable: ["meal", "food", "dish"],
@@ -31,7 +32,7 @@ const wordSections = [
     plain: "to cook? I know that I love",
   },
   {
-    changeable: ["fried rice", "spam masubi", "sushi"],
+    changeable: ["fried rice", "spam", "sushi"],
     heScores: [10, 20, 30],
     sheScores: [5, 10, 15],
   },

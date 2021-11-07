@@ -17,22 +17,22 @@ export default function WrittenEssay(props) {
       />
     )
   );
-  return <div className="essay-section">{sections}</div>;
+  return <p className="essay-section">{sections}</p>;
 }
 
 function PlainSection(props) {
-  return <div className="essay-sentence">{props.text}</div>;
+  return <span className="essay-sentence">{props.text}</span>;
 }
 
 function ChangeableSection(props) {
   return (
-    <div
+    <span
       onClick={props.onClick}
       className={`essay-sentence ${
         props.selected ? "selected-word" : "changeable-word"
       }`}
     >
       {props.text}
-    </div>
+    </span>
   );
 }

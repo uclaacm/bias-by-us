@@ -10,9 +10,8 @@
 }
 
 .essay-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .essay-sentence {
