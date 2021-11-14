@@ -5,8 +5,17 @@
   align-items: center;
 }
 
+.essay-background {
+  background-color: lightgray;
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+
 .written-essay {
   margin: 2vh 0;
+  background-color: white;
+  padding: 10px 10px;
+  border-radius: 15px;
 }
 
 .essay-section {
@@ -34,7 +43,7 @@
 
 .word-suggestion {
   margin: 0 2vw;
-  background-color: lightgray;
+  background-color: white;
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -62,7 +71,7 @@
 }
 
 .changeable-word {
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(209, 241, 252);
 }
 
 .changeable-word:hover {
@@ -70,7 +79,7 @@
 }
 
 .reset-button {
-  background-color: rgb(211, 211, 211);
+  background-color: white;
   margin-top: 2vh;
   margin-bottom: 1vh;
   border-radius: 5px;
