@@ -49,7 +49,6 @@
 
 .selected-word {
   background-color: rgb(124, 255, 255);
-  border-radius: 5px;
 }
 
 .selected-word-suggestion {
@@ -64,12 +63,10 @@
 
 .changeable-word {
   background-color: rgb(211, 211, 211);
-  border-radius: 5px;
 }
 
 .changeable-word:hover {
   background-color: rgb(209, 237, 237);
-  border-radius: 5px;
 }
 
 .reset-button {
