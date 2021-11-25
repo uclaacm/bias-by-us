@@ -92,3 +92,8 @@
 .reset-button:hover {
   background-color: lightslategray;
 }
+
+.select-score {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
