@@ -28,7 +28,7 @@ export default function WordSuggestionsBar(props) {
   return (
     <div>
       <div className="word-suggestions-bar">{displayedOptions}</div>
-      <div className="essay-lower-bar">
+      <div className="essay-lower-bar select-score">
         {`Selected Word's Score: 
         ${(
           20 +

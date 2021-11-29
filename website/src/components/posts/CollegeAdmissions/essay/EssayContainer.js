@@ -185,39 +185,41 @@ export default function EssayContainer() {
 
   return (
     <div className="essay-container">
-      <div>
-        <ScoreBar essayScore={essayScore} />
-      </div>
-      <div className="written-essay">
-        <WrittenEssay
-          setSelectedIndex={setSelectedIndex}
-          selectedIndex={selectedIndex}
-          wordsList={wordsList}
-          wordSections={wordSections}
-        />
-      </div>
-      <div>
-        {/* conditionally render the word suggestions bar */}
-        {selectedIndex ? (
-          <WordSuggestionsBar
+      <div className="essay-container essay-background">
+        <div>
+          <ScoreBar essayScore={essayScore} />
+        </div>
+        <div className="written-essay">
+          <WrittenEssay
+            setSelectedIndex={setSelectedIndex}
             selectedIndex={selectedIndex}
             wordsList={wordsList}
-            dispatchWordsList={dispatchWordsList}
-            tryCustomWord={tryCustomWord}
+            wordSections={wordSections}
           />
-        ) : (
-          "Select a highlighted word to get started!"
-        )}
-      </div>
+        </div>
+        <div>
+          {/* conditionally render the word suggestions bar */}
+          {selectedIndex ? (
+            <WordSuggestionsBar
+              selectedIndex={selectedIndex}
+              wordsList={wordsList}
+              dispatchWordsList={dispatchWordsList}
+              tryCustomWord={tryCustomWord}
+            />
+          ) : (
+            "Select a highlighted word to get started!"
+          )}
+        </div>
 
-      <div
-        className="reset-button"
-        onClick={() => {
-          setSelectedIndex(null);
-          dispatchWordsList({ type: "resetWords" });
-        }}
-      >
-        Reset The Essay
+        <div
+          className="reset-button"
+          onClick={() => {
+            setSelectedIndex(null);
+            dispatchWordsList({ type: "resetWords" });
+          }}
+        >
+          Reset The Essay
+        </div>
       </div>
       <div>Similarity of Words to He/She</div>
       <ScatterPlot wordsList={wordsList} />
