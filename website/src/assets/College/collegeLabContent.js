@@ -20,9 +20,22 @@ export default [
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - TeachLA Logo",
-      header: "Interactive Essay",
-      subheader: "Make your own essay!",
+      header: "Biases in Disguise",
+      subheader: "How do biases implicitly manifest within data?",
       bodyText: [
+        {
+          body: (
+            <p>
+              The engineers of GRADE and other similar models{" "}
+              <mark className="bold">
+                remove labels for protected classes such as race and gender from
+                the data altogether
+              </mark>{" "}
+              to prevent such attributes from being taken into account. Despite
+              such explicit measures, these models may still end up biased.
+            </p>
+          ),
+        },
         {
           body: <EssayContainer />,
         },
