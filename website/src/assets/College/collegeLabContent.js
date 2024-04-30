@@ -7,11 +7,34 @@ export default [
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - TeachLA Logo",
-      header: "Case Study #1: College Admissions",
-      subheader: "Robots Reading Your Essays?",
+      header: "Introduction",
+      subheader: "What did the University of Texas at Austin Do?",
       bodyText: [
         {
-          body: <p className="bold">We Will Work On This Case Study!</p>,
+          body: (
+            <p>
+              <p>
+                In 2013, the CS department at University of Texas at Austin
+                implemented the GRADE (GRaduate ADmissions Evaluator) machine
+                learning system into its Ph.D admissions process.
+              </p>
+              <br />
+              <p>
+                {" "}
+                Made to reflect the admissions committee’s decisions prior to
+                its implementation in 2013, issues arose of it compounding the
+                initial biases that admissions committee held, which
+                disadvantaged applicants from underrepresented groups. The
+                department ultimately abandoned GRADE in 2020.
+              </p>
+              <br />
+              <p className="bold">
+                In this case study, we will analyze why and how ML models such
+                as GRADE that screen various applications can undervalue the
+                achievements of underrepresented groups.
+              </p>
+            </p>
+          ),
         },
       ],
     },
