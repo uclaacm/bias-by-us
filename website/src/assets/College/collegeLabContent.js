@@ -2,6 +2,7 @@ import teachLogo from "../teachla-logo.svg";
 import React from "react";
 import "../../main.css";
 import EssayContainer from "../../components/posts/CollegeAdmissions/essay/EssayContainer";
+import EnrollGraphContainer from "../../components/posts/CollegeAdmissions/GradEnroll/EnrollGraphContainer";
 export default [
   {
     post: {
@@ -25,6 +26,19 @@ export default [
       bodyText: [
         {
           body: <EssayContainer />,
+        },
+      ],
+    },
+  },
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - TeachLA Logo",
+      header: "Historical - Grad Enrollment of Women",
+      subheader: "Graph of percent enrolled of women in ___",
+      bodyText: [
+        {
+          body: <EnrollGraphContainer />,
         },
       ],
     },
