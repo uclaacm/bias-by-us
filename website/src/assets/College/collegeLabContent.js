@@ -2,6 +2,8 @@ import teachLogo from "../teachla-logo.svg";
 import React from "react";
 import "../../main.css";
 import EssayContainer from "../../components/posts/CollegeAdmissions/essay/EssayContainer";
+import WomenEnrollmentContainer from "../../components/posts/CollegeAdmissions/enrollmentGraph/WomenEnrollmentContainer.js";
+
 export default [
   {
     post: {
@@ -38,6 +40,43 @@ export default [
         },
         {
           body: <EssayContainer />,
+        },
+      ],
+    },
+  },
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - TeachLA Logo",
+      header: "enrollment graph",
+      subheader: "amazing graph",
+      bodyText: [
+        {
+          body: (
+            <p className="text-center">
+              <mark className="bold">
+                Historical - Grad Enrollment of Women
+              </mark>
+            </p>
+          ),
+        },
+        {
+          body: <WomenEnrollmentContainer />,
+        },
+        {
+          body: (
+            <p className="gray-text text-center">
+              Source:{" "}
+              <a
+                href="https://cockrell.utexas.edu/media/xt-adaptive-images/1600/images/wep-stats/HistoricalGrad.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                The University of Texas at Austin
+              </a>
+            </p>
+          ),
         },
       ],
     },
