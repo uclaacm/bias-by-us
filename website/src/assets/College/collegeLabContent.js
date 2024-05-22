@@ -35,7 +35,8 @@ export default [
       profilePic: teachLogo,
       profilePicName: "Profile Picture - TeachLA Logo",
       header: "Historical - Grad Enrollment of Women",
-      subheader: "Graph of percent enrolled of women in ___",
+      subheader:
+        "Graph of percent of women in enrolled in engineering programs",
       bodyText: [
         {
           body: <EnrollGraphContainer />,
