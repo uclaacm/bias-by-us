@@ -1,8 +1,8 @@
 import teachLogo from "../teachla-logo.svg";
 import React from "react";
 import "../../main.css";
-import EssayContainer from "../../components/posts/CollegeAdmissions/essay/EssayContainer";
-import EnrollGraphContainer from "../../components/posts/CollegeAdmissions/GradEnroll/EnrollGraphContainer";
+import EssayContainer from "../../components/posts/CollegeAdmissions/essay/EssayContainer.js";
+import EnrollGraphContainer from "../../components/posts/CollegeAdmissions/GradEnroll/EnrollGraphContainer.js";
 import WomenEnrollmentContainer from "../../components/posts/CollegeAdmissions/enrollmentGraph/WomenEnrollmentContainer.js";
 
 export default [
