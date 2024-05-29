@@ -2,6 +2,8 @@ import teachLogo from "../teachla-logo.svg";
 import React from "react";
 import "../../main.css";
 import EssayContainer from "../../components/posts/CollegeAdmissions/essay/EssayContainer";
+import WomenEnrollmentContainer from "../../components/posts/CollegeAdmissions/enrollmentGraph/WomenEnrollmentContainer.js";
+
 export default [
   {
     post: {
@@ -20,11 +22,61 @@ export default [
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - TeachLA Logo",
-      header: "Interactive Essay",
-      subheader: "Make your own essay!",
+      header: "Biases in Disguise",
+      subheader: "How do biases implicitly manifest within data?",
       bodyText: [
         {
+          body: (
+            <p>
+              The engineers of GRADE and other similar models{" "}
+              <mark className="bold">
+                remove labels for protected classes such as race and gender from
+                the data altogether
+              </mark>{" "}
+              to prevent such attributes from being taken into account. Despite
+              such explicit measures, these models may still end up biased.
+            </p>
+          ),
+        },
+        {
           body: <EssayContainer />,
+        },
+      ],
+    },
+  },
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - TeachLA Logo",
+      header: "enrollment graph",
+      subheader: "amazing graph",
+      bodyText: [
+        {
+          body: (
+            <p className="text-center">
+              <mark className="bold">
+                Historical - Grad Enrollment of Women
+              </mark>
+            </p>
+          ),
+        },
+        {
+          body: <WomenEnrollmentContainer />,
+        },
+        {
+          body: (
+            <p className="gray-text text-center">
+              Source:{" "}
+              <a
+                href="https://cockrell.utexas.edu/media/xt-adaptive-images/1600/images/wep-stats/HistoricalGrad.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                The University of Texas at Austin
+              </a>
+            </p>
+          ),
         },
       ],
     },
