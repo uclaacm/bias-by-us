@@ -32,8 +32,13 @@ To start our app, you just need to run `npm start` within the website folder!
 cd website
 npm start
 ```
+If this doesn't work, you may need to add a file named ".env" in the website subdirectory, whose only text is
 
-And to build our project for production (with CRA's webpack bundling and all that goodness),
+```
+SKIP_PREFLIGHT_CHECK=true
+```
+
+To build our project for production (with CRA's webpack bundling and all that goodness),
 
 ```
 cd website
