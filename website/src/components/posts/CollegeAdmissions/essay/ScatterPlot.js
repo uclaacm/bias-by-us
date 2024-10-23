@@ -7,7 +7,7 @@ import {
   ZAxis,
   Tooltip,
   Legend,
-  //Label,
+  Label,
   Scatter,
   LabelList,
   ResponsiveContainer,
@@ -78,7 +78,7 @@ export default function ScatterPlot(props) {
           type="number"
           domain={[0, 100]}
         >
-          {/* <Label value="Similarity to He" position="bottom" offset={10} /> */}
+          <Label value="Similarity to He" position="bottom" offset={10} />
         </XAxis>
 
         <YAxis
@@ -87,11 +87,20 @@ export default function ScatterPlot(props) {
           unit="%"
           domain={[0, 100]}
         >
-          {/* <Label value="Similarity to She" angle={270} position="left" /> */}
+          <Label value="Similarity to She" angle={270} position="left" />
         </YAxis>
         <ZAxis dataKey="word" name="Word" />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+        <Scatter
+          data={[
+            { heScore: 0, sheScore: 0 },
+            { heScore: 100, sheScore: 100 },
+          ]}
+          line={{ stroke: "#CCCCCC", strokeDasharray: "3 3" }}
+          fill="none"
+          shape="none"
+        />
         <Legend />
         {listOfScatters}
       </ScatterChart>
