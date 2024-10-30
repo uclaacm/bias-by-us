@@ -69,7 +69,7 @@ export default function ScatterPlot(props) {
       <ScatterChart
         width={500}
         height={300}
-        margin={{ top: 20, right: 20, bottom: 10, left: 10 }}
+        margin={{ top: 20, right: 20, bottom: 40, left: 30 }}
       >
         <XAxis
           dataKey="heScore"
@@ -87,7 +87,12 @@ export default function ScatterPlot(props) {
           unit="%"
           domain={[0, 100]}
         >
-          <Label value="Similarity to She" angle={270} position="left" />
+          <Label
+            value="Similarity to She"
+            angle={270}
+            position="left"
+            offset={10}
+          />
         </YAxis>
         <ZAxis dataKey="word" name="Word" />
         <CartesianGrid strokeDasharray="3 3" />
@@ -101,7 +106,7 @@ export default function ScatterPlot(props) {
           fill="none"
           shape="none"
         />
-        <Legend />
+        <Legend wrapperStyle={{ marginTop: "100px", marginBottom: "-40px" }} />
         {listOfScatters}
       </ScatterChart>
     </ResponsiveContainer>
