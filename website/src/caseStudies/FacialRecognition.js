@@ -25,7 +25,7 @@ const FacialRecognitionInfo = [
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - TeachLA Logo",
-      header: "Case Study #500: Face Recognition",
+      header: "Case Study #3: Face Recognition",
       subheader: "Stay Tuned For More!",
       bodyText: [
         {
@@ -40,7 +40,7 @@ const FacialRecognitionInfo = [
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Frame 1",
       header: "Frame 1",
-      subheader: "Why Is This bad?",
+      subheader: "Why Is This Important?",
       bodyText: [
         {
           body: (
