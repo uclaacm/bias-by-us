@@ -18,9 +18,8 @@ export default function ConclusionGraphic() {
         <button
           disabled={currentCard === 0}
           className={`card-button ${currentCard === 0 ? "gray" : ""}`}
-          style={{
-            backgroundColor: currentCard === 0 ? "gray" : "initial",
-          }}
+          let
+          color="#808080"
           aria-label="Previous Solution"
           onClick={previousCard}
         >
@@ -31,9 +30,6 @@ export default function ConclusionGraphic() {
           className={`card-button ${
             currentCard === conclusion.length - 1 ? "gray" : ""
           }`}
-          style={{
-            backgroundColor: currentCard === 0 ? "gray" : "initial",
-          }}
           aria-label="Next Solution"
           onClick={nextCard}
         >
