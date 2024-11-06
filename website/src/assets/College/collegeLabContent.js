@@ -13,7 +13,7 @@ export default [
       subheader: "Robots Reading Your Essays?",
       bodyText: [
         {
-          body: <p className="bold">We Will Work On This Case Study!</p>,
+          body: <p className="bold">We Will Work On This Fun Case Study!</p>,
         },
       ],
     },
