@@ -18,8 +18,6 @@ export default function ConclusionGraphic() {
         <button
           disabled={currentCard === 0}
           className={`card-button ${currentCard === 0 ? "gray" : ""}`}
-          let
-          color="#808080"
           aria-label="Previous Solution"
           onClick={previousCard}
         >
