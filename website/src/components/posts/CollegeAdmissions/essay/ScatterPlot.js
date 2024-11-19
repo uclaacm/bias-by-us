@@ -42,6 +42,22 @@ export default function ScatterPlot(props) {
       wordObj.heScore - wordObj.sheScore <= 5 &&
       wordObj.heScore - wordObj.sheScore >= -5
   );
+
+  //add a small offset to the points in case they are overlapping
+  const seenValues = {};
+  selected.forEach((wordObj) => {
+    const val = `${wordObj.heScore}-${wordObj.sheScore}`;
+    if (seenValues[val]) {
+      wordObj.sheScore += 5;
+      const val2 = `${wordObj.heScore}-${wordObj.sheScore}`;
+      if (seenValues[val2]) {
+        wordObj.sheScore += 5;
+      }
+    } else {
+      seenValues[val] = true;
+    }
+  });
+
   const listOfScatters = [];
   //append heLeaning words
   listOfScatters.push(
