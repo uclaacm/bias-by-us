@@ -31,7 +31,7 @@ const aboutUsInfo = [
           body: (
             <p className="bold">
               This will be a page with information about TeachLA as a whole, and
-              what Learning Labs aim to do!
+              what Learning Labs aim to do! Here is a change.
             </p>
           ),
         },
