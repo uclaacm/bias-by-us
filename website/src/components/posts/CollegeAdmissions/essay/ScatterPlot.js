@@ -108,6 +108,7 @@ export default function ScatterPlot(props) {
             angle={270}
             position="left"
             offset={10}
+            dy={-60}
           />
         </YAxis>
         <ZAxis dataKey="word" name="Word" />
