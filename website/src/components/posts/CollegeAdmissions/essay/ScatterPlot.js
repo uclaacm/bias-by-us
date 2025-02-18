@@ -43,20 +43,43 @@ export default function ScatterPlot(props) {
       wordObj.heScore - wordObj.sheScore >= -5
   );
 
-  //add a small offset to the points in case they are overlapping
-  const seenValues = {};
-  selected.forEach((wordObj) => {
-    const val = `${wordObj.heScore}-${wordObj.sheScore}`;
-    if (seenValues[val]) {
-      wordObj.sheScore += 5;
-      const val2 = `${wordObj.heScore}-${wordObj.sheScore}`;
-      if (seenValues[val2]) {
-        wordObj.sheScore += 5;
-      }
-    } else {
-      seenValues[val] = true;
+  // use tooltip to collapse words on top off each other into 1 pop-up
+  const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      // Find all words that match the current heScore and sheScore
+      const { heScore, sheScore } = payload[0].payload;
+      const matchingWords = selected.filter(
+        (wordObj) =>
+          wordObj.heScore === heScore && wordObj.sheScore === sheScore
+      );
+
+      return (
+        <div
+          style={{
+            background: "white",
+            padding: "10px",
+            border: "1px solid #ccc",
+          }}
+        >
+          <p>
+            <strong>He Similarity:</strong> {heScore}%
+          </p>
+          <p>
+            <strong>She Similarity:</strong> {sheScore}%
+          </p>
+          <p>
+            <strong>Words:</strong>
+          </p>
+          <ul>
+            {matchingWords.map((wordObj, index) => (
+              <li key={index}>{wordObj.word}</li>
+            ))}
+          </ul>
+        </div>
+      );
     }
-  });
+    return null;
+  };
 
   const listOfScatters = [];
   //append heLeaning words
@@ -113,7 +136,10 @@ export default function ScatterPlot(props) {
         </YAxis>
         <ZAxis dataKey="word" name="Word" />
         <CartesianGrid strokeDasharray="3 3" />
-        <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+        <Tooltip
+          content={<CustomTooltip />}
+          cursor={{ strokeDasharray: "3 3" }}
+        />
         <Scatter
           data={[
             { heScore: 0, sheScore: 0 },
