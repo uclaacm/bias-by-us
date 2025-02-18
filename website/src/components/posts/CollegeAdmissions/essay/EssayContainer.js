@@ -221,7 +221,7 @@ export default function EssayContainer() {
           Reset The Essay
         </div>
       </div>
-      <div>Similarity of Words to He/She</div>
+      <div style={{ marginTop: "20px" }}>Similarity of Words to He/She</div>
       <ScatterPlot wordsList={wordsList} />
     </div>
   );
