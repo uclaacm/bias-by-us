@@ -3,6 +3,7 @@ import React from "react";
 import "../../main.css";
 import EssayContainer from "../../components/posts/CollegeAdmissions/essay/EssayContainer";
 import WomenEnrollmentContainer from "../../components/posts/CollegeAdmissions/enrollmentGraph/WomenEnrollmentContainer.js";
+import { MatchingGame } from "./MatchingGame.js";
 
 export default [
   {
@@ -140,7 +141,39 @@ export default [
       ],
     },
   },
-
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - Thinking Like an ML Model",
+      header: "Thinking Like an ML Model",
+      headerLink: true,
+      linkTo: "facebook",
+      subheader:
+        "Why did the model take factors unrelated to competence into account?",
+      bodyText: [
+        {
+          body: (
+            <p className="bold">
+              The computer isn't really looking for gender. So why does it learn
+              to take that into account without being told to do so?
+              <br></br>
+              <br></br>
+              Here's an interactive example that emulates how machine learning
+              models "learn".
+              <br></br>
+              <br></br>
+              Grouping exercise!
+              <br></br>
+              Explain why you make mistakes.
+              <br></br>
+              Explain how that's similar to how ML models make mistakes.
+              <MatchingGame />
+            </p>
+          ),
+        },
+      ],
+    },
+  },
   {
     post: {
       profilePic: teachLogo,
