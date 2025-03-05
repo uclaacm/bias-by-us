@@ -142,8 +142,8 @@ export default [
   {
     post: {
       profilePic: teachLogo,
-      profilePicName: "Profile Picture - Facial Recognition",
-      header: "Case Study #2: Facial Recognition",
+      profilePicName: "Profile Picture - Facebook Logo",
+      header: "Case Study #2: Facebook Ads",
       headerLink: true,
       linkTo: "facebook",
       subheader: "Social Media Targets Ads Through Demographics",
