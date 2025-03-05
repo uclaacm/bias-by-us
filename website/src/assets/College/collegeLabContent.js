@@ -86,8 +86,6 @@ export default [
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Facial Recognition",
       header: "Learning from Biased Decisions",
-      headerLink: true,
-      linkTo: "facebook",
       subheader: "What served as the source for bias in GRADE?",
       bodyText: [
         {
