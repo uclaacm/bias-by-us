@@ -86,8 +86,6 @@ export default [
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Facial Recognition",
       header: "Learning from Biased Decisions",
-      headerLink: true,
-      linkTo: "facebook",
       subheader: "What served as the source for bias in GRADE?",
       bodyText: [
         {
@@ -144,8 +142,8 @@ export default [
   {
     post: {
       profilePic: teachLogo,
-      profilePicName: "Profile Picture - Facial Recognition",
-      header: "Case Study #2: Facial Recognition",
+      profilePicName: "Profile Picture - Facebook Logo",
+      header: "Case Study #2: Facebook Ads",
       headerLink: true,
       linkTo: "facebook",
       subheader: "Social Media Targets Ads Through Demographics",
