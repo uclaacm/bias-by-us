@@ -2,7 +2,9 @@ import React from "react";
 import "../main.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "../components/mainContent/PostsList";
+import CounterFrame from "../components/posts/FacialRecognition/CounterFrame";
 import { VisibilityProvider } from "../components/mainContent/commonLogic";
+
 
 export default function FacialRecognition() {
   return (
@@ -39,35 +41,11 @@ const FacialRecognitionInfo = [
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Frame 1",
-      header: "Frame 1",
-      subheader: "Why Is This Important?",
+      header: "Facial Recognition Game",
+      subheader: "Understanding Bias Through Categorization",
       bodyText: [
         {
-          body: (
-            <p className="bold">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          ),
-        },
-        {
-          body: (
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
-          ),
-        },
-        {
-          body: (
-            <p>
-              <mark className="bold">{`TODO: `} </mark>Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-          ),
+          body: <CounterFrame />
         },
       ],
     },
