@@ -3,6 +3,7 @@ import React from "react";
 import "../../main.css";
 import EssayContainer from "../../components/posts/CollegeAdmissions/essay/EssayContainer";
 import WomenEnrollmentContainer from "../../components/posts/CollegeAdmissions/enrollmentGraph/WomenEnrollmentContainer.js";
+import { MatchingGame } from "./MatchingGame.js";
 
 export default [
   {
@@ -15,19 +16,21 @@ export default [
         {
           body: (
             <p>
-              In 2013, the CS department at the University of Texas at Austin implemented the GRADE (GRaduate ADmissions Evaluator)
-              machine learning system into its Ph.D. admissions process.
+              In 2013, the CS department at the University of Texas at Austin
+              implemented the GRADE (GRaduate ADmissions Evaluator) machine
+              learning system into its Ph.D. admissions process.
             </p>
           ),
         },
         {
           body: (
             <p>
-              Made to reflect the admissions committee’s decisions prior to its implementation in 2013, 
-              issues arose of it{" "}
+              Made to reflect the admissions committee’s decisions prior to its
+              implementation in 2013, issues arose of it{" "}
               <mark className="underline">
-                compounding the initial biases that the admissions committee held, 
-                which disadvantaged applicants from underrepresented groups.
+                compounding the initial biases that the admissions committee
+                held, which disadvantaged applicants from underrepresented
+                groups.
               </mark>{" "}
               The department ultimately abandoned GRADE in 2020.
             </p>
@@ -37,8 +40,9 @@ export default [
           body: (
             <p>
               <mark className="bold">
-                In this case study, we will analyze why and how ML models such as GRADE that screen various applications 
-                can undervalue the achievements of underrepresented groups.
+                In this case study, we will analyze why and how ML models such
+                as GRADE that screen various applications can undervalue the
+                achievements of underrepresented groups.
               </mark>
             </p>
           ),
@@ -46,7 +50,7 @@ export default [
       ],
     },
   },
-  
+
   {
     post: {
       profilePic: teachLogo,
@@ -167,7 +171,39 @@ export default [
       ],
     },
   },
-
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - Thinking Like an ML Model",
+      header: "Thinking Like an ML Model",
+      headerLink: true,
+      linkTo: "facebook",
+      subheader:
+        "Why did the model take factors unrelated to competence into account?",
+      bodyText: [
+        {
+          body: (
+            <p className="bold">
+              The computer isn't really looking for gender. So why does it learn
+              to take that into account without being told to do so?
+              <br></br>
+              <br></br>
+              Here's an interactive example that emulates how machine learning
+              models "learn".
+              <br></br>
+              <br></br>
+              Grouping exercise!
+              <br></br>
+              Explain why you make mistakes.
+              <br></br>
+              Explain how that's similar to how ML models make mistakes.
+              <MatchingGame />
+            </p>
+          ),
+        },
+      ],
+    },
+  },
   {
     post: {
       profilePic: teachLogo,
