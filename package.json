@@ -19,5 +19,8 @@
   },
   "devDependencies": {
     "husky": "^7.0.0"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
