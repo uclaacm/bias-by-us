@@ -7,7 +7,7 @@ import {
   ZAxis,
   Tooltip,
   Legend,
-  //Label,
+  Label,
   Scatter,
   LabelList,
   ResponsiveContainer,
@@ -42,6 +42,45 @@ export default function ScatterPlot(props) {
       wordObj.heScore - wordObj.sheScore <= 5 &&
       wordObj.heScore - wordObj.sheScore >= -5
   );
+
+  // use tooltip to collapse words on top off each other into 1 pop-up
+  const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      // Find all words that match the current heScore and sheScore
+      const { heScore, sheScore } = payload[0].payload;
+      const matchingWords = selected.filter(
+        (wordObj) =>
+          wordObj.heScore === heScore && wordObj.sheScore === sheScore
+      );
+
+      return (
+        <div
+          style={{
+            background: "white",
+            padding: "10px",
+            border: "1px solid #ccc",
+          }}
+        >
+          <p>
+            <strong>He Similarity:</strong> {heScore}%
+          </p>
+          <p>
+            <strong>She Similarity:</strong> {sheScore}%
+          </p>
+          <p>
+            <strong>Words:</strong>
+          </p>
+          <ul>
+            {matchingWords.map((wordObj, index) => (
+              <li key={index}>{wordObj.word}</li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+    return null;
+  };
+
   const listOfScatters = [];
   //append heLeaning words
   listOfScatters.push(
@@ -69,7 +108,7 @@ export default function ScatterPlot(props) {
       <ScatterChart
         width={500}
         height={300}
-        margin={{ top: 20, right: 20, bottom: 10, left: 10 }}
+        margin={{ top: 20, right: 20, bottom: 40, left: 30 }}
       >
         <XAxis
           dataKey="heScore"
@@ -78,7 +117,7 @@ export default function ScatterPlot(props) {
           type="number"
           domain={[0, 100]}
         >
-          {/* <Label value="Similarity to He" position="bottom" offset={10} /> */}
+          <Label value="Similarity to He" position="bottom" offset={10} />
         </XAxis>
 
         <YAxis
@@ -87,12 +126,30 @@ export default function ScatterPlot(props) {
           unit="%"
           domain={[0, 100]}
         >
-          {/* <Label value="Similarity to She" angle={270} position="left" /> */}
+          <Label
+            value="Similarity to She"
+            angle={270}
+            position="left"
+            offset={10}
+            dy={-60}
+          />
         </YAxis>
         <ZAxis dataKey="word" name="Word" />
         <CartesianGrid strokeDasharray="3 3" />
-        <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-        <Legend />
+        <Tooltip
+          content={<CustomTooltip />}
+          cursor={{ strokeDasharray: "3 3" }}
+        />
+        <Scatter
+          data={[
+            { heScore: 0, sheScore: 0 },
+            { heScore: 100, sheScore: 100 },
+          ]}
+          line={{ stroke: "#CCCCCC", strokeDasharray: "3 3" }}
+          fill="none"
+          shape="none"
+        />
+        <Legend wrapperStyle={{ marginTop: "100px", marginBottom: "-40px" }} />
         {listOfScatters}
       </ScatterChart>
     </ResponsiveContainer>

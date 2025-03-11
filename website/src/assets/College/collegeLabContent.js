@@ -10,15 +10,44 @@ export default [
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - TeachLA Logo",
-      header: "Case Study #1: College Admissions",
-      subheader: "Robots Reading Your Essays?",
+      header: "Introduction",
+      subheader: "What did the University of Texas at Austin do?",
       bodyText: [
         {
-          body: <p className="bold">We Will Work On This Fun Case Study!</p>,
+          body: (
+            <p>
+              In 2013, the CS department at the University of Texas at Austin implemented the GRADE (GRaduate ADmissions Evaluator)
+              machine learning system into its Ph.D. admissions process.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p>
+              Made to reflect the admissions committee’s decisions prior to its implementation in 2013, 
+              issues arose of it{" "}
+              <mark className="underline">
+                compounding the initial biases that the admissions committee held, 
+                which disadvantaged applicants from underrepresented groups.
+              </mark>{" "}
+              The department ultimately abandoned GRADE in 2020.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p>
+              <mark className="bold">
+                In this case study, we will analyze why and how ML models such as GRADE that screen various applications 
+                can undervalue the achievements of underrepresented groups.
+              </mark>
+            </p>
+          ),
         },
       ],
     },
   },
+  
   {
     post: {
       profilePic: teachLogo,
@@ -87,8 +116,6 @@ export default [
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Facial Recognition",
       header: "Learning from Biased Decisions",
-      headerLink: true,
-      linkTo: "facebook",
       subheader: "What served as the source for bias in GRADE?",
       bodyText: [
         {
@@ -177,8 +204,8 @@ export default [
   {
     post: {
       profilePic: teachLogo,
-      profilePicName: "Profile Picture - Facial Recognition",
-      header: "Case Study #2: Facial Recognition",
+      profilePicName: "Profile Picture - Facebook Logo",
+      header: "Case Study #2: Facebook Ads",
       headerLink: true,
       linkTo: "facebook",
       subheader: "Social Media Targets Ads Through Demographics",

@@ -11,6 +11,26 @@
   border-radius: 15px;
 }
 
+.score-bar {
+  display: block;
+  height: 5px;
+  width: 450px;
+  background: white;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.score-bar-circle {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: black;
+  left: 50%;
+  top: -7.5px;
+}
+
 .written-essay {
   margin: 2vh 0;
   background-color: white;

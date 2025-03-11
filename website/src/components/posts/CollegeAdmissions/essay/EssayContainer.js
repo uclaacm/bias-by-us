@@ -186,6 +186,7 @@ export default function EssayContainer() {
   return (
     <div className="essay-container">
       <div className="essay-container essay-background">
+        <div>The score is {essayScore.toFixed(2)}</div>
         <div>
           <ScoreBar essayScore={essayScore} />
         </div>
@@ -221,7 +222,7 @@ export default function EssayContainer() {
           Reset The Essay
         </div>
       </div>
-      <div>Similarity of Words to He/She</div>
+      <div style={{ marginTop: "20px" }}>Similarity of Words to He/She</div>
       <ScatterPlot wordsList={wordsList} />
     </div>
   );
