@@ -503,7 +503,7 @@ export default [
       profilePicName: "Profile Picture - Facial Recognition",
       header: "Case Study #3: Facial Recognition",
       headerLink: true,
-      linkTo: "facialRecognition",
+      linkTo: "/facialRecognition",
       subheader: "Facial Recognition Technology And Its Implications",
       bodyText: [
         {
