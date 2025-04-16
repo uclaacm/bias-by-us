@@ -181,22 +181,24 @@ export default [
       bodyText: [
         {
           body: (
-            <p className="bold">
-              The computer isn't really looking for gender. So why does it learn
-              to take that into account without being told to do so?
-              <br></br>
-              <br></br>
-              Here's an interactive example that emulates how machine learning
-              models "learn".
-              <br></br>
-              <br></br>
-              Grouping exercise!
-              <br></br>
-              Explain why you make mistakes.
-              <br></br>
-              Explain how that's similar to how ML models make mistakes.
+            <>
+              <p className="bold">
+                The computer isn't really looking for gender. So why does it
+                learn to take that into account without being told to do so?
+                <br></br>
+                <br></br>
+                Here's an interactive example that emulates how machine learning
+                models "learn".
+                <br></br>
+                <br></br>
+                Grouping exercise!
+                <br></br>
+                Explain why you make mistakes.
+                <br></br>
+                Explain how that's similar to how ML models make mistakes.
+              </p>
               <MatchingGame />
-            </p>
+            </>
           ),
         },
       ],
