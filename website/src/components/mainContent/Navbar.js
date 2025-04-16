@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import teachLogo from "../../assets/teachla-logo.svg";
 import navButton from "../../assets/navButton.svg";
 import "../../main.css";
@@ -7,6 +7,8 @@ import "../../index.css";
 import "./navbar.css";
 
 export default function NavBar(props) {
+  const params = useParams();
+
   // dropdownOpen: boolean variable for whether the dropdown menu is open or closed
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -14,6 +16,11 @@ export default function NavBar(props) {
   const dropdownHandler = () => {
     setDropdownOpen(!dropdownOpen);
   };
+
+  // on the homepage (/), currentPage is intentionally undefined
+  const currentPage = params.currentPage;
+
+  const subtitle = getHeader(currentPage);
 
   const navSections = [
     {
@@ -94,9 +101,27 @@ export default function NavBar(props) {
         <Link className="title-link" to="/">
           <h1 className="title">Bias by Us</h1>
         </Link>
-        <h2 className="subtitle">{props.subtitle}</h2>
+        <h2 className="subtitle">{subtitle}</h2>
       </div>
       {dropdownArea()}
     </div>
   );
+}
+
+//function that renders the heading for the navbar from the route parameters
+function getHeader(path) {
+  let subtitle = "A TeachLA Learning Lab!";
+  const pageNames = {
+    aboutUs: "Who's TeachLA?",
+    college: "Case Study #1: College Admissions",
+    facebook: "Case Study #2: Facebook Ads",
+    facialRecognition: "Case Study #3: Facial Recognition",
+    conclusion: "In Conclusion...",
+    resources: "To Learn More...",
+  };
+  //return default dictionary value if path is falsy
+
+  //get the subtitle from our pageNames dictionary if path exists
+  if (path) ({ [path]: subtitle } = pageNames);
+  return subtitle;
 }
