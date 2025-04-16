@@ -176,8 +176,6 @@ export default [
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Thinking Like an ML Model",
       header: "Thinking Like an ML Model",
-      headerLink: true,
-      linkTo: "facebook",
       subheader:
         "Why did the model take factors unrelated to competence into account?",
       bodyText: [
