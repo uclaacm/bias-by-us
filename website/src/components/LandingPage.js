@@ -38,14 +38,7 @@ const landingPageInfo = [
           ),
         },
         {
-          body: (
-            <p>
-              We're going to highlight three different case studies that
-              showcase just how pervasive biases can be to our lives, from small
-              things like the ads that appear on your social media feed to
-              things as monumental as applying for college admission!
-            </p>
-          ),
+          body: <p>hi</p>,
         },
         {
           body: (
