@@ -5,7 +5,7 @@ import EssayContainer from "../../components/posts/CollegeAdmissions/essay/Essay
 import WomenEnrollmentContainer from "../../components/posts/CollegeAdmissions/enrollmentGraph/WomenEnrollmentContainer.js";
 import { MatchingGame } from "./MatchingGame.js";
 
-export default [
+const content = [
   {
     post: {
       profilePic: teachLogo,
@@ -227,3 +227,5 @@ export default [
     },
   },
 ];
+
+export default content;

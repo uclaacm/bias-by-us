@@ -15,7 +15,7 @@ import facebookAds from "./personalizedAds.svg";
 import anime from "./animationpic.svg";
 import teachLogo from "../../assets/teachla-logo.svg";
 
-export default [
+const content = [
   {
     post: {
       profilePic: facebookLogo,
@@ -537,3 +537,5 @@ export default [
     },
   },
 ];
+
+export default content;

@@ -3,7 +3,8 @@ import "../../../../assets/Facebook/facebookLabContent.css";
 import dial from "../../../../assets/dial.jpg";
 import looking from "../../../../assets/looking.jpg";
 import whyad from "../../../../assets/whyamiseeingthisad.png";
-export default [
+
+const content = [
   {
     card: {
       head: "1. Lessening the focus on targeted advertisements at the slight cost of revenue loss",
@@ -59,3 +60,5 @@ export default [
     },
   },
 ];
+
+export default content;
