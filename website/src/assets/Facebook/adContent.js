@@ -10,7 +10,7 @@ import preschool from "./ads/preschool.svg";
 import janitor from "./ads/janitor.svg";
 import retail from "./ads/retail.svg";
 
-export default {
+const content = {
   Lumber: {
     img: lumber,
     header: "Strong Lumberjacks Needed!",
@@ -122,3 +122,5 @@ export default {
     pay: "$15-$17 an hour",
   },
 };
+
+export default content;

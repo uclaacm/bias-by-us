@@ -1,7 +1,7 @@
 import React from "react";
 import "./posts.css";
 import "../mainContent/mainContent.css";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 function HeaderLinkWrapper(props) {
   return props.headerLink ? (

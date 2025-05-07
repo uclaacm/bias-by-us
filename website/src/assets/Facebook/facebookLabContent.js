@@ -15,7 +15,7 @@ import facebookAds from "./personalizedAds.svg";
 import anime from "./animationpic.svg";
 import teachLogo from "../../assets/teachla-logo.svg";
 
-export default [
+const content = [
   {
     post: {
       profilePic: facebookLogo,
@@ -503,7 +503,7 @@ export default [
       profilePicName: "Profile Picture - Facial Recognition",
       header: "Case Study #3: Facial Recognition",
       headerLink: true,
-      linkTo: "facialRecognition",
+      linkTo: "/facialRecognition",
       subheader: "Facial Recognition Technology And Its Implications",
       bodyText: [
         {
@@ -537,3 +537,5 @@ export default [
     },
   },
 ];
+
+export default content;

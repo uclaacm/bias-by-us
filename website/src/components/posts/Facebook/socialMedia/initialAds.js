@@ -1,5 +1,6 @@
 import placeholderThumbnail from "../../../../assets/placeholderThumbnail.png";
 import "./socialMedia.css";
+
 const adData = [
   [0.27966767, 0.10170184, 0.04216069, 0.01245083], //lumber
   [0.13921071, 0.09911504, 0.09458128, 0.05468602], //AI
@@ -13,6 +14,7 @@ const adData = [
   [0.04034156, 0.06471523, 0.09940547, 0.12949953], // Janitor
   [0.03507962, 0.05173587, 0.11007304, 0.13183236], // Supermarket
 ];
+
 //adPercentages represented this way: index 0 is white male, index 1 is black male, index 2 is white female, index 3 is black female
 const adNames = [
   "Lumber",
@@ -27,7 +29,11 @@ const adNames = [
   "Janitor",
   "Retail",
 ];
+
 let initialAdFrequencies = [];
+
+/*this is the setup for all the ads initially for the histogram, x/y for the axes of data, 
+and thumbnail for the picture*/
 for (let i = 0; i < 11; i++) {
   initialAdFrequencies[i] = {
     x: adNames[i],
@@ -36,8 +42,9 @@ for (let i = 0; i < 11; i++) {
     adPercentages: adData[i],
   };
 }
-/*this is the setup for all the ads initially for the histogram, x/y for the axes of data, 
-and thumbnail for the picture*/
-export default {
+
+const ads = {
   adList: initialAdFrequencies,
 };
+
+export default ads;

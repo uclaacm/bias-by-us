@@ -8,8 +8,8 @@ export default function ScoreBar(props) {
   scaledScore = scaledScore < 0 ? 0 : scaledScore > 100 ? 100 : scaledScore;
 
   return (
-    <div class="score-bar">
-      <div class="score-bar-circle" style={{ left: scaledScore + "%" }}></div>
+    <div className="score-bar">
+      <div className="score-bar-circle" style={{ left: scaledScore + "%" }}></div>
     </div>
   );
 }

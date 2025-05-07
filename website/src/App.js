@@ -2,7 +2,7 @@ import React from "react";
 import "./main.css";
 import "./components/mainContent/navbar.css";
 import Navbar from "./components/mainContent/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
 import LandingPage from "./components/LandingPage";
 import CollegeAdmissionsUT from "./caseStudies/CollegeAdmissionsUT";
 import CaseStudyFacebook from "./caseStudies/CaseStudyFacebook";
@@ -15,72 +15,27 @@ function App() {
   return (
     <div className="app">
       <Router>
-        {/* conditionally render the heading in navbar */}
-        <Switch>
-          {/* render default navbar if URL is empty */}
-          <Route exact path="/">
-            <div className="navbar">
-              <Navbar path="/" subtitle={getHeader()} />
-            </div>
-          </Route>
-          {/* pass in URL through params if it's not the default URL */}
-          <Route
-            path="/:currentPage"
-            render={(input) => (
-              <div className="navbar">
-                <Navbar
-                  path={"/" + input.match.params.currentPage}
-                  subtitle={getHeader(input.match.params.currentPage)}
-                />
-              </div>
-            )}
-          ></Route>
-        </Switch>
+        <div className="navbar">
+          <Routes>
+            <Route path="/">
+              <Route index element={<Navbar />} />
+              <Route path=":currentPage" element={<Navbar />} />
+            </Route>
+          </Routes>
+        </div>
 
-        <Switch>
-          <Route exact path="/">
-            <LandingPage />
-          </Route>
-          <Route path="/aboutUs">
-            <AboutUsPage />
-          </Route>
-          <Route path="/college">
-            <CollegeAdmissionsUT />
-          </Route>
-          <Route path="/facebook">
-            <CaseStudyFacebook />
-          </Route>
-          <Route path="/facialRecognition">
-            <FacialRecognition />
-          </Route>
-          <Route path="/conclusion">
-            <ConclusionPage />
-          </Route>
-          <Route path="/resources">
-            <ResourcesPage />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<LandingPage />} />
+          <Route path="/aboutUs" element={<AboutUsPage />} />
+          <Route path="/college" element={<CollegeAdmissionsUT />} />
+          <Route path="/facebook" element={<CaseStudyFacebook />} />
+          <Route path="/facialRecognition" element={<FacialRecognition />} />
+          <Route path="/conclusion" element={<ConclusionPage />} />
+          <Route path="/resources" element={<ResourcesPage />} />
+        </Routes>
       </Router>
     </div>
   );
 }
 
 export default App;
-
-//function that renders the heading for the navbar from the route parameters
-function getHeader(path) {
-  let subtitle = "A TeachLA Learning Lab!";
-  const pageNames = {
-    aboutUs: "Who's TeachLA?",
-    college: "Case Study #1: College Admissions",
-    facebook: "Case Study #2: Facebook Ads",
-    facialRecognition: "Case Study #3: Facial Recognition",
-    conclusion: "In Conclusion...",
-    resources: "To Learn More...",
-  };
-  //return default dictionary value if path is falsy
-
-  //get the subtitle from our pageNames dictionary if path exists
-  if (path) ({ [path]: subtitle } = pageNames);
-  return subtitle;
-}

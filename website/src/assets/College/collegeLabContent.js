@@ -5,7 +5,7 @@ import EssayContainer from "../../components/posts/CollegeAdmissions/essay/Essay
 import WomenEnrollmentContainer from "../../components/posts/CollegeAdmissions/enrollmentGraph/WomenEnrollmentContainer.js";
 import { MatchingGame } from "./MatchingGame.js";
 
-export default [
+const content = [
   {
     post: {
       profilePic: teachLogo,
@@ -176,29 +176,29 @@ export default [
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Thinking Like an ML Model",
       header: "Thinking Like an ML Model",
-      headerLink: true,
-      linkTo: "facebook",
       subheader:
         "Why did the model take factors unrelated to competence into account?",
       bodyText: [
         {
           body: (
-            <p className="bold">
-              The computer isn't really looking for gender. So why does it learn
-              to take that into account without being told to do so?
-              <br></br>
-              <br></br>
-              Here's an interactive example that emulates how machine learning
-              models "learn".
-              <br></br>
-              <br></br>
-              Grouping exercise!
-              <br></br>
-              Explain why you make mistakes.
-              <br></br>
-              Explain how that's similar to how ML models make mistakes.
+            <>
+              <p className="bold">
+                The computer isn't really looking for gender. So why does it
+                learn to take that into account without being told to do so?
+                <br></br>
+                <br></br>
+                Here's an interactive example that emulates how machine learning
+                models "learn".
+                <br></br>
+                <br></br>
+                Grouping exercise!
+                <br></br>
+                Explain why you make mistakes.
+                <br></br>
+                Explain how that's similar to how ML models make mistakes.
+              </p>
               <MatchingGame />
-            </p>
+            </>
           ),
         },
       ],
@@ -210,7 +210,7 @@ export default [
       profilePicName: "Profile Picture - Facebook Logo",
       header: "Case Study #2: Facebook Ads",
       headerLink: true,
-      linkTo: "facebook",
+      linkTo: "/facebook",
       subheader: "Social Media Targets Ads Through Demographics",
       bodyText: [
         {
@@ -227,3 +227,5 @@ export default [
     },
   },
 ];
+
+export default content;
