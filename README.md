@@ -23,7 +23,6 @@ First, let's clone our repository, and install all of our node dependencies:
 git clone https://github.com/uclaacm/bias-by-us.git
 cd bias-by-us
 npm install
-npm install react-scripts
 ```
 
 To start our app, you just need to run `npm start` within the website folder!
