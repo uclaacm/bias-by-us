@@ -29,13 +29,7 @@ const landingPageInfo = [
       subheader: "It's not just humans that can be biased",
       bodyText: [
         {
-          body: (
-            <p className="bold">
-              Bias By Us is an interactive explanation of bias in machine
-              learning algorithms, and how they affect multiple aspects of
-              every-day life!
-            </p>
-          ),
+          body: <p className="bold">testing</p>,
         },
         {
           body: (
