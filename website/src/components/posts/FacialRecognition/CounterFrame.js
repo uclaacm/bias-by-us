@@ -42,14 +42,15 @@ const useCounterStore = create((set) => ({
       if (![1, 2, 3, 4].includes(guess)) {
         return state;
       }
+      const correctVal = state.numbers[state.step];
       const updatedGuesses = new Map(state.guesses);
-      let v = state.guesses.get(state.numbers[state.step]);
-      if (guess === state.numbers[state.step]) {
+      let v = state.guesses.get(correctVal);
+      if (guess === correctVal) {
         v.correct++;
       } else {
         v.incorrect++;
       }
-      updatedGuesses.set(guess, v);
+      updatedGuesses.set(correctVal, v);
       return { step: state.step + 1, guesses: updatedGuesses };
     }),
 }));
