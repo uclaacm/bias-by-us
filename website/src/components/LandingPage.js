@@ -176,4 +176,82 @@ const landingPageInfo = [
       ],
     },
   },
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - Conclusion",
+      header: "Conclusion",
+      headerLink: true,
+      linkTo: "/conclusion",
+      subheader: "Thanks for taking the time to learn more about biases!",
+      bodyText: [
+        {
+          body: (
+            <p className="bold">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p>
+              <mark className="bold">{`TODO: `} </mark>Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          ),
+        },
+      ],
+    },
+  },
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - Resources",
+      header: "Resources",
+      headerLink: true,
+      linkTo: "/resources",
+      subheader: "Curious to learn more?",
+      bodyText: [
+        {
+          body: (
+            <p className="bold">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p>
+              <mark className="bold">{`TODO: `} </mark>Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          ),
+        },
+      ],
+    },
+  },
 ];
