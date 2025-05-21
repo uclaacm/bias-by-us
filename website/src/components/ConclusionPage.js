@@ -45,7 +45,7 @@ const conclusionPageInfo = [
       profilePicName: "Profile Picture - Additional Resources",
       header: "Additional Resources",
       headerLink: true,
-      linkTo: "resources",
+      linkTo: "../resources",
       subheader: "More resources to learn more about what we have covered",
       bodyText: [
         {
