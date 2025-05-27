@@ -2,7 +2,7 @@ import React from "react";
 import { create } from "zustand";
 
 const useCounterStore = create((set) => ({
-  numbers: [1, 1, 2, 2, 3, 3, 4, 4, 3, 3, 2, 2, 1],
+  numbers: [3, 1, 2, 2, 3, 2, 4, 2, 3, 2, 1, 2, 2],
   step: 0,
   guesses: new Map([
     [
