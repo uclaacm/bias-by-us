@@ -2,8 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./MatchingGame.css";
 import placeholderThumbnail from "../placeholderThumbnail.png";
-import num1 from "../1.avif";
-import num2 from "../2.avif";
+import num1 from "../one.jpg"; // 1.avif
+import num2 from "../two.jpg"; // 2.avif
 
 export const MatchingGame = () => {
   const [score, setScore] = useState(0);
