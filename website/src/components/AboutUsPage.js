@@ -23,7 +23,7 @@ const aboutUsInfo = [
   {
     post: {
       profilePic: teachLogo,
-      profilePicName: "Profile Picture - TeacLA Logo",
+      profilePicName: "Profile Picture - TeachLA Logo",
       header: "Welcome To Bias By Us!",
       subheader: "It's not just humans that can be biased",
       bodyText: [
