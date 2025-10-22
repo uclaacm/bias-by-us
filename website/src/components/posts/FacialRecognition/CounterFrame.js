@@ -1,40 +1,82 @@
-import React, { useState } from 'react';
+import React from "react";
+import { create } from "zustand";
+
+const useCounterStore = create((set) => ({
+  numbers: [3, 1, 2, 2, 3, 2, 4, 2, 3, 2, 1, 2, 2],
+  step: 0,
+  guesses: new Map([
+    [
+      1,
+      {
+        correct: 0,
+        incorrect: 0,
+      },
+    ],
+    [
+      2,
+      {
+        correct: 0,
+        incorrect: 0,
+      },
+    ],
+    [
+      3,
+      {
+        correct: 0,
+        incorrect: 0,
+      },
+    ],
+    [
+      4,
+      {
+        correct: 0,
+        incorrect: 0,
+      },
+    ],
+  ]),
+  increment: (guess) =>
+    set((state) => {
+      if (state.step === state.numbers.length - 1) {
+        return state;
+      }
+      if (![1, 2, 3, 4].includes(guess)) {
+        return state;
+      }
+      const correctVal = state.numbers[state.step];
+      const updatedGuesses = new Map(state.guesses);
+      let v = state.guesses.get(correctVal);
+      if (guess === correctVal) {
+        v.correct++;
+      } else {
+        v.incorrect++;
+      }
+      updatedGuesses.set(correctVal, v);
+      return { step: state.step + 1, guesses: updatedGuesses };
+    }),
+}));
 
 function CounterFrame() {
-  const numbers = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [counters, setCounters] = useState([0, 0, 0, 0]);
-  const [processedLast, setProcessedLast] = useState(false);
-
+  const currentNumber = useCounterStore((state) => state.numbers[state.step]);
+  const increment = useCounterStore((state) => state.increment);
+  const guesses = useCounterStore((state) => state.guesses);
 
   const handleButtonClick = (counterIndex) => {
-    //Checks to make sure we haven't iterated through the last element yet
-    if(!processedLast) {
-      // Makes a copy of the current counters array
-      const updatedCounters = [...counters];
-      updatedCounters[counterIndex] = updatedCounters[counterIndex] + 1;
-      setCounters(updatedCounters);
-
-      if (currentIndex < numbers.length - 1) {
-        setCurrentIndex(currentIndex + 1);
-      }
-      else {
-        setProcessedLast(true);
-      }
-    }
+    increment(counterIndex);
   };
 
   return (
     <div>
-      <h2>Current Number: {numbers[currentIndex]}</h2>
+      <h2>Current Number: {currentNumber}</h2>
       <div>
-        {counters.map((count, index) => (
+        {Array.from(guesses, ([val, { correct, incorrect }]) => (
           <button
-            key={index}
-            onClick={() => handleButtonClick(index)}
-            style={{ marginRight: '10px', marginTop: '10px' }}
+            key={val}
+            onClick={() => handleButtonClick(val)}
+            style={{ marginRight: "10px", marginTop: "10px" }}
           >
-            Counter {index + 1}: {count}
+            {val}
+            correct: {correct}
+            incorrect: {incorrect}
           </button>
         ))}
       </div>
