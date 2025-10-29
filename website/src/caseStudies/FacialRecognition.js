@@ -5,7 +5,6 @@ import PostsList from "../components/mainContent/PostsList";
 import CounterFrame from "../components/posts/FacialRecognition/CounterFrame";
 import { VisibilityProvider } from "../components/mainContent/commonLogic";
 
-
 export default function FacialRecognition() {
   return (
     <VisibilityProvider>
@@ -45,7 +44,7 @@ const FacialRecognitionInfo = [
       subheader: "Understanding Bias Through Categorization",
       bodyText: [
         {
-          body: <CounterFrame />
+          body: <CounterFrame />,
         },
       ],
     },
@@ -128,6 +127,26 @@ const FacialRecognitionInfo = [
   },
 
   {
+    commentSection: {
+      profilePic: teachLogo,
+      profilePicName: "Teach Logo",
+      followups: [
+        {
+          questionHeader: "Reflection Question 1:",
+          question:
+            "What are some privacy concerns that can arise with the increased use in facial recognition technology? What are some ways that such technology can help improve safety? Compare and contrast.",
+          answers: [
+            <p>
+              blah
+              <mark className="bold">blah</mark> blah
+            </p>,
+          ],
+        },
+      ],
+    },
+  },
+
+  {
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Frame 5",
@@ -166,6 +185,26 @@ const FacialRecognitionInfo = [
   },
 
   {
+    commentSection: {
+      profilePic: teachLogo,
+      profilePicName: "Teach Logo",
+      followups: [
+        {
+          questionHeader: "Reflection Question 2:",
+          question:
+            "In what ways can we reduce the bias present in facial recognition technology? Remember where such biases originate from.",
+          answers: [
+            <p>
+              blah
+              <mark className="bold">blah</mark> blah
+            </p>,
+          ],
+        },
+      ],
+    },
+  },
+
+  {
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Frame 6",
@@ -198,6 +237,26 @@ const FacialRecognitionInfo = [
               anim id est laborum.
             </p>
           ),
+        },
+      ],
+    },
+  },
+
+  {
+    commentSection: {
+      profilePic: teachLogo,
+      profilePicName: "Teach Logo",
+      followups: [
+        {
+          questionHeader: "Reflection Question 3:",
+          question:
+            "What legal frameworks, standards, and guidelines are needed to safeguard individual rights and hold organizations accountable for the ethical use of facial recognition technology?",
+          answers: [
+            <p>
+              blah
+              <mark className="bold">blah</mark> blah
+            </p>,
+          ],
         },
       ],
     },
