@@ -30,7 +30,25 @@ const FacialRecognitionInfo = [
       subheader: "Stay Tuned For More!",
       bodyText: [
         {
-          body: <p className="bold">We Will Work On This Case Study!</p>,
+          body: (
+            <p>
+              Facial recognition technology is often used to identify crime
+              suspects. However, research has shown that this technology is
+              often inaccurate when identifying certain groups of people. A
+              study by MIT found that facial recognition systems can be up to
+              35% less accurate when identifying women or people of color. This
+              can lead law enforcement to arrest or accuse the wrong people.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p className="bold">
+              In this case study, we explore how humans’ biases when identifying
+              people can affect how we train our facial recognition
+              systems.{" "}
+            </p>
+          ),
         },
       ],
     },
