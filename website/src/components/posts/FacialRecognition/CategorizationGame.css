@@ -1,0 +1,57 @@
+.food-img {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.instructions {
+  text-align: center;
+}
+
+.not-selected, .selected, .next-button{
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #cbe4ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.selected {
+  background-color: #0080ff;
+  color: white;
+}
+
+.next-button {
+  width: 40%;
+  font-size: 16px;
+}
+
+.not-selected:hover, .next-button:hover {
+  background-color: #a7c9ff;
+}
+
+.interactive-section {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  font-size: 13px;
+}
+
+.rating-result span {
+  color: #c88200;
+  font-size: 20px;
+}
