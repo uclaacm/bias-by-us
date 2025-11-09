@@ -97,16 +97,16 @@ function CategorizationGame() {
             <h2>Game Completed!</h2>
             <h4>Important Notes:</h4>
             <p>
-              {" "}
-              There are so many factors that might influence ratings besides
+              There are many factors that might influence ratings besides
               familiarity. We tried to limit these by choosing photos with
               saturated colors and nice plating. We wanted you to have a split
               between familiar and unfamiliar foods, so we chose some commonly
               eaten dishes in the US as well as random countries' national or
               popular dishes. As humans, we all have a little bias, and it was
               tricky finding pictures that really represent a dish when you
-              haven't eaten it. If there's a dish you recognize with a picture
-              that can be improved, let us know!
+              haven't eaten it. National dishes might not be the country's most
+              popular dish either. If there's a dish or country you recognize
+              with a picture that can be improved, let us know!
             </p>
           </>
         ) : (
