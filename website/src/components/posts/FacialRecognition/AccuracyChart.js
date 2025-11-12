@@ -35,22 +35,22 @@ export default function AccuracyChart() {
         {
           label: "Darker female",
           backgroundColor: "#e58a84",
-          data: [79.2, 66.3, 65.6, 68.6, 77.5],
+          data: [79.2, 65.5, 65.3, 68.63, 77.5],
         },
         {
           label: "Darker male",
           backgroundColor: "#b39ce4",
-          data: [92, 100, 86, 98, 96],
+          data: [94, 99.3, 88, 98.74, 98.7],
         },
         {
           label: "Lighter female",
           backgroundColor: "#8cb492",
-          data: [96, 91, 90, 90, 91],
+          data: [98.3, 90.2, 92.9, 92.88, 93.6],
         },
         {
           label: "Lighter male",
           backgroundColor: "#f7c795",
-          data: [100, 100, 100, 100, 100],
+          data: [100, 99.2, 99.7, 100, 100],
         },
       ],
     };
