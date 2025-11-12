@@ -30,7 +30,25 @@ const FacialRecognitionInfo = [
       subheader: "Stay Tuned For More!",
       bodyText: [
         {
-          body: <p className="bold">We Will Work On This Case Study!</p>,
+          body: (
+            <p>
+              Facial recognition technology is often used to identify crime
+              suspects. However, research has shown that this technology is
+              often inaccurate when identifying certain groups of people. A
+              study by MIT found that facial recognition systems can be up to
+              35% less accurate when identifying women or people of color. This
+              can lead law enforcement to arrest or accuse the wrong people.
+            </p>
+          ),
+        },
+        {
+          body: (
+            <p className="bold">
+              In this case study, we explore how humans’ biases when identifying
+              people can affect how we train our facial recognition
+              systems.{" "}
+            </p>
+          ),
         },
       ],
     },
@@ -83,6 +101,20 @@ const FacialRecognitionInfo = [
               anim id est laborum.
             </p>
           ),
+        },
+      ],
+    },
+  },
+
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - Frame 3",
+      header: "Accuracy of Face Recognition Technologies",
+      subheader: "Hover to See Group Performance",
+      bodyText: [
+        {
+          body: <AccuracyChart />,
         },
       ],
     },
@@ -274,29 +306,26 @@ const FacialRecognitionInfo = [
         {
           body: (
             <p className="bold">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              The Consequences of Bias in Facial Recognition
             </p>
           ),
         },
         {
           body: (
             <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Facial recognition technology has repeatedly been shown to exhibit
+              various biases against certain groups, leading to real-world
+              consequences such as wrongful identification of suspects or
+              determining healthcare. To address these issues, researchers are
+              actively working on debiasing facial recognition models as well as
+              the data sets they rely on. This involves creating more balanced
+              training data and adjusting algorithms so they learn to make
+              accurate predictions.
             </p>
           ),
         },
         {
-          body: (
-            <p>
-              <mark className="bold">{`TODO: `} </mark>Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-          ),
+          body: <p></p>,
         },
       ],
     },
