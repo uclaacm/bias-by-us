@@ -3,6 +3,7 @@ import "../main.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "../components/mainContent/PostsList";
 import CounterFrame from "../components/posts/FacialRecognition/CounterFrame";
+import AccuracyChart from "../components/posts/FacialRecognition/AccuracyChart";
 import { VisibilityProvider } from "../components/mainContent/commonLogic";
 
 export default function FacialRecognition() {
@@ -101,6 +102,20 @@ const FacialRecognitionInfo = [
               anim id est laborum.
             </p>
           ),
+        },
+      ],
+    },
+  },
+
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - Frame 3",
+      header: "Accuracy of Face Recognition Technologies",
+      subheader: "Hover to See Group Performance",
+      bodyText: [
+        {
+          body: <AccuracyChart />,
         },
       ],
     },
