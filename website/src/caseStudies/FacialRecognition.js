@@ -3,6 +3,7 @@ import "../main.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "../components/mainContent/PostsList";
 import CategorizationGame from "../components/posts/FacialRecognition/CategorizationGame";
+import AccuracyChart from "../components/posts/FacialRecognition/AccuracyChart";
 import { VisibilityProvider } from "../components/mainContent/commonLogic";
 
 export default function FacialRecognition() {
@@ -105,7 +106,7 @@ const FacialRecognitionInfo = [
       ],
     },
   },
-
+ 
   {
     post: {
       profilePic: teachLogo,
