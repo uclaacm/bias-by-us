@@ -3,8 +3,8 @@ import "../main.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "../components/mainContent/PostsList";
 import CounterFrame from "../components/posts/FacialRecognition/CounterFrame";
+import Timeline from "../components/posts/FacialRecognition/Timeline";
 import { VisibilityProvider } from "../components/mainContent/commonLogic";
-
 
 export default function FacialRecognition() {
   return (
@@ -45,7 +45,7 @@ const FacialRecognitionInfo = [
       subheader: "Understanding Bias Through Categorization",
       bodyText: [
         {
-          body: <CounterFrame />
+          body: <CounterFrame />,
         },
       ],
     },
@@ -84,6 +84,20 @@ const FacialRecognitionInfo = [
               anim id est laborum.
             </p>
           ),
+        },
+      ],
+    },
+  },
+
+  {
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - Frame 3",
+      header: "Facial Recognition Timeline",
+      subheader: "Interactive Timeline",
+      bodyText: [
+        {
+          body: <Timeline />,
         },
       ],
     },
