@@ -106,7 +106,7 @@ const FacialRecognitionInfo = [
       ],
     },
   },
-
+ 
   {
     post: {
       profilePic: teachLogo,

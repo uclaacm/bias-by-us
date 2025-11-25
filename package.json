@@ -18,6 +18,7 @@
     "url": "https://github.com/uclaacm/bias-by-us/issues"
   },
   "devDependencies": {
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "lint-staged": "^16.2.6"
   }
 }
