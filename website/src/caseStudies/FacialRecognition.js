@@ -2,7 +2,8 @@ import React from "react";
 import "../main.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "../components/mainContent/PostsList";
-import CategorizationGame from "../components/posts/FacialRecognition/CategorizationGame";
+import CounterFrame from "../components/posts/FacialRecognition/CounterFrame";
+import AccuracyChart from "../components/posts/FacialRecognition/AccuracyChart";
 import { VisibilityProvider } from "../components/mainContent/commonLogic";
 
 export default function FacialRecognition() {
@@ -58,11 +59,11 @@ const FacialRecognitionInfo = [
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Frame 1",
-      header: "Food Rating Game",
+      header: "Facial Recognition Game",
       subheader: "Understanding Bias Through Categorization",
       bodyText: [
         {
-          body: <CategorizationGame />,
+          body: <CounterFrame />,
         },
       ],
     },
