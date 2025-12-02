@@ -3,6 +3,7 @@ import "../main.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "../components/mainContent/PostsList";
 import CounterFrame from "../components/posts/FacialRecognition/CounterFrame";
+import Timeline from "../components/posts/FacialRecognition/Timeline";
 import AccuracyChart from "../components/posts/FacialRecognition/AccuracyChart";
 import { VisibilityProvider } from "../components/mainContent/commonLogic";
 
@@ -106,11 +107,25 @@ const FacialRecognitionInfo = [
       ],
     },
   },
-
+  
   {
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Frame 3",
+      header: "Facial Recognition Timeline",
+      subheader: "Interactive Timeline",
+      bodyText: [
+        {
+          body: <Timeline />,
+        },
+      ],
+    },
+  },
+
+{
+    post: {
+      profilePic: teachLogo,
+      profilePicName: "Profile Picture - Frame 3b",
       header: "Accuracy of Face Recognition Technologies",
       subheader: "Hover to See Group Performance",
       bodyText: [
@@ -119,7 +134,7 @@ const FacialRecognitionInfo = [
         },
       ],
     },
-  },
+ },
 
   {
     post: {
