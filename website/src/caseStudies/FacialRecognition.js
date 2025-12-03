@@ -107,7 +107,7 @@ const FacialRecognitionInfo = [
       ],
     },
   },
-  
+
   {
     post: {
       profilePic: teachLogo,
@@ -122,7 +122,7 @@ const FacialRecognitionInfo = [
     },
   },
 
-{
+  {
     post: {
       profilePic: teachLogo,
       profilePicName: "Profile Picture - Frame 3b",
@@ -134,7 +134,7 @@ const FacialRecognitionInfo = [
         },
       ],
     },
- },
+  },
 
   {
     post: {
@@ -185,48 +185,16 @@ const FacialRecognitionInfo = [
             "What are some privacy concerns that can arise with the increased use in facial recognition technology? What are some ways that such technology can help improve safety? Compare and contrast.",
           answers: [
             <p>
-              blah
-              <mark className="bold">blah</mark> blah
+              For example, there are many concerns that having powerful facial
+              recognition technology fall into the wrong hands, like corrupt
+              governments or criminals, could lead to excess surveillance, loss
+              of privacy, or easy stalking. On the flip side, using such
+              technology carefully can help with law enforcement by easily
+              identifying criminals in surveillance footage and finding missing
+              people.
+              <mark className="bold"></mark>
             </p>,
           ],
-        },
-      ],
-    },
-  },
-
-  {
-    post: {
-      profilePic: teachLogo,
-      profilePicName: "Profile Picture - Frame 5",
-      header: "Frame 5",
-      subheader: "Why Is This Important?",
-      bodyText: [
-        {
-          body: (
-            <p className="bold">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          ),
-        },
-        {
-          body: (
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
-          ),
-        },
-        {
-          body: (
-            <p>
-              <mark className="bold">{`TODO: `} </mark>Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-          ),
         },
       ],
     },
@@ -243,48 +211,12 @@ const FacialRecognitionInfo = [
             "In what ways can we reduce the bias present in facial recognition technology? Remember where such biases originate from.",
           answers: [
             <p>
-              blah
-              <mark className="bold">blah</mark> blah
+              We could ensure that our models are trained on diverse datasets,
+              continuously run tests on existing models that detect significant
+              biases, and use these technologies with caution.
+              <mark className="bold"></mark>
             </p>,
           ],
-        },
-      ],
-    },
-  },
-
-  {
-    post: {
-      profilePic: teachLogo,
-      profilePicName: "Profile Picture - Frame 6",
-      header: "Frame 6",
-      subheader: "Why Is This Important?",
-      bodyText: [
-        {
-          body: (
-            <p className="bold">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          ),
-        },
-        {
-          body: (
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
-          ),
-        },
-        {
-          body: (
-            <p>
-              <mark className="bold">{`TODO: `} </mark>Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-          ),
         },
       ],
     },
@@ -301,8 +233,11 @@ const FacialRecognitionInfo = [
             "What legal frameworks, standards, and guidelines are needed to safeguard individual rights and hold organizations accountable for the ethical use of facial recognition technology?",
           answers: [
             <p>
-              blah
-              <mark className="bold">blah</mark> blah
+              For example, we could require facial recognition technology to
+              undergo standardized testing to detect potential biases and
+              require a human to approve its decisions in high-risk use cases,
+              such as evidence in criminal court.
+              <mark className="bold"></mark>
             </p>,
           ],
         },
