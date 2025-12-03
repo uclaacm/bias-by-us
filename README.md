@@ -29,6 +29,7 @@ To start our app, you just need to run `npm start` within the website folder!
 
 ```
 cd website
+npm install
 npm start
 ```
 
