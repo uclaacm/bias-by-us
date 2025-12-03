@@ -2,10 +2,11 @@ import React from "react";
 import "../main.css";
 import teachLogo from "../assets/teachla-logo.svg";
 import PostsList from "../components/mainContent/PostsList";
-import CounterFrame from "../components/posts/FacialRecognition/CounterFrame";
+//import CounterFrame from "../components/posts/FacialRecognition/CounterFrame";
 import Timeline from "../components/posts/FacialRecognition/Timeline";
 import AccuracyChart from "../components/posts/FacialRecognition/AccuracyChart";
 import { VisibilityProvider } from "../components/mainContent/commonLogic";
+import CategorizationGame from "../components/posts/FacialRecognition/CategorizationGame";
 
 export default function FacialRecognition() {
   return (
@@ -64,7 +65,7 @@ const FacialRecognitionInfo = [
       subheader: "Understanding Bias Through Categorization",
       bodyText: [
         {
-          body: <CounterFrame />,
+          body: <CategorizationGame />,
         },
       ],
     },
