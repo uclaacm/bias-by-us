@@ -14,6 +14,7 @@ import trendsPic from "./trends.svg";
 import facebookAds from "./personalizedAds.svg";
 import anime from "./animationpic.svg";
 import teachLogo from "../../assets/teachla-logo.svg";
+import FeedbackLoopAnimation from "../../components/posts/Facebook/feedbackLoop/FeedbackLoopAnimation.js";
 
 const content = [
   {
@@ -233,13 +234,7 @@ const content = [
           ),
         },
         {
-          body: (
-            <img
-              style={{ maxWidth: "680px", width: "75vw" }}
-              src={anime}
-              alt="a static design of the animation that visualizes how skewed samples amplify biases"
-            ></img>
-          ), // we will remove this once we implement the animation
+          body: <FeedbackLoopAnimation />,
         },
         {
           body: (
