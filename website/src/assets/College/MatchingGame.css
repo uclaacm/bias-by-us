@@ -1,5 +1,21 @@
-button {
+.game-area {
   background-color: skyblue;
   border-radius: 5px;
   padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.catcher {
+  background-color: lightgreen;
+  border-radius: 7px;
+  position: relative;
+  top: 95%;
+}
+
+.falling-obj {
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
 }

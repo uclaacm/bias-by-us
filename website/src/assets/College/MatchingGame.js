@@ -1,32 +1,135 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import "./MatchingGame.css";
-import placeholderThumbnail from "../placeholderThumbnail.png";
 
 export const MatchingGame = () => {
-  const [score, setScore] = useState(0);
+  const GAME_WIDTH = 400;
+  const GAME_HEIGHT = 500;
+  const CATCHER_WIDTH = 60;
+  const CATCHER_HEIGHT = 30;
+  const ITEM_SIZE = 50;
+  const gameAreaRef = useRef(null);
 
-  function processGroup1Click() {
+  const [goodTossed, setGoodTossed] = useState(0);
+  const [badCollected, setBadCollected] = useState(0);
+  const [score, setScore] = useState(0);
+  const [state, setState] = useState("starting"); // starting, playing, gameover
+
+  const [catcherPosition, setCatcherPosition] = useState(
+    GAME_WIDTH / 2 - CATCHER_WIDTH / 2,
+  );
+  const [itemY, setItemY] = useState(50);
+  const [itemX, setItemX] = useState(Math.random() * (GAME_WIDTH - ITEM_SIZE));
+
+  const start = () => {
+    setState("playing");
+    // Add keydown listener
+    if (gameAreaRef.current) {
+      gameAreaRef.current.addEventListener("keydown", handleKeyDown);
+    }
+  };
+
+  const handleKeyDown = useCallback((e) => {
+    if (e.key === "ArrowLeft") {
+      setCatcherPosition((prev) => Math.max(0, prev - 20));
+    } else if (e.key === "ArrowRight") {
+      setCatcherPosition((prev) =>
+        Math.min(GAME_WIDTH - CATCHER_WIDTH, prev + 20),
+      );
+    }
+  }, []);
+
+  const calculateFall = (currentY) => {
+    const newY = currentY + 5;
+    if (newY > GAME_HEIGHT - ITEM_SIZE) {
+      // Check for catch
+      return -20; // Reset to top
+    }
+    return Math.max(0, newY);
+  };
+
+  useEffect(() => {
+    // Focus the game area on mount so it can receive key events
+    if (gameAreaRef.current) {
+      gameAreaRef.current.focus();
+    }
+  }, []);
+
+  // Game Loop
+  useEffect(() => {
+    const gameLoop = setInterval(() => {
+      // render falling object
+      setItemY((prev) => calculateFall(prev));
+    }, 20); // ~33 FPS game loop
+
+    return () => clearInterval(gameLoop);
+  }, []);
+
+  function processCollect() {
     setScore(score + 10);
   }
 
-  function processGroup2Click() {
-    setScore(score - 5);
-    console.log(score);
+  function processTossed() {
+    setScore(score - 10);
   }
 
   return (
     <>
       <br></br>
-      <h1>Let's play a game!</h1>
+      <h2>Imagine you're a cupcake inspector at a factory.</h2>
+      <h3>
+        Collect only the best cupcakes: no cracks, no bites, and good frosting
+        shape!
+      </h3>
 
-      <p>Score: {score}</p>
+      <p>Score:? {score}</p>
 
-      <img src={placeholderThumbnail} width={250} height={250} alt="game"></img>
       <br></br>
-      <button onClick={processGroup1Click}>Group 1</button>
+      <div
+        className="game-area"
+        ref={gameAreaRef}
+        style={{ width: GAME_WIDTH, height: GAME_HEIGHT }}
+        tabIndex={0} // Make the div focusable
+      >
+        {state === "starting" && (
+          <>
+            <button className="start-button" onClick={start}>
+              Start
+            </button>
+          </>
+        )}
 
-      <button onClick={processGroup2Click}>Group 2</button>
+        {state === "playing" && (
+          <>
+            <div
+              className="catcher"
+              style={{
+                top: GAME_HEIGHT - CATCHER_HEIGHT / 2,
+                left: catcherPosition,
+                width: CATCHER_WIDTH,
+                height: CATCHER_HEIGHT,
+                padding: 0,
+              }}
+            />
+            <div
+              className="falling-obj"
+              style={{
+                backgroundColor: "red",
+                top: itemY,
+                left: itemX,
+                width: ITEM_SIZE,
+              }}
+            />
+          </>
+        )}
+
+        {state === "gameover" && (
+          <div className="game-over">
+            <h2>Game Over!</h2>
+            <p>Your final score is: {score}</p>
+          </div>
+        )}
+      </div>
 
       <br></br>
     </>

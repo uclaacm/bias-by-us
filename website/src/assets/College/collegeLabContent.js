@@ -47,6 +47,9 @@ const content = [
             </p>
           ),
         },
+        {
+          body: <MatchingGame />,
+        },
       ],
     },
   },
