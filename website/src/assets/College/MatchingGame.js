@@ -5,7 +5,7 @@ import "./MatchingGame.css";
 export const MatchingGame = () => {
   const GAME_WIDTH = 400;
   const GAME_HEIGHT = 500;
-  const CATCHER_WIDTH = 60;
+  const CATCHER_WIDTH = 100;
   const CATCHER_HEIGHT = 30;
   const ITEM_SIZE = 50;
   const gameAreaRef = useRef(null);
@@ -25,6 +25,7 @@ export const MatchingGame = () => {
     setState("playing");
     // Add keydown listener
     if (gameAreaRef.current) {
+      gameAreaRef.current.focus();
       gameAreaRef.current.addEventListener("keydown", handleKeyDown);
     }
   };
@@ -39,21 +40,34 @@ export const MatchingGame = () => {
     }
   }, []);
 
-  const calculateFall = (currentY) => {
-    const newY = currentY + 5;
-    if (newY > GAME_HEIGHT - ITEM_SIZE) {
-      // Check for catch
-      return -20; // Reset to top
-    }
-    return Math.max(0, newY);
-  };
-
-  useEffect(() => {
-    // Focus the game area on mount so it can receive key events
-    if (gameAreaRef.current) {
-      gameAreaRef.current.focus();
-    }
-  }, []);
+  const calculateFall = useCallback(
+    (currentY) => {
+      const newY = currentY + 5;
+      if (newY > GAME_HEIGHT - ITEM_SIZE) {
+        // Check for catch
+        if (
+          itemX + ITEM_SIZE >= catcherPosition &&
+          itemX <= catcherPosition + CATCHER_WIDTH
+        ) {
+          processCollect();
+        } else {
+          processTossed();
+        }
+        setItemX((prev) => Math.random() * (GAME_WIDTH - ITEM_SIZE)); // New X position
+        return -20; // Reset to top
+      }
+      return Math.max(0, newY);
+    },
+    [
+      GAME_HEIGHT,
+      ITEM_SIZE,
+      itemX,
+      catcherPosition,
+      processCollect,
+      processTossed,
+      GAME_WIDTH,
+    ],
+  );
 
   // Game Loop
   useEffect(() => {
@@ -63,7 +77,7 @@ export const MatchingGame = () => {
     }, 20); // ~33 FPS game loop
 
     return () => clearInterval(gameLoop);
-  }, []);
+  }, [calculateFall]);
 
   function processCollect() {
     setScore(score + 10);
@@ -82,7 +96,7 @@ export const MatchingGame = () => {
         shape!
       </h3>
 
-      <p>Score:? {score}</p>
+      <p>Score: {score}</p>
 
       <br></br>
       <div
