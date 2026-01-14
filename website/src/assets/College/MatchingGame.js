@@ -71,6 +71,7 @@ export const MatchingGame = () => {
 
   // Game Loop
   useEffect(() => {
+    if (state !== "playing") return;
     const gameLoop = setInterval(() => {
       // render falling object
       setItemY((prev) => calculateFall(prev));
