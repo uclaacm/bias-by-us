@@ -224,7 +224,7 @@ export const MatchingGame = () => {
       <h3>
         {" "}
         Imagine you're a cupcake inspector at a factory. Collect only the best
-        cupcakes: no cracks, no bites, and good frosting shape!{" "}
+        cupcakes: no bites and good frosting shape!{" "}
       </h3>
 
       <br></br>
