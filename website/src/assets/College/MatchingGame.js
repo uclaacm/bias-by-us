@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useRef, useEffect, useCallback } from "react";
+import c1 from "../matchingGameImgs/c1.svg";
 import "./MatchingGame.css";
 
 export const MatchingGame = () => {
@@ -9,7 +10,13 @@ export const MatchingGame = () => {
   const CATCHER_HEIGHT = 30;
   const ITEM_SIZE = 50;
   const gameAreaRef = useRef(null);
+  const cupcakes = [
+    { image: c1, isGood: true },
+    { image: c1, isGood: false },
+    { image: c1, isGood: false },
+  ];
 
+  const [currentCupcake, setCurrentCupcake] = useState(0);
   const [goodTossed, setGoodTossed] = useState(0);
   const [badCollected, setBadCollected] = useState(0);
   const [score, setScore] = useState(0);
@@ -23,6 +30,10 @@ export const MatchingGame = () => {
 
   const start = () => {
     setState("playing");
+    setCurrentCupcake(0);
+    setScore(0);
+    setItemY(0);
+    setItemX(Math.random() * (GAME_WIDTH - ITEM_SIZE));
     // Add keydown listener
     if (gameAreaRef.current) {
       gameAreaRef.current.focus();
@@ -53,8 +64,14 @@ export const MatchingGame = () => {
         } else {
           processTossed();
         }
-        setItemX((prev) => Math.random() * (GAME_WIDTH - ITEM_SIZE)); // New X position
-        return -20; // Reset to top
+        if (currentCupcake < cupcakes.length - 1) {
+          setCurrentCupcake((prev) => prev + 1);
+          setItemX((prev) => Math.random() * (GAME_WIDTH - ITEM_SIZE)); // New X position
+          return -20; // Reset to top
+        } else {
+          setState("gameover");
+          return GAME_HEIGHT; // End game
+        }
       }
       return Math.max(0, newY);
     },
@@ -66,6 +83,8 @@ export const MatchingGame = () => {
       processCollect,
       processTossed,
       GAME_WIDTH,
+      cupcakes.length,
+      currentCupcake,
     ],
   );
 
@@ -103,7 +122,10 @@ export const MatchingGame = () => {
       <div
         className="game-area"
         ref={gameAreaRef}
-        style={{ width: GAME_WIDTH, height: GAME_HEIGHT }}
+        style={{
+          width: GAME_WIDTH,
+          height: GAME_HEIGHT,
+        }}
         tabIndex={0} // Make the div focusable
       >
         {state === "starting" && (
@@ -126,13 +148,15 @@ export const MatchingGame = () => {
                 padding: 0,
               }}
             />
-            <div
+            <img
+              src={cupcakes[currentCupcake].image}
+              alt="cupcake"
               className="falling-obj"
               style={{
-                backgroundColor: "red",
                 top: itemY,
                 left: itemX,
                 width: ITEM_SIZE,
+                objectFit: "cover",
               }}
             />
           </>
@@ -142,6 +166,7 @@ export const MatchingGame = () => {
           <div className="game-over">
             <h2>Game Over!</h2>
             <p>Your final score is: {score}</p>
+            <button onClick={start}>Restart</button>
           </div>
         )}
       </div>

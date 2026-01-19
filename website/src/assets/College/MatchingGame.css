@@ -1,5 +1,6 @@
 .game-area {
-  background-color: skyblue;
+  background-size: cover;
+  background-image: url('../background.svg');
   border-radius: 5px;
   padding: 10px;
   margin-right: auto;
@@ -14,8 +15,7 @@
 }
 
 .falling-obj {
-  height: 30px;
-  background-color: red;
-  border-radius: 50%;
+  width: 40px;
+  height: auto;
   position: relative;
 }
