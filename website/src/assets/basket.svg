@@ -1,0 +1,28 @@
+<svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2478_18)" filter="url(#filter0_g_2478_18)">
+<path d="M19.1544 54.495C19.1544 54.495 22.889 24 47.5375 24C72.1859 24 74.4267 54.495 74.4267 54.495" stroke="#CF5329" stroke-width="3" stroke-linecap="round"/>
+<path d="M34.4676 56.6215C34.4842 53.3078 37.1839 50.635 40.4975 50.6516L83.8229 50.8685C88.2952 50.8909 91.1718 55.6223 89.1334 59.6031L75.7556 85.7288C74.7243 87.7428 72.6477 89.0053 70.385 88.994L40.3064 88.8435C36.9927 88.8269 34.3199 86.1272 34.3365 82.8135L34.4676 56.6215Z" fill="#E0693A"/>
+<path d="M66.8682 56.7836C66.8848 53.4699 64.212 50.7702 60.8983 50.7537L10.5264 50.5015C5.92035 50.4785 3.00719 55.4392 5.27115 59.4505L20.0961 85.7174C21.1547 87.5931 23.1375 88.7575 25.2912 88.7682L60.7072 88.9455C64.0208 88.9621 66.7205 86.2893 66.7371 82.9756L66.8682 56.7836Z" fill="#E0693A"/>
+<path d="M78.3116 55.3443C78.3116 55.3443 74.0037 61.1691 45.9569 60.8899C17.91 60.6107 15.4187 54.7181 15.4187 54.7181" stroke="#CF5329" stroke-width="3" stroke-linecap="round"/>
+<path d="M39.5755 71.8711C39.5755 71.8711 38.0563 73.0426 28.1077 72.9436C18.159 72.8445 17.2664 71.649 17.2664 71.649" stroke="#DD571E" stroke-linecap="round"/>
+<path d="M41.1145 77.6035C41.1145 77.6035 39.8109 78.3601 31.2576 78.275C22.7044 78.1898 21.9344 77.4126 21.9344 77.4126" stroke="#DD571E" stroke-linecap="round"/>
+<path d="M72.5172 77.8592C72.5108 78.8998 71.4715 79.6172 70.495 79.2552L52.2285 72.4831C51.0901 72.061 50.8981 70.5332 51.897 69.8437L70.2844 57.1508C71.2832 56.4613 72.6457 57.1811 72.6382 58.3943L72.5172 77.8592Z" fill="#FFCCC3"/>
+<path d="M56.7929 80.5713C56.1946 81.3222 55.0539 81.3245 54.4513 80.5759L37.5651 59.5996C36.7758 58.6192 37.4708 57.1622 38.7289 57.1597L72.3809 57.0928C73.639 57.0903 74.3423 58.5445 73.5587 59.5281L56.7929 80.5713Z" fill="#FFE5E0"/>
+<line x1="23.6485" y1="69.9287" x2="30.7761" y2="82.4021" stroke="#DD571E" stroke-linecap="round"/>
+<line x1="29.3731" y1="67.9954" x2="38.3728" y2="82.395" stroke="#DD571E" stroke-linecap="round"/>
+</g>
+<defs>
+<filter id="filter0_g_2478_18" x="0" y="0" width="94" height="94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="1 1" numOctaves="3" seed="9567" />
+<feDisplacementMap in="shape" scale="4" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_2478_18">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+<clipPath id="clip0_2478_18">
+<rect width="90" height="90" fill="white" transform="translate(2 2)"/>
+</clipPath>
+</defs>
+</svg>

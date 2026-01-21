@@ -190,16 +190,51 @@ const content = [
                 Here's an interactive example that emulates how machine learning
                 models "learn".
                 <br></br>
-                <br></br>
-                Grouping exercise!
-                <br></br>
-                Explain why you make mistakes.
-                <br></br>
-                Explain how that's similar to how ML models make mistakes.
               </p>
               <MatchingGame />
             </>
           ),
+        },
+      ],
+    },
+  },
+  {
+    commentSection: {
+      profilePic: teachLogo,
+      profilePicName: "Teach Logo",
+      followups: [
+        {
+          questionHeader: "Game Reflection Question 1:",
+          question:
+            "Was it harder to sort cupcakes that didn't resemble the training examples?",
+          answers: [],
+        },
+      ],
+    },
+  },
+  {
+    commentSection: {
+      profilePic: teachLogo,
+      profilePicName: "Teach Logo",
+      followups: [
+        {
+          questionHeader: "Game Reflection Question 2:",
+          question:
+            "When the game sped up, did you find yourself looking for easy-to-see patterns like color or shape instead of the requirements (no bites and good frosting shape)?",
+          answers: [],
+        },
+      ],
+    },
+  },
+  {
+    commentSection: {
+      profilePic: teachLogo,
+      profilePicName: "Teach Logo",
+      followups: [
+        {
+          questionHeader: "Game Reflection Question 3:",
+          question: "How is this similar to how ML models make mistakes?",
+          answers: [],
         },
       ],
     },

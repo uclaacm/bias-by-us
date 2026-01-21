@@ -1,5 +1,120 @@
-button {
-  background-color: skyblue;
+.game-container {
+  display: flex;
+}
+
+.game-area {
+  background-image: url("../background.svg");
+  background-size: cover;
   border-radius: 5px;
   padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+
+  /* NOTE: DO NOT use text-align: center or display: flex; the cupcakes will fall out of bounds */
 }
+
+.falling-obj {
+  width: 40px;
+  height: auto;
+  position: relative;
+}
+
+.catcher {
+  background-size: cover;
+  background-image: url('../catcher.svg');
+  position: relative;
+  top: 95%;
+}
+
+.start-button, .restart-button {
+  background-color: #3258ff;
+  border: none;
+  color: rgb(255 255 255);
+  padding: 15px 32px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.start-button {
+  display: block;
+ }
+
+ .game-window {
+  background-color: white;
+  margin: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 5%;
+  text-align: center;
+ }
+
+ .banner-img {
+  width: 60%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+ }
+
+ .footnote {
+  margin-top: 10px;
+  font-size: 10px;
+ }
+
+ .result-category {
+  font-size: 14px; 
+  margin-top: 15px;
+  margin-bottom: 0;
+ }
+
+ .result-category span {
+  font-weight: bold;
+ }
+
+ .result {
+  margin-top: 5px;
+  margin-bottom: 0;
+  background-color: #c2c4ff;
+  padding: 5px;
+  border-radius: 8px;
+ }
+
+ .image-container {
+  display: block;
+  width: 70px;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  background-color: #6F2700;
+  padding: 5px;
+  border-radius: 5px;
+ }
+
+ .cupcake {
+  height: 50px;
+ }
+
+ .training-comment {
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #F00;
+ }
+
+ .training-comment span {
+  color: #0F0;
+ }
+
+ .instructions {
+  background-color: white;
+  padding: 20px;
+  margin: 30% auto 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 70%;
+  font-size: 14px;
+ }
